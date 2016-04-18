@@ -1,12 +1,11 @@
 package scr.kurs1.week1_additional;
-import java.util.*;
+
+import java.util.Scanner;
 
 /**
  * Created by miha on 18.04.2016.
  */
-//1) Ввести с клавиатуры значения трех сторон треугольника a, b и c и опреде-
-//        лить, является ли он прямоугольным. Ответ вывести в виде сообщения.
-public class treygolnik {
+public class additional1 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.println("Введите первую сторону");
@@ -15,15 +14,10 @@ public class treygolnik {
         int b = scn.nextInt();
         System.out.println("Введите третью сторону");
         int c = scn.nextInt();
-        if (((a + b) > c) && ((b + c) >a) && ((a + c)) > b) {
+        if (((a + b) > c) && ((b + c) > a) && ((a + c)) > b) {
             System.out.println("Это трехугольник");
-        }
-        else {
+        } else {
             System.out.println("Это не трехугольник");
         }
-
-
-
-
     }
 }
