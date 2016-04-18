@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class additional6 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        System.out.println("Единицы измерения км/ч,км и час");
+        System.out.println("Единицы измерения км/ч,км ");
         System.out.println("Введите скорость");
         double v = scn.nextDouble();
         System.out.println("Введите растояние ");
         double s = scn.nextDouble();
         double t = s / v;
-        System.out.println(t);
+        System.out.println("Время в пути " + t + " часа");
     }
 }
