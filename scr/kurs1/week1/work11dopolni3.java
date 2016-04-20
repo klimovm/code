@@ -1,4 +1,5 @@
 package kurs1.week1;
+
 import java.util.Scanner;
 
 /**
@@ -11,14 +12,18 @@ import java.util.Scanner;
 //        8888  -   4
 //        989990  - 1
 
-public class work11dopolni3 {
+public class Work11dopolni3 {
+
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
+
         System.out.println("Введите число");
         String n = scr.next();
-        int     cnt = 0;
-        for(int i = 0; i < n.length(); i++) {
-            if( n.charAt(i) == '8')
+
+        int cnt = 0;
+
+        for (int i = 0; i < n.length(); i++) {
+            if (n.charAt(i) == '8')
                 cnt++;
         }
         System.out.print(cnt);

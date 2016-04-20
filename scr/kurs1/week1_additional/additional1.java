@@ -5,15 +5,20 @@ import java.util.Scanner;
 /**
  * Created by miha on 18.04.2016.
  */
-public class additional1 {
+public class Additional1 {
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+
         System.out.println("Введите первую сторону");
         int a = scn.nextInt();
+
         System.out.println("Введите вторую сторону");
         int b = scn.nextInt();
+
         System.out.println("Введите третью сторону");
         int c = scn.nextInt();
+
         if (((a + b) > c) && ((b + c) > a) && ((a + c)) > b) {
             System.out.println("Это трехугольник");
         } else {

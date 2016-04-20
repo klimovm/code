@@ -1,4 +1,5 @@
 package kurs1.week1;
+
 import java.util.Scanner;
 
 /**
@@ -11,16 +12,21 @@ import java.util.Scanner;
 //        1      2    -   false
 //        18     98   -   true
 
-public class work8 {
+public class Work8 {
+
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
+
         System.out.println("Введите первое число");
         int n1 = scr.nextInt();
+
         System.out.println("Введите второе число");
         int n2 = scr.nextInt();
-        int nu1 = n1 % 10;
+
+        int num1 = n1 % 10;
         int num2 = n2 % 10;
-        boolean a =  (nu1 == num2 );
+        boolean a = (num1 == num2);
+
         System.out.println(a);
 
     }
