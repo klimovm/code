@@ -8,7 +8,7 @@ import java.util.Scanner;
 //Вводим два числа, если одно из них делиться на другое без остатка, то выводим тру и показываем результат деления
 // (целую часть от деления  и остачу)в другом случае выводим false и показываем результат деления
 // (целую часть от деления  и остачу)
-public class Work7 {
+public class Work7_0 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

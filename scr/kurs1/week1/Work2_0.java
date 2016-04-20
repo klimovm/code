@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 
 //Пользователь вводит три числа с консоли, нужно вывести на консоль наибольшее, наименьшее
-public class Work2 {
+public class Work2_0 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

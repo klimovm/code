@@ -12,7 +12,7 @@ import java.util.Scanner;
 //        8888  -   4
 //        989990  - 1
 
-public class Work11dopolni3 {
+public class Work11_dopolni3 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

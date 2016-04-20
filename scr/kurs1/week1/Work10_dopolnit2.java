@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 //Вычислить факториал числа.
 
-public class Work10dopolnit2 {
+public class Work10_dopolnit2 {
 
 
     public static void main(String[] args) {

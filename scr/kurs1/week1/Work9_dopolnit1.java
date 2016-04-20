@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 //Перевод с числа с десятичной системы счисления в двоичную, и наоборот. Пользователь сам вводит число
 
-public class Work9dopolnit1 {
+public class Work9_dopolnit1 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

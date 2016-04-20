@@ -12,7 +12,7 @@ import java.util.Scanner;
 //        1      2    -   false
 //        18     98   -   true
 
-public class Work8 {
+public class Work8_0 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

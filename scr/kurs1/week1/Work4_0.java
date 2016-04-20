@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 //Вводим число с плавающей точкой с консоли, и проверяем лежит ли оно в диапазоне от 0 до 1
 
-public class Work4 {
+public class Work4_0 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

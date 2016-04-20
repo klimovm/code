@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 //Вводим два числа, вывести их суму,
 // если она в диапазоне от 11 до 19
-public class Work6 {
+public class Work6_0 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
