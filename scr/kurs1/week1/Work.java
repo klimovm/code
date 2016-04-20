@@ -9,7 +9,7 @@ import java.util.concurrent.SynchronousQueue;
 /**
  * Created by Mihail on 16.04.2016.
  */
-public class Work666 {
+public class Work {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
