@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Вычислить стоимость покупки с учетом скидки.
 // Скидка в 10% предос-тавляется, если сумма покупки превышает 1000 гривен.
 
-public class Additional8 {
+public class Additional8_0 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

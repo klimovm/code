@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Известны площади круга и квадрата. Определить:
 // а) уместится ли круг в квадрат; б) уместится ли квадрат в круге.
 
-public class Additional_15 {
+public class Additional_15_ {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

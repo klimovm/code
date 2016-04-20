@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 
 //У вас есть скорость и растояние, за какое время вы приедете в пукт назначания
-public class Additional6 {
+public class Additional6_0 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

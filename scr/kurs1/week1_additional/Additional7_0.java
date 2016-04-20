@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 //Ввести с экрана число от 1 до 12. По номеру месяца выдать сообщение о времени года.
 // Если пользователь введет недопустимое число, программа должна выдать сообщение об ошибке.
-public class Additional7 {
+public class Additional7_0 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

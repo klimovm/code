@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 //Написать программу вычисления идеального веса пользователя (рост-100).
 // Выдать рекомендации о необходимости поправиться либо похудеть.
-public class Additional9 {
+public class Additional9_0 {
     public static void main(String[] args) {
 
         Scanner scn = new Scanner(System.in);

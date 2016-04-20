@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Определить, является ли шестизначное число "счастливым"
 // (сумма первых трех цифр равна сумме последних трех цифр).
 
-public class Additional_14 {
+public class Additional_14_ {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

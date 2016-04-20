@@ -9,7 +9,7 @@ import java.lang.*;
 
 //Ввести с клавиатуры три числа, положительные возвести в куб, а отрицательные заменить на 0.
 
-public class Additional2 {
+public class Additional2_0 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

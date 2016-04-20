@@ -10,7 +10,7 @@ import java.util.Scanner;
 // добавляет к нему слово "копейка" в правильной форме.
 // Например, 1копейка, 5 копеек, 42 копейки .
 
-public class Additional_11 {
+public class Additional_11_ {
     public static void main(String[] args) {
 
         Scanner scn = new Scanner(System.in);

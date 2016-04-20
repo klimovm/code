@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Даны три числа A,B,C. Увеличить числа в два раза,
 // если A+B+C>0, в противном случае заменить на нули.
 
-public class Additional_13 {
+public class Additional_13_ {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

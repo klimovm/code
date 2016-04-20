@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 
 //Известны две скорости, одна в километрах в час, другая в метрах в секунду. Какая из них больше?
-public class Additional4 {
+public class Additional4_0 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

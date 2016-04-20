@@ -9,7 +9,7 @@ import java.util.Scanner;
 //Написать программу вычисления стоимости переговоров, если по субботам и воскресеньям
 // предоставляется 20% скидка.Ввести продолжительность разговора и день недели (цифра от 1 до 7)
 
-public class Additional_10 {
+public class Additional_10_ {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

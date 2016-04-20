@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by miha on 18.04.2016.
  */
-public class Additional1 {
+public class Additional1_0 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

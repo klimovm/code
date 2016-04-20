@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 //Дано трехзначное число. Определить: а) верно ли, что все его цифры одинаковые;
 // б) есть ли среди его цифр одинаковые.
-public class Additional3 {
+public class Additional3_0 {
 
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);

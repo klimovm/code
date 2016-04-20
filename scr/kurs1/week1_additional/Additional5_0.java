@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 
 //Даны три числа a, b, c. Определить, имеется ли среди них хотя бы одна пара равных
-public class Additional5 {
+public class Additional5_0 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
