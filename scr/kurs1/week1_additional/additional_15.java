@@ -30,6 +30,7 @@ public class Additional_15 {
             System.out.println("Круг помещается в квадрат");
         } else if (diametrKruga > diagonal) {
             System.out.println("Квадрат помещается в круг");
-        } else System.out.println("Пересекаются");
+        } else
+            System.out.println("Пересекаются");
     }
 }
