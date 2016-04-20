@@ -14,9 +14,11 @@ public class work10dopolnit2 {
         Scanner scr = new Scanner(System.in);
         System.out.println("Введите число");
         int k = scr.nextInt();
-        for (int i = 1; i<=k; i++)
+        int factorial = 1;
+        for (int i = 2; i <= k; i++)
+            factorial *= i;
 
-        System.out.println(i);
+        System.out.println(factorial);
     }
 
 
