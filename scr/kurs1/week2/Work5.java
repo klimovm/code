@@ -11,11 +11,31 @@ import java.util.Scanner;
 public class Work5 {
 
     public static void main(String[] args) {
-        int[] arr = new int[5];
-        for (int i = 0; i < arr.length; i++) {
-            // generate number and put into arr
-            arr[i] = (int) (Math.random() * 100);
-        }
 
+        int[] mas = new int[6];
+        int random = 0;
+
+        for (int i = 0; i < mas.length; i++) {
+            random = (int) (Math.random() * 50);
+            if (i == 0 || i % 2 == 0) {
+
+                // todo use ternary operator
+                if (random % 2 == 0) {
+                    mas[i] = random;
+                } else {
+                    mas[i] = random + 1;
+                }
+
+            } else {
+
+                //todo use ternary operator
+                if (random % 2 != 0) {
+                    mas[i] = random;
+                } else {
+                    mas[i] = random + 1;
+                }
+            }
+            System.out.print(mas[i] + "  ");
+        }
     }
 }
