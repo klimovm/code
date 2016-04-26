@@ -22,12 +22,6 @@ public class Work8 {
             System.out.println("Введите елемент 1 массива " + (i + 1));
             arr1[i] = scn.nextInt();
         }
-//        System.out.print("массив1 " );
-//        for (int i = 0; i<arr1.length;i++) {
-//            System.out.print(arr1 [i] + " ");
-//        }
-//
-//        System.out.println(" ");
 
         int[] arr2 = new int[n];
         for (int i = 0; i < arr2.length; i++) {
