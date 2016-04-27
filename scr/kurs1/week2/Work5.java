@@ -19,7 +19,7 @@ public class Work5 {
             random = (int) (Math.random() * 50);
             if (i == 0 || i % 2 == 0) {
 
-                // todo use ternary operator
+
                 if (random % 2 == 0) {
                     mas[i] = random;
                 } else {
@@ -28,7 +28,7 @@ public class Work5 {
 
             } else {
 
-                //todo use ternary operator
+
                 if (random % 2 != 0) {
                     mas[i] = random;
                 } else {
