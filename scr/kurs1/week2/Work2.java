@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 public class Work2 {
     public static void main(String[] args) {
-        int[] mas = {2, 6, 8, 10, 3};
+        int[] mas = {1, 2, 3, 14, 5};
 
         System.out.print("Входящий массив:  ");
         for (int v : mas)
@@ -33,12 +33,7 @@ public class Work2 {
         System.out.println("Максимум " + max);
         System.out.print("исходящий массив:  ");
 
-        if (min != max)
-            for (int i = 0; i < mas.length; i++)
-                if (mas[i] == max)
-                    mas[i] = min;
-                else if (mas[i] == min)
-                    mas[i] = max;
+
         for (int i = 0; i < mas.length; i++)
 
             System.out.print(mas[i] + "  ");
