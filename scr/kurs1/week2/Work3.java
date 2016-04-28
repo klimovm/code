@@ -11,19 +11,20 @@ public class Work3 {
 
         int[] masiv1 = {9, 2, 6, 5, 7};
         System.out.print("первый массив  ");
-        {
-            for (int v : masiv1)
-                System.out.print(v + " ");
+
+        for (int v : masiv1) {
+            System.out.print(v + " ");
         }
 
         System.out.println("   ");
 
         int[] masiv2 = new int[5];
         System.out.print("Второй массив  ");
-        {
-            for (int d : masiv2)
-                System.out.print(d + " ");
+
+        for (int d : masiv2) {
+            System.out.print(d + " ");
         }
+
 
         System.out.println(" ");
         System.out.print("данные из первого массива во второй  ");
@@ -35,8 +36,9 @@ public class Work3 {
 //        masiv2[2]=masiv1[2];
 //        masiv2[3]=masiv1[3];
 //        masiv2[4]=masiv1[4];
-        for (int c : masiv2)
+        for (int c : masiv2) {
             System.out.print(c + " ");
+        }
 
 
     }
