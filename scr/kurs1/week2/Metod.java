@@ -5,7 +5,7 @@ package scr.kurs1.week2;
  */
 public class Metod {
 
-    public  static  int [] vozvratMasiv (int [] mas){
+    public static int[] vozvratMasiv(int[] mas) {
         int min = mas[0];
         for (int i = 0; i < mas.length; i++) {
 
@@ -20,12 +20,12 @@ public class Metod {
                 max = mas[i];
         }
         int indexmax = 0;
-        for (int i = 0; i<mas.length; i++)
+        for (int i = 0; i < mas.length; i++)
             if (max == mas[i]) {
                 indexmax = i;
             }
         int indexmin = 0;
-        for (int i = 0; i<mas.length; i++)
+        for (int i = 0; i < mas.length; i++)
             if (min == mas[i]) {
                 indexmin = i;
             }
@@ -35,24 +35,15 @@ public class Metod {
 
         return mas;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    public static int indexMin(int min,int[] mas) {
-        int indexmin = 0;
-        for (int i = 0; i<mas.length; i++)
-            if (min == mas[i]) {
-                indexmin = i;
-            }
-        return  indexmin;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
