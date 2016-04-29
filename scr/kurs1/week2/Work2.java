@@ -33,6 +33,15 @@ public class Work2 {
         System.out.println("Максимум " + max);
         System.out.print("исходящий массив:  ");
 
+        if (min != max){
+            // is it necessary?  Смена местами максимального и минимального значения в масиве
+            for (int i = 0; i < mas.length; i++)
+                if (mas[i] == max)
+                    mas[i] = min;
+                else if (mas[i] == min)
+                    mas[i] = max;
+        }
+
 
         for (int i = 0; i < mas.length; i++)
 
