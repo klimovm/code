@@ -10,40 +10,47 @@ public class Work2_metod {
 
         System.out.print("Входящий массив:  ");
         for (int i = 0; i < mas.length; i++) {
-            System.out.print(mas[i] + " ");}
+            System.out.print(mas[i] + " ");
+        }
         System.out.println(" ");
 
 
+        int min = minMassiv(mas);
+        int indexmin = 0;
+        for (int i = 0; i < mas.length; i++) {
+            min = mas[i];
+            indexmin = i;
+        }
+        System.out.println("index min: " + indexmin);
 
-          int min = minMassiv(mas);
-          int max = maxMassiv(mas);
-//
-//        System.out.println("Минимум " + min);
-//        System.out.println("Максимум " + max);
+
+
+        int max = maxMassiv(mas);
+        int indexmax = 0;
+        for (int i = 0; i < mas.length; i++) {
+            min = mas[i];
+            indexmax = i;
+        }
+        System.out.println("indexmax: " + indexmax);
+
+
+        System.out.println("Минимум " + min);
+        System.out.println("Максимум " + max);
         System.out.print("исходящий массив:  ");
 
 
-        if (min != max){
-
-            for (int i = 0; i < mas.length; i++)
-                if (mas[i] == max)
-                    mas[i] = min;
-                else if (mas[i] == min)
-                    mas[i] = max;
-        }
-
-
-        for (int i = 0; i < mas.length; i++){
+        for (int i = 0; i < mas.length; i++) {
             System.out.print(mas[i] + " ");
         }
 
         System.out.println();
 
     }
-/***************************************************************************************************************/
 
-    public static int minMassiv ( int [] mas) {
-       int min = mas[0];
+    /***************************************************************************************************************/
+
+    public static int minMassiv(int[] mas) {
+        int min = mas[0];
         for (int i = 0; i < mas.length; i++) {
 
             if (min > mas[i]) {
@@ -53,7 +60,7 @@ public class Work2_metod {
         return min;
     }
 
-    public static int maxMassiv ( int [] mas) {
+    public static int maxMassiv(int[] mas) {
         int max = mas[0];
         for (int i = 0; i < mas.length; i++) {
 
@@ -62,5 +69,6 @@ public class Work2_metod {
         }
         return max;
     }
+
 
 }
