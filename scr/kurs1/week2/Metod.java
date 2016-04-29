@@ -32,7 +32,10 @@ public class Metod {
         mas[indexmax] = min;
         mas[indexmin] = max;
 
+        for (int i = 0; i < mas.length; i++) {
+            System.out.print(mas[i] + " ");
 
+        }
         return mas;
     }
 }
