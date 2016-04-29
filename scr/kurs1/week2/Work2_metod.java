@@ -6,7 +6,7 @@ package scr.kurs1.week2;
 public class Work2_metod {
 
     public static void main(String[] args) {
-        int[] mas = {1, 2, 3, 8, 4};
+        int[] mas = {1, 2, 3, 4, 5};
 
         System.out.print("Входящий массив:  ");
         for (int i = 0; i < mas.length; i++) {
@@ -15,24 +15,15 @@ public class Work2_metod {
         System.out.println(" ");
 
 
-        int min = minMassiv(mas);
-        int indexmin = 0;
-        for (int i = 0; i < mas.length; i++) {
-            min = mas[i];
-            indexmin = i;
-        }
-        System.out.println("index min: " + indexmin);
+        int min = ArrayUtils.minMassiv(mas);
+        int max = ArrayUtils.maxMassiv(mas);
+
+        int indexmax = ArrayUtils.indexMax(max, mas);
+        int indexmin = ArrayUtils.indexMin(min, mas);
 
 
-
-        int max = maxMassiv(mas);
-        int indexmax = 0;
-        for (int i = 0; i < mas.length; i++) {
-            min = mas[i];
-            indexmax = i;
-        }
-        System.out.println("indexmax: " + indexmax);
-
+        mas[indexmax] = min;
+        mas[indexmin] = max;
 
         System.out.println("Минимум " + min);
         System.out.println("Максимум " + max);
@@ -46,29 +37,9 @@ public class Work2_metod {
         System.out.println();
 
     }
-
-    /***************************************************************************************************************/
-
-    public static int minMassiv(int[] mas) {
-        int min = mas[0];
-        for (int i = 0; i < mas.length; i++) {
-
-            if (min > mas[i]) {
-                min = mas[i];
-            }
-        }
-        return min;
-    }
-
-    public static int maxMassiv(int[] mas) {
-        int max = mas[0];
-        for (int i = 0; i < mas.length; i++) {
-
-            if (max < mas[i])
-                max = mas[i];
-        }
-        return max;
-    }
-
-
 }
+
+
+
+
+
