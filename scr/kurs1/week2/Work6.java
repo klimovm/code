@@ -7,14 +7,18 @@ package scr.kurs1.week2;
 //Найти среднее арифметическое массива
 
 public class Work6 {
-
     public static void main(String[] args) {
-        int[] maviv = {4, 4, 4, 4};
-        int srednee = 0;
 
-        for (int i = 0; i < maviv.length; i++) {
-            srednee += maviv[i];
+        int[] masiv = {1, 2, 3, 4};
+        int summa = 0;
+        for (int i = 0; i < masiv.length; i++) {
+            summa = (summa + masiv[i]);
         }
-        System.out.println(srednee / maviv.length);
+        int srednee = summa / masiv.length;
+
+
+        System.out.println(masiv.length);
+        System.out.println(srednee);
+
     }
 }

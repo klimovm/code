@@ -14,9 +14,9 @@ public class Work4 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
-        int[] mass = new int[5];
+        int[] mass = new int[2];
 
-        for (int i = 0; i < mass.length; i++) {
+        for (int i = 0; i < mass.length; i++)  {
             System.out.println("введите елемент массива " + (i + 1));
             mass[i] = scn.nextInt();
 

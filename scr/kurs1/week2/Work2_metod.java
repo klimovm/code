@@ -9,18 +9,14 @@ public class Work2_metod {
         int[] mas = {1, 2, 3, 4, 5};
 
         System.out.print("Входящий массив:  ");
-        for (int i = 0; i < mas.length; i++) {
-            System.out.print(mas[i] + " ");
-        }
+        ArrayUtils.printArr(mas);
         System.out.println(" ");
-
 
         int min = ArrayUtils.minMassiv(mas);
         int max = ArrayUtils.maxMassiv(mas);
 
         int indexmax = ArrayUtils.indexMax(max, mas);
         int indexmin = ArrayUtils.indexMin(min, mas);
-
 
         mas[indexmax] = min;
         mas[indexmin] = max;
@@ -29,11 +25,7 @@ public class Work2_metod {
         System.out.println("Максимум " + max);
         System.out.print("исходящий массив:  ");
 
-
-        for (int i = 0; i < mas.length; i++) {
-            System.out.print(mas[i] + " ");
-        }
-
+        ArrayUtils.printArr(mas);
         System.out.println();
 
     }
