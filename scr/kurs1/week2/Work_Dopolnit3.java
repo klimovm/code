@@ -3,14 +3,6 @@ package scr.kurs1.week2;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/*Алгоритм
-1)Объявляем метод сканер
-2)Вводим с консоли строку
-3)Объявляем переменную  типа char со значением  "а"
-4)Преобразовуем строку в массив "Чаров"
-
-* */
-
 /**
  * Created by miha on 04.05.2016.
  */

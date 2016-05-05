@@ -11,8 +11,8 @@ import java.util.Scanner;
 public class Work_Dopolnit2 {
 
     public static boolean isPrime(int t) {
-        for(int i = 2; i <= Math.sqrt(t) ; i++) {
-            if(t%i == 0) {
+        for (int i = 2; i <= Math.sqrt(t); i++) {
+            if (t % i == 0) {
                 return false;
             }
         }
@@ -26,7 +26,7 @@ public class Work_Dopolnit2 {
         int n = scanner.nextInt();
 
 
-        if(n > 1) {
+        if (n > 1) {
             if (isPrime(n)) {
                 System.out.println("Вы ввели простое число");
             }
