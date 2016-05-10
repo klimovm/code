@@ -13,7 +13,7 @@ import java.util.Scanner;
 */
 public class Work1 {
     public static void main(String[] args) {
-        int [][] matrix = Utils.MatrixGenerate();
+        int[][] matrix = Utils.MatrixGenerate();
 
         String res = Utils.toString(matrix);
         System.out.println("Случайная матрица:");
@@ -21,9 +21,9 @@ public class Work1 {
 
         System.out.println();
 
-        for (int i = 0; i < matrix.length ; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j]%5==0){
+                if (matrix[i][j] % 5 == 0) {
                     matrix[i][j] = 8;
                 }
 
