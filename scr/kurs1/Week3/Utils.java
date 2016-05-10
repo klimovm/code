@@ -64,7 +64,7 @@ public class Utils {
         return matrix;
     }
 
-
+    /******************************************************************************************************************/
     public static String BooleantoString(boolean[][] mat) {
         if (mat == null) {
             return "wrong argument, mat is null";
@@ -89,5 +89,16 @@ public class Utils {
 
         return matRes;
     }
+
+    /******************************************************************************************************************/
+    public static boolean PaliandrMetod(String stroka) {
+        for (int i = 0, j = stroka.length() - 1; i < stroka.length() && j > 0; i++, j--) {
+            if (stroka.charAt(i) != stroka.charAt(j)) return false;
+
+        }
+        return true;
+    }
+    /******************************************************************************************************************/
+
 
 }
