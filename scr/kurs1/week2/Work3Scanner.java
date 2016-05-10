@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by miha on 22.04.2016.
  */
-public class Work3_Scanner {
+public class Work3Scanner {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

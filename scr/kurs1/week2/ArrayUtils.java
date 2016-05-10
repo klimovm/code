@@ -3,8 +3,10 @@ package scr.kurs1.week2;
 /**
  * Created by miha on 29.04.2016.
  */
+
 public class ArrayUtils {
-    public static int minMassiv(int[] mas) {
+    /******************************************************************************************************************/
+    public static int findMin(int[] mas) {
         int min = mas[0];
         for (int i = 0; i < mas.length; i++) {
 
@@ -15,7 +17,8 @@ public class ArrayUtils {
         return min;
     }
 
-    public static int maxMassiv(int[] mas) {
+    /******************************************************************************************************************/
+    public static int findMAx(int[] mas) {
         int max = mas[0];
         for (int i = 0; i < mas.length; i++) {
 
@@ -25,30 +28,43 @@ public class ArrayUtils {
         return max;
     }
 
-
-    public static int indexMax(int max,int[] mas) {
+    /******************************************************************************************************************/
+    public static int findIndexMax(int max, int[] mas) {
         int indexmax = 0;
-        for (int i = 0; i<mas.length; i++)
+        for (int i = 0; i < mas.length; i++)
             if (max == mas[i]) {
                 indexmax = i;
             }
-        return  indexmax;
+        return indexmax;
     }
 
-    public static int indexMin(int min,int[] mas) {
+    /******************************************************************************************************************/
+    public static int findIndexMin(int min, int[] mas) {
         int indexmin = 0;
-        for (int i = 0; i<mas.length; i++)
+        for (int i = 0; i < mas.length; i++)
             if (min == mas[i]) {
                 indexmin = i;
             }
-        return  indexmin;
+        return indexmin;
     }
 
-    public static void printArr(int [] mas){
+    /******************************************************************************************************************/
+    public static void printArr(int[] mas) {
         for (int i = 0; i < mas.length; i++) {
             System.out.print(mas[i] + " ");
         }
     }
-
+    /******************************************************************************************************************/
+    public static int massivRandom (int[] mass ){
+        int parnost = 0;
+        for (int i = 0; i < mass.length; i++) {
+            mass[i] = 25 + (int) (Math.random() * ((75 - 25) + 1));
+            if (mass[i] % 2 == 0) {
+                parnost++;
+            }
+            System.out.print(mass[i] + " ");
+        }
+        return parnost;
+    }
 }
 

@@ -17,29 +17,12 @@ public class Work9 {
 
         //заполняем рандомом первый масив размером "n"
         int[] massiv1 = new int[n];
-        int parnost1 = 0;
-        for (int i = 0; i < massiv1.length; i++) {
-            massiv1[i] = 25 + (int) (Math.random() * ((75 - 25) + 1));
-            if (massiv1[i] % 2 == 0) {
-                parnost1++;
-            }
-            System.out.print(massiv1[i] + " ");
-        }
-
-
+        int parnost1 = ArrayUtils.massivRandom(massiv1);
         System.out.println(" ");
 
         //заполняем рандомом второй масив размером "n"
         int[] massiv2 = new int[n];
-        int parnost2 = 0;
-        for (int i = 0; i < massiv2.length; i++) {
-            massiv2[i] = 25 + (int) (Math.random() * ((75 - 25) + 1));
-            if (massiv2[i] % 2 == 0) {
-                parnost2++;
-            }
-            System.out.print(massiv2[i] + " ");
-        }
-
+        int parnost2 = ArrayUtils.massivRandom(massiv2);
         System.out.println(" ");
 
         if (parnost1 > parnost2) {

@@ -9,14 +9,9 @@ import java.util.Scanner;
 
 //Посчитать колличество букв 'a' в строке (искомый символ может быть разным)
 
-public class Work_Dopolnit3 {
+public class WorkDopolnit3 {
     public static void main(String[] args) {
-//        Scanner scn = new Scanner(System.in);
-//        System.out.println("Введите какой то текст: ");
-//        String text = scn.next();
-//        char a = 'a';
-//        char [] massiv = text.toCharArray();
-//        System.out.println(massiv);
+
 
         Scanner scn = new Scanner(System.in);
         String[] mass = new String[3];

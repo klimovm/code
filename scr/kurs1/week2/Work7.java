@@ -38,22 +38,11 @@ public class Work7 {
         }
         int srednee1 = summa1 / (masiv.length/2);
 
-
         int summa2 = 0;
         for (int i = (masiv.length-1); i >masiv.length /2; i--) {
             summa2 = (summa2 + masiv[i]);
         }
         int srednee2 = summa2;
-
-
-//        System.out.println(" ");
-//        System.out.println("длинна масива "+masiv.length);
-//        System.out.println("среднее первой "+srednee1);
-//
-//        System.out.println(" ");
-//        System.out.println("среднее второй "+srednee2);
-
-
     }
 }
 

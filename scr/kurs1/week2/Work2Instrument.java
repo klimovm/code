@@ -3,7 +3,7 @@ package scr.kurs1.week2;
 /**
  * Created by miha on 29.04.2016.
  */
-public class Work2_metod {
+public class Work2Instrument {
 
     public static void main(String[] args) {
         int[] mas = {1, 2, 3, 4, 5};
@@ -12,11 +12,11 @@ public class Work2_metod {
         ArrayUtils.printArr(mas);
         System.out.println(" ");
 
-        int min = ArrayUtils.minMassiv(mas);
-        int max = ArrayUtils.maxMassiv(mas);
+        int min = ArrayUtils.findMin(mas);
+        int max = ArrayUtils.findMAx(mas);
 
-        int indexmax = ArrayUtils.indexMax(max, mas);
-        int indexmin = ArrayUtils.indexMin(min, mas);
+        int indexmax = ArrayUtils.findIndexMax(max, mas);
+        int indexmin = ArrayUtils.findIndexMin(min, mas);
 
         mas[indexmax] = min;
         mas[indexmin] = max;
@@ -26,7 +26,6 @@ public class Work2_metod {
         System.out.print("исходящий массив:  ");
 
         ArrayUtils.printArr(mas);
-        System.out.println();
 
     }
 }

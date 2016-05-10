@@ -13,10 +13,8 @@ public class Work2 {
         int[] mas = {1, 2, 3, 14, 5};
 
         System.out.print("Входящий массив:  ");
-        for (int v : mas)
-            System.out.print(v + "  ");
-        System.out.println(" ");
-
+        ArrayUtils.printArr(mas);
+        System.out.println();
 
         int min = mas[0];
         int max = mas[0];
@@ -33,7 +31,7 @@ public class Work2 {
         System.out.println("Максимум " + max);
         System.out.print("исходящий массив:  ");
 
-        if (min != max){
+        if (min != max) {
             // is it necessary?  Смена местами максимального и минимального значения в масиве
             for (int i = 0; i < mas.length; i++)
                 if (mas[i] == max)
@@ -42,11 +40,7 @@ public class Work2 {
                     mas[i] = max;
         }
 
-
-        for (int i = 0; i < mas.length; i++)
-
-            System.out.print(mas[i] + "  ");
-        System.out.println();
+        ArrayUtils.printArr(mas);
 
     }
 }

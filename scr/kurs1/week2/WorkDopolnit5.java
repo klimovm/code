@@ -6,7 +6,7 @@ package scr.kurs1.week2;
 
 //Заменить в строке все символы 'a' на '@' и вывести новую строку // "array is a data type" -> "@rr@y is @ d@t@ type"
 
-public class Work_Dopolnit5 {
+public class WorkDopolnit5 {
     public static void main(String[] args) {
 
         String string1 = "array is a data type";

@@ -29,8 +29,7 @@ public class Work8 {
             arr2[i] = scn.nextInt();
         }
 
-
-        System.out.println(" ");
+        System.out.println();
         System.out.print("массив3 = ");
         int[] mass3 = new int[n];
         for (int i = 0; i < mass3.length; i++) {

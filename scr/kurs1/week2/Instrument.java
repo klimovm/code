@@ -1,11 +1,10 @@
 package scr.kurs1.week2;
 
 /**
- * Created by miha on 29.04.2016.
+ * Created by miha on 10.05.2016.
  */
-public class Metod {
-
-    public static int[] vozvratMasiv(int[] mas) {
+public class Instrument {
+    public static int[] returnMas(int[] mas) {
         int min = mas[0];
         for (int i = 0; i < mas.length; i++) {
 
@@ -39,14 +38,3 @@ public class Metod {
         return mas;
     }
 }
-
-
-
-
-
-
-
-
-
-
-

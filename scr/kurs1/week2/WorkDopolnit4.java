@@ -10,7 +10,7 @@ import java.util.Scanner;
 // {1,2,3,4,5} -> 2 = {4,5,1,2,3}; {1,2,3,4,5} -> 3 = {3,4,5,1,2}
 // Количество позиций и массив указывает пользователь
 
-public class Work_Dopolnit4 {
+public class WorkDopolnit4 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.println("Введите размер массива: ");

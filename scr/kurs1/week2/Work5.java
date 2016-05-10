@@ -18,17 +18,13 @@ public class Work5 {
         for (int i = 0; i < mas.length; i++) {
             random = (int) (Math.random() * 50);
             if (i == 0 || i % 2 == 0) {
-
-
                 if (random % 2 == 0) {
                     mas[i] = random;
                 } else {
                     mas[i] = random + 1;
                 }
-
-            } else {
-
-
+            }
+            else {
                 if (random % 2 != 0) {
                     mas[i] = random;
                 } else {
