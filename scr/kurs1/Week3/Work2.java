@@ -12,10 +12,9 @@ public class Work2 {
                 if (i == j) {
                     matrix[i][j] = true;
                 }
-
             }
-
         }
+
         String res2 = MatrixUtils.BooleantoString(matrix);
         System.out.println(res2);
     }
