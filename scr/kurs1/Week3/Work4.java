@@ -1,5 +1,7 @@
 package scr.kurs1.week3;
 
+import scr.kurs1.week2.ArrayUtils;
+
 /**
  * Created by miha on 10.05.2016.
  */
@@ -11,7 +13,6 @@ package scr.kurs1.week3;
 		*/
 public class Work4 {
     public static void main(String[] args) {
-        //int [][] matrix = {{2,3,5},{4,2,7},{4,5,2}};
         int[][] matrix = MatrixUtils.MatrixGenerate();
         System.out.println("Наша матрица:");
         System.out.println(MatrixUtils.toString(matrix));
@@ -24,8 +25,7 @@ public class Work4 {
             }
         }
         System.out.println("Наш массив с диагонали:");
-        for (int v : mass) {
-            System.out.print(v + " ");
+        ArrayUtils.printArr(mass);
         }
-    }
 }
+

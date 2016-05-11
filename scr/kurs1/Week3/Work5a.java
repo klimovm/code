@@ -1,5 +1,9 @@
 package scr.kurs1.week3;
 
+import scr.kurs1.week2.ArrayUtils;
+
+import java.util.Arrays;
+
 /**
  * Created by miha on 10.05.2016.
  */
@@ -7,18 +11,27 @@ package scr.kurs1.week3;
 
 public class Work5a {
     public static void main(String[] args) {
-        int [][] matrix = {{1,2,3,4,5},{6,7,8,9},{10,11}};
+        String[][] matrix = {{"Олег", "Игор", "Витя", "Саша", "Дима"}, {"Катя", "Даша", "Настя", "Соня"}, {"Кот", "Пес"}};
         System.out.println("Входящая матрица:");
-        System.out.println(MatrixUtils.toString(matrix));
-        for (int i = 0; i <matrix.length ; i++) {
-            for (int j = 0; j < matrix[i].length ; j++) {
+        printMatrixString(matrix);
 
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
 
 
             }
-
         }
+
         System.out.println("Входящая матрица:");
-        System.out.println(MatrixUtils.toString(matrix));
+        // System.out.println(MatrixUtils.toString(matrix));
     }
+
+    /******************************************************************************************************************/
+    public static void printMatrixString(String[][] mas) {
+        for (int i = 0; i < mas.length; i++) {
+            System.out.println(Arrays.toString(mas[i]));
+        }
+            }
+    /******************************************************************************************************************/
 }
+
