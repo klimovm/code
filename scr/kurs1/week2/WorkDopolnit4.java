@@ -16,39 +16,36 @@ public class WorkDopolnit4 {
         System.out.println("Введите размер массива: ");
         int n = scn.nextInt();
         int[] massiv = new int[n];
+        int[] massiv2 = new int[massiv.length];
 
         for (int i = 0; i < massiv.length; i++) {
             System.out.println("Введите " + (i + 1) + "-й елемент массива:");
             massiv[i] = scn.nextInt();
         }
 
-        for (int i = 0; i < massiv.length; i++) {
-            System.out.print(massiv[i]);
-        }
+        ArrayUtils.printArr(massiv);
 
-        System.out.println(" ");
+        System.out.println();
 
         System.out.println("Введдите количество позиций для сдвига от 0 до " + (massiv.length - 1));
         int sdvig = scn.nextInt();
         if (sdvig > (massiv.length - 1) || sdvig < 0) {
             System.out.println("Вы ввели неверное число");
         } else {
-            Sdvig(massiv, sdvig);
-            for (int i = 0; i < massiv.length; i++) {
-                System.out.print(massiv[i]);
-            }
+            Sdvig(massiv,massiv2, sdvig);
+            ArrayUtils.printArr(massiv2);
         }
 
     }
 
-
-    public static void Sdvig(int[] massiv, int sdvig) {
-        for (int i = 0; i < massiv.length; i++) {
-            int temp = massiv[massiv.length - 1];
-            for (int j = massiv.length - 1; j > 0; j--) {
-                massiv[j] = massiv[j - 1];
+    public static void Sdvig(int[] massiv, int [] massiv2,int sdvig) {
+        for (int i = massiv.length-1; i >= 0; i--) {
+            if(i+sdvig >= massiv.length){
+                massiv2[i+sdvig-massiv.length] = massiv[i];
             }
-            massiv[0] = temp;
+            else{
+                massiv2[i+sdvig] = massiv[i];
+            }
         }
     }
 }

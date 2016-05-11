@@ -5,7 +5,7 @@ package scr.kurs1.Week3;
  */
 //а) Поменять наибольшую строку массива с наименьшей в двухмерном массиве. (Размер - сумма элементов в строке)
 
-public class Work5_a {
+public class Work5a {
     public static void main(String[] args) {
         int [][] matrix = {{1,2,3,4,5},{6,7,8,9},{10,11}};
         System.out.println("Входящая матрица:");
