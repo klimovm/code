@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Work5a {
     public static void main(String[] args) {
-        String[][] matrix = {{"Олег", "Игор", "Витя", "Саша", "Дима"}, {"Катя", "Даша", "Настя", "Соня"}, {"Кот", "Пес"}};
+        String[][] matrix = {{"Олег", "Ян", "Витя1"}, {"Катя1111", "Даша11", "Настя11", "Соня1"}, {"Кот", "Пес2"}};
         System.out.println("Входящая матрица:");
         printMatrixString(matrix);
 
