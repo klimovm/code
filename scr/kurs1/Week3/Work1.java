@@ -1,7 +1,4 @@
-package scr.kurs1.Week3;
-
-import java.util.Random;
-import java.util.Scanner;
+package scr.kurs1.week3;
 
 /**
  * Created by Mihail on 09.05.2016.
@@ -13,9 +10,9 @@ import java.util.Scanner;
 */
 public class Work1 {
     public static void main(String[] args) {
-        int[][] matrix = Utils.MatrixGenerate();
+        int[][] matrix = MatrixUtils.MatrixGenerate();
 
-        String res = Utils.toString(matrix);
+        String res = MatrixUtils.toString(matrix);
         System.out.println("Случайная матрица:");
         System.out.println(res);
 
@@ -30,7 +27,7 @@ public class Work1 {
             }
 
         }
-        String res2 = Utils.toString(matrix);
+        String res2 = MatrixUtils.toString(matrix);
         System.out.println("Преобразованая матрица:");
         System.out.println(res2);
 

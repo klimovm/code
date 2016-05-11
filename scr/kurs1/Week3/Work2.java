@@ -1,4 +1,4 @@
-package scr.kurs1.Week3;
+package scr.kurs1.week3;
 
 /**
  * Created by miha on 10.05.2016.
@@ -16,7 +16,7 @@ public class Work2 {
             }
 
         }
-        String res2 = Utils.BooleantoString(matrix);
+        String res2 = MatrixUtils.BooleantoString(matrix);
         System.out.println(res2);
     }
 }

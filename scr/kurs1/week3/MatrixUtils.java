@@ -1,4 +1,4 @@
-package scr.kurs1.Week3;
+package scr.kurs1.week3;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by Mihail on 09.05.2016.
  */
-public class Utils {
+public class MatrixUtils {
     public static int[][] MatrixGenerate() {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите число строк");

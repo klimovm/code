@@ -1,4 +1,4 @@
-package scr.kurs1.Week3;
+package scr.kurs1.week3;
 
 /**
  * Created by miha on 10.05.2016.
@@ -12,9 +12,9 @@ package scr.kurs1.Week3;
 public class Work4 {
     public static void main(String[] args) {
         //int [][] matrix = {{2,3,5},{4,2,7},{4,5,2}};
-        int[][] matrix = Utils.MatrixGenerate();
+        int[][] matrix = MatrixUtils.MatrixGenerate();
         System.out.println("Наша матрица:");
-        System.out.println(Utils.toString(matrix));
+        System.out.println(MatrixUtils.toString(matrix));
         int[] mass = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {

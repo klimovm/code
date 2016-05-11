@@ -1,4 +1,4 @@
-package scr.kurs1.Week3;
+package scr.kurs1.week3;
 
 import java.util.Scanner;
 
@@ -10,6 +10,6 @@ public class Work3 {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите строку:");
         String stroka = in.next();
-        System.out.println( Utils.PaliandrMetod(stroka));
+        System.out.println( MatrixUtils.PaliandrMetod(stroka));
     }
 }
