@@ -28,7 +28,7 @@ public class Work1 {
 
         }
         String res2 = MatrixUtils.toString(matrix);
-        System.out.println("Преобразованая матрица: ");
+        System.out.println("Преобразованая матрица:");
         System.out.println(res2);
 
     }

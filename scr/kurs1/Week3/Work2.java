@@ -15,6 +15,7 @@ public class Work2 {
             }
         }
 
+
         String res2 = MatrixUtils.BooleantoString(matrix);
         System.out.println(res2);
     }
