@@ -33,5 +33,13 @@ public class Work5a {
         }
             }
     /******************************************************************************************************************/
+    public static int count(String[] masiv) {
+        String line = "";
+        for (int i = 0; i < masiv.length; i++) {
+            line += masiv[i].toString();
+        }
+        int count = line.length();
+        return count;
+    }
 }
 
