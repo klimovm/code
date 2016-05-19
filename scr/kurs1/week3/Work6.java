@@ -9,7 +9,7 @@ import java.util.zip.Inflater;
  * Created by miha on 16.05.2016.
  */
 /* Требуется найти самую длинную непрерывную цепочку нулей  и единиц в последовательности цифр.
-		Вход:
+        Вход:
 		10001101001
 		Выход:
     	(2,4) - цепочка нулей
@@ -18,23 +18,26 @@ import java.util.zip.Inflater;
 public class Work6 {
     public static void main(String[] args) {
         //012345678
-        String num = "10001010011";
-        String [] mas = num.split("");
-        for (int i = 0; i <mas.length ; i++) {
-            System.out.print(mas[i]+" ");
-        }
-        int indexStart0 = 0;
-        for (int i = 0; i <mas.length-1 ; i++) {
-            if (mas[i] == "0" && mas[i] == mas[i+1]){
-                indexStart0 += indexStart0;
-            }
+        String num = "00011100";
+        char[] mas = num.toCharArray();
+        for (int i = 0; i < mas.length; i++) {
+            System.out.print(mas[i] + " ");
         }
         System.out.println();
-        System.out.println(indexStart0);
-        System.out.println(mas.length);
-        System.out.println(num.length());
+        int zeroCount = countZeroSeq(mas, 3);
+        System.out.println(zeroCount);
+    }
+
+    public static int countZeroSeq(char[] mas, int startPos) {
+        int count = 0;
+        for (int i = startPos; i < mas.length; i++) {
+            if (mas[startPos] == '0' && mas[startPos++] == '0')
+                count++;
+        }
+        return count;
     }
 }
+
 
 
 
