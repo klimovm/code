@@ -24,14 +24,26 @@ public class Work6 {
             System.out.print(mas[i] + " ");
         }
         System.out.println();
-        int zeroCount = countZeroSeq(mas, 3);
+        int zeroCount = countZeroSeq(mas, 0);
         System.out.println(zeroCount);
+
+        int oneCount = countOneSeq(mas, 4);
+        System.out.println(oneCount);
     }
 
     public static int countZeroSeq(char[] mas, int startPos) {
         int count = 0;
         for (int i = startPos; i < mas.length; i++) {
             if (mas[startPos] == '0' && mas[startPos++] == '0')
+                count++;
+        }
+        return count;
+    }
+
+    public static int countOneSeq(char[] mas, int startPos) {
+        int count = 0;
+        for (int i = startPos; i < mas.length; i++) {
+            if (mas[startPos] == '1' && mas[startPos++] == '1')
                 count++;
         }
         return count;
