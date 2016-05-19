@@ -29,6 +29,20 @@ public class Work6 {
 
         int oneCount = countOneSeq(mas, 4);
         System.out.println(oneCount);
+
+        // Поиск максимальной последовательности нулей
+        int maxZeroLink = 0;
+        // Поиск максимальной последовательности единиц
+        int maxOneLink = 0;
+        // Поиск начального индекса с максимальной последовательности нулей
+        int indexStartZero = 0;
+        // Поиск начального индекса с максимальной последовательности единиц
+        int indexStartOne = 0;
+        System.out.println(indexStartZero +","+ maxZeroLink + " - цепочка нулей" );
+        System.out.println(indexStartOne+","+ maxOneLink + " - цепочка единиц" );
+
+
+
     }
 
     public static int countZeroSeq(char[] mas, int startPos) {
