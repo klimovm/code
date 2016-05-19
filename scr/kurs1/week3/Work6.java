@@ -18,7 +18,7 @@ import java.util.zip.Inflater;
 public class Work6 {
     public static void main(String[] args) {
         //012345678
-        String num = "00011100";
+        String num = "11100000";
         char[] mas = num.toCharArray();
         for (int i = 0; i < mas.length; i++) {
             System.out.print(mas[i] + " ");
@@ -38,8 +38,8 @@ public class Work6 {
         int indexStartZero = 0;
         // Поиск начального индекса с максимальной последовательности единиц
         int indexStartOne = 0;
-        System.out.println(indexStartZero +","+ maxZeroLink + " - цепочка нулей" );
-        System.out.println(indexStartOne+","+ maxOneLink + " - цепочка единиц" );
+        System.out.println(indexStartZero +","+(indexStartZero + maxZeroLink) + " - цепочка нулей" );
+        System.out.println(indexStartOne+","+ (indexStartOne+maxOneLink) + " - цепочка единиц" );
 
 
 
