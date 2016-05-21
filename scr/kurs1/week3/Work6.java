@@ -18,17 +18,15 @@ import java.util.zip.Inflater;
 public class Work6 {
     public static void main(String[] args) {
         //012345678
-        String num = "11100000";
+        System.out.println("0 1 2 3 4 5 6 7");
+        String num = "10010001";
         char[] mas = num.toCharArray();
         for (int i = 0; i < mas.length; i++) {
             System.out.print(mas[i] + " ");
         }
         System.out.println();
-        int zeroCount = countZeroSeq(mas, 0);
+        int zeroCount = countZeroSeq(mas, 4);
         System.out.println(zeroCount);
-
-        int oneCount = countOneSeq(mas, 4);
-        System.out.println(oneCount);
 
         // Поиск максимальной последовательности нулей
         int maxZeroLink = 0;
@@ -38,30 +36,45 @@ public class Work6 {
         int indexStartZero = 0;
         // Поиск начального индекса с максимальной последовательности единиц
         int indexStartOne = 0;
-        System.out.println(indexStartZero +","+(indexStartZero + maxZeroLink) + " - цепочка нулей" );
-        System.out.println(indexStartOne+","+ (indexStartOne+maxOneLink) + " - цепочка единиц" );
-
+        //  System.out.println(indexStartZero +","+(indexStartZero + maxZeroLink) + " - цепочка нулей" );
+        //   System.out.println(indexStartOne+","+ (indexStartOne+maxOneLink) + " - цепочка единиц" );
 
 
     }
 
     public static int countZeroSeq(char[] mas, int startPos) {
         int count = 0;
-        for (int i = startPos; i < mas.length; i++) {
-            if (mas[startPos] == '0' && mas[startPos++] == '0')
-                count++;
+
+        if (mas[startPos] == '0') {
+            int count0 = 0;
+            for (int i = startPos; i < mas.length; i++) {
+                if (mas[startPos] == '0' && mas[startPos++] == '0')
+                    count0++;
+            }
+            count=count0;
         }
+
+        if (mas[startPos] == '1') {
+            int count1 = 0;
+            for (int i = startPos; i < mas.length; i++) {
+                if (mas[startPos] == '1' && mas[startPos++] == '1')
+                    count1++;
+            }
+            count=count1;
+        }
+
+
         return count;
     }
 
-    public static int countOneSeq(char[] mas, int startPos) {
-        int count = 0;
-        for (int i = startPos; i < mas.length; i++) {
-            if (mas[startPos] == '1' && mas[startPos++] == '1')
-                count++;
-        }
-        return count;
-    }
+//    public static int countOneSeq(char[] mas, int startPos) {
+//        int count = 0;
+//        for (int i = startPos; i < mas.length; i++) {
+//            if (mas[startPos] == '1' && mas[startPos++] == '1')
+//                count++;
+//        }
+//        return count;
+//    }
 }
 
 
