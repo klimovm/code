@@ -19,6 +19,13 @@ public class Human {
         this.weight = weight;
     }
 
+    public  String getName(){
+        return  this.name;
+    }
+    public void setName(String name){
+        if ((name==null)) return;
+        this.name=name;
+    }
 
     public String asString() {
         return String.format("Name - %s, age - %d, height - %d,sex - %s,", name, age, height, sex);
