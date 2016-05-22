@@ -46,37 +46,24 @@ public class Work6 {
         int count = 0;
 
         if (mas[startPos] == '0') {
-            int count0 = 0;
-            for (int i = startPos; i < mas.length; i++) {
-                if (mas[startPos] == '0' && mas[startPos++] == '0')
-                    count0++;
-            }
-            count=count0;
+            int count0 = countSeqR(mas, startPos, '0');
+            count = count0;
+        } else if (mas[startPos] == '1') {
+            int count1 = countSeqR(mas, startPos, '1');
+            count = count1;
         }
-
-        if (mas[startPos] == '1') {
-            int count1 = 0;
-            for (int i = startPos; i < mas.length; i++) {
-                if (mas[startPos] == '1' && mas[startPos++] == '1')
-                    count1++;
-            }
-            count=count1;
-        }
-
-
         return count;
     }
 
-//    public static int countOneSeq(char[] mas, int startPos) {
-//        int count = 0;
-//        for (int i = startPos; i < mas.length; i++) {
-//            if (mas[startPos] == '1' && mas[startPos++] == '1')
-//                count++;
-//        }
-//        return count;
-//    }
+    public static int countSeqR(char[] mas, int startPos, char sym) {
+        int count = 0;
+
+        for (int i = startPos; i < mas.length; i++) {
+            if (mas[startPos] == sym && mas[startPos++] == sym)
+                count++;
+        }
+        return count;
+    }
+
+
 }
-
-
-
-

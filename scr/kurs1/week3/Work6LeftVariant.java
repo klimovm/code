@@ -18,8 +18,8 @@ public class Work6LeftVariant {
             num += Integer.toString(mas[i]);//записываем полученные символы в другую строку
         }
 
-        int b[] = new int[mas.length-2];
-        int c[] = new int[mas.length-2];
+        int b[] = new int[mas.length];
+        int c[] = new int[mas.length];
         int ind0 = -1;
         int ind1 = -1;
         int length0 = 0;
@@ -33,7 +33,7 @@ public class Work6LeftVariant {
             length1 = 0;
         }
 
-        for (int i = 0; i < mas.length-2; i++) {
+        for (int i = 0; i < mas.length; i++) {
             if (mas[i] == 0) {
                 b[i] = b[i - 1] + 1;
                 if (b[i] > length0) {
@@ -43,7 +43,7 @@ public class Work6LeftVariant {
             }
 
         }
-        for (int i = 0; i < mas.length-2; i++) {
+        for (int i = 0; i < mas.length; i++) {
             if (mas[i] == 1) {
                 c[i] = c[i - 1] + 1;
                 if (b[i] > length1) {
