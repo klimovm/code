@@ -1,5 +1,7 @@
 package scr.myTrening;
 
+import sun.misc.Sort;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -10,11 +12,11 @@ import java.util.Collections;
 public class SortStringArray {
     public static void main(String[] args) {
         String [] auto = {"BMW","Opel","Audi"};
-        Ac(auto);
+        sortAuto(auto);
 
     }
-    public static void Ac (String [] mas) {
-        Arrays.sort(mas, Collections.<String>reverseOrder());
+    public static void sortAuto (String [] mas) {
+        Arrays.sort(mas);
         for (int i = 0; i < mas.length; i++) {
             System.out.println(mas[i] + " ");
         }
