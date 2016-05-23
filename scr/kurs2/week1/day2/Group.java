@@ -54,7 +54,15 @@ public class Group {
 
     public void sortName() {
         for (int i = students.length - 1; i > 0; i--) {
-            System.out.println(students[i]);
+            //students[i].getName().compareTo(students[i+1].getName()
+
+            if (students[i].getName().compareTo(students[i+1].getName()) {
+                return;}
+
+
+
+
+
         }
 
     }
