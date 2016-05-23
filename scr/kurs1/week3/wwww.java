@@ -6,44 +6,47 @@ import java.util.Scanner;
  * Created by miha on 19.05.2016.
  */
 public class wwww {
-    public static void main(String[] args) {
-        int a[] = {2, 2, 0, 0, 0, 0, 1, 1, 3, 0, 0} ;
-        int b[] = new int[a.length];
-        int c[] = new int[a.length];
-        int ind = -1;
-        int ans = 0;
-        int sss = -1;
-        int eee = 0;
-        if(a[0] == 0) {
-            b[0] = 1;
-            ind = 0;
-            sss = 0;
-            ans = 1;
-            eee = 0;
-        }
-        for(int i = 1; i < a.length; i++){
-            if(a[i] == 0) {
-                b[i] = b[i - 1] + 1;
-                if(b[i] > ans){
-                    ans = b[i];
-                    ind = i - b[i] + 1;
-                }
-            }
-        }
-        System.out.println(ind);
 
-        for(int i = 1; i < a.length; i++){
-            if(a[i] == 1) {
-                c[i] = c[i - 1] + 1;
-                if(c[i] > eee){
-                    eee = c[i];
-                    sss = i - c[i] + 1;
-                }
+    public static void main(String[] args) {
+        //012345678
+        String s = "10001101001";
+        ArrayLineSearch0(s);
+        ArrayLineSearch1(s);
+    }
+
+    public static void ArrayLineSearch0(String s) {
+        String[] arr0 = s.split("1");
+        String max0 = arr0[0];
+        int max = 0;
+
+        for (int i = 0; i < arr0.length; i++) {
+            if (max < arr0[i].length()) {
+                max = arr0[i].length();
+                max0 = arr0[i];
+
+            }
+
+
+        }
+        System.out.println("(" + (s.indexOf(max0) + 1) + ","+ ((s.indexOf(max0))+max) + ") - цепочка нулей");
+    }
+
+
+    public static void ArrayLineSearch1(String s) {
+        String[] arr1 = s.split("0");
+        String max1 = arr1[0];
+        int max = 0;
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i]);
+            if (max < arr1[i].length()) {
+                max = arr1[i].length();
+                max1 = arr1[i];
             }
         }
-        System.out.println(sss);
-        System.out.println(ans);
-        System.out.println(eee);
+        System.out.println();
+        System.out.println("(" + (s.indexOf(max1) + 1) + ","+ ((s.indexOf(max1))+max) + ") - цепочка единиц");
     }
+
+
 }
 

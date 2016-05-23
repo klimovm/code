@@ -25,7 +25,7 @@ public class Work6 {
             System.out.print(mas[i] + " ");
         }
         System.out.println();
-        int zeroCount = countZeroSeq(mas, 4);
+        int zeroCount = countZeroSeq(mas, 7);
         System.out.println(zeroCount);
 
         // Поиск максимальной последовательности нулей

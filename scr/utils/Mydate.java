@@ -3,16 +3,18 @@ package scr.utils;
 /**
  * Created by Mihail on 22.05.2016.
  */
-public class Mydate {
-    private  int yearBith;
-    private int monthBith;
-    private  int dayBith;
+public class MyDate {
+    private int yearBirth;
+    private int monthBirth;
+    private int dayBirth;
 
+    public MyDate(int yearBirth, int monthBirth, int dayBirth) {
+        this.yearBirth = yearBirth;
+        this.monthBirth = monthBirth;
+        this.dayBirth = dayBirth;
+    }
 
-    public  Mydate(int yearBith, int monthBith,int dayBith){
-        this.yearBith = yearBith;
-        this.monthBith = monthBith;
-        this.dayBith = dayBith;
-
+    public String asString(){
+        return String.format("%d.%d.%d", dayBirth, monthBirth, yearBirth);
     }
 }

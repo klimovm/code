@@ -39,10 +39,16 @@ public class Work7 {
         int srednee1 = summa1 / (masiv.length/2);
 
         int summa2 = 0;
-        for (int i = (masiv.length-1); i >masiv.length /2; i--) {
+        for (int i =masiv.length /2 ; i <(masiv.length); i++) {
             summa2 = (summa2 + masiv[i]);
         }
-        int srednee2 = summa2;
+        int srednee2 = (masiv.length/2);
+        System.out.println();
+        if (srednee1 > srednee2){
+            System.out.println(masiv[0]+" "+masiv[1]);
+        }
+        else System.out.println(masiv[2]+" "+masiv[3]);
+
     }
 }
 
