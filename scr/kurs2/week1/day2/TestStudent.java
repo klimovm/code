@@ -2,6 +2,8 @@ package scr.kurs2.week1.day2;
 
 import scr.utils.MyDate;
 
+import java.util.Scanner;
+
 /**
  * Created by Mihail on 22.05.2016.
  */
@@ -29,6 +31,14 @@ public class TestStudent {
 
         aco13.sortName();
         System.out.println();
+
+        aco13.search("Alex");
+
+
+
+
+
+
 
 
     }

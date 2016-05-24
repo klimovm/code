@@ -1,8 +1,6 @@
 package scr.kurs2.week1.day2;
 
 
-import java.util.Arrays;
-
 /**
  * Created by Mihail on 22.05.2016.
  */
@@ -44,27 +42,38 @@ public class Group {
         }
     }
 
-    public Student search(String name) {
-        return null;
+    public String search(String name) {
+        String tmp = " ";
+        for (int i = 0; i <counter ; i++) {
+            if (name == students[i].getName()){
+                System.out.println("Такой студент есть в группе");
+            }
+// else if (name != students[i].getName()){
+//                System.out.println("В данной группе нет такого студента");
+//            }
+        }
+        return tmp;
     }
+
 
     public boolean delStudent(Student student) {
         return true;
     }
 
     public void sortName() {
-        for (int i = 0; i < students.length - 1; i++) {
-            int comparation = students[i].getName().compareTo(students[i + 1].getName());
-            if (comparation > 0) {
-                Student tmp = students[i];
-                students[i] = students[i + 1];
-                students[i + 1] = tmp;
+        for (int j = 0; j < counter; j++) {
+            for (int i = 0; i < counter - 1; i++) {
+                int comparation = students[i].getName().compareTo(students[i + 1].getName());
+                if (comparation > 0) {
+                    Student tmp = students[i];
+                    students[i] = students[i + 1];
+                    students[i + 1] = tmp;
+                }
             }
         }
 
-        for (int i = 0; i < students.length; i++) {
+        for (int i = 0; i < counter; i++) {
             System.out.println(students[i].asString());
-
         }
     }
 }

@@ -18,6 +18,7 @@ public class TDD {
                           , expected == actual,expected,actual);
 
         boolean expected1 = true;
+
         boolean actual1 = group.delStudent(st1);
 
         System.out.printf("Metod name - %s, result - %s," +
