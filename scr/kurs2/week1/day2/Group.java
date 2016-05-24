@@ -53,19 +53,18 @@ public class Group {
     }
 
     public void sortName() {
-        for (int i = students.length - 1; i > 0; i--) {
-            //students[i].getName().compareTo(students[i+1].getName()
-
-            if (students[i].getName().compareTo(students[i+1].getName()) {
-                return;}
-
-
-
-
-
+        for (int i = 0; i < students.length - 1; i++) {
+            int comparation = students[i].getName().compareTo(students[i + 1].getName());
+            if (comparation > 0) {
+                Student tmp = students[i];
+                students[i] = students[i + 1];
+                students[i + 1] = tmp;
+            }
         }
 
+        for (int i = 0; i < students.length; i++) {
+            System.out.println(students[i].asString());
+
+        }
     }
-
-
 }

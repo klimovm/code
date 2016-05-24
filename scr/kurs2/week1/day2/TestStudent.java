@@ -14,7 +14,7 @@ public class TestStudent {
         Student st2 = new Student("Jack",
                 new MyDate(1989, 3, 13),
                 'M');
-        Student st3 = new Student("Anna",
+        Student st3 = new Student("Alisa",
                 new MyDate(1988, 1, 3),
                 'W');
 
@@ -25,7 +25,11 @@ public class TestStudent {
         aco13.addStudent(st3);
 
         aco13.showGroup();
+        System.out.println();
+
         aco13.sortName();
+        System.out.println();
+
 
     }
 }
