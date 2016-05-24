@@ -2,8 +2,6 @@ package scr.kurs2.week1.day2;
 
 import scr.utils.MyDate;
 
-import java.util.Scanner;
-
 /**
  * Created by Mihail on 22.05.2016.
  */
@@ -16,7 +14,7 @@ public class TestStudent {
         Student st2 = new Student("Jack",
                 new MyDate(1989, 3, 13),
                 'M');
-        Student st3 = new Student("Alisa",
+        Student st3 = new Student("Anna",
                 new MyDate(1988, 1, 3),
                 'W');
 
@@ -27,19 +25,7 @@ public class TestStudent {
         aco13.addStudent(st3);
 
         aco13.showGroup();
-        System.out.println();
-
-        aco13.sortName();
-        System.out.println();
-
-        aco13.search("Alex");
-
-
-
-
-
-
-
+       // aco13.sortName();
 
     }
 }
