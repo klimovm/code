@@ -71,8 +71,5 @@ public class Group {
             }
         }
 
-        for (int i = 0; i < counter; i++) {
-            System.out.println(students[i].asString());
-        }
     }
 }
