@@ -42,16 +42,13 @@ public class Group {
         }
     }
 
-    public String search(String name) {
-        String student = " ";
+    public Student search(String name) {
         for (int i = 0; i < counter; i++) {
             if (name == students[i].getName()) {
-                return students[i].asString();
-            } else if (name != students[i].getName()) {
-                return null;
+                return students[i];
             }
         }
-        return student;
+        return null;
     }
 
 
@@ -71,5 +68,8 @@ public class Group {
             }
         }
 
+//        for (int i = 0; i < counter; i++) {
+//            System.out.println(students[i].asString());
+//        }
     }
 }
