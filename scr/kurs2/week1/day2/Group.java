@@ -43,16 +43,15 @@ public class Group {
     }
 
     public String search(String name) {
-        String tmp = " ";
-        for (int i = 0; i <counter ; i++) {
-            if (name == students[i].getName()){
-                System.out.println("Такой студент есть в группе");
+        String student = " ";
+        for (int i = 0; i < counter; i++) {
+            if (name == students[i].getName()) {
+                return students[i].asString();
+            } else if (name != students[i].getName()) {
+                return null;
             }
-// else if (name != students[i].getName()){
-//                System.out.println("В данной группе нет такого студента");
-//            }
         }
-        return tmp;
+        return student;
     }
 
 
