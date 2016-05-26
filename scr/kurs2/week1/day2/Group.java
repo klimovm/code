@@ -27,6 +27,7 @@ public class Group {
 
     public boolean addStudent(Student student) {
         if (student == null) return false;
+//               todo make resizeable(сделать изменения размера)
         if (counter >= students.length) return false;
 
 //               todo check if already present in group
@@ -44,19 +45,15 @@ public class Group {
 
     public Student search(String name) {
         for (int i = 0; i < counter; i++) {
-            if (name == students[i].getName()) {
+            if (name.equals(students[i].getName())) {
                 return students[i];
             }
         }
         return null;
     }
 
-
-    public boolean delStudent(Student student) {
-        return true;
-    }
-
     public void sortName() {
+//        todo ry to not repeat comparing of already sorted Students
         for (int j = 0; j < counter; j++) {
             for (int i = 0; i < counter - 1; i++) {
                 int comparation = students[i].getName().compareTo(students[i + 1].getName());
@@ -67,9 +64,24 @@ public class Group {
                 }
             }
         }
-
-//        for (int i = 0; i < counter; i++) {
-//            System.out.println(students[i].asString());
-//        }
+        showGroup();
     }
+
+    public boolean delStudent(Student student) {
+
+        for (int i = 0; i < counter; i++) {
+            if (students[i] == (student)) {
+                students[i] = null;
+
+                for (int j = i; i < counter; j++) {
+                    students[j] = students[j + 1];
+                }
+            }
+            counter--;
+            return true;
+        }
+        return false;
+    }
+
+
 }

@@ -29,9 +29,8 @@ public class TestStudent {
         aco13.showGroup();
         System.out.println();
 
-        aco13.search("Alisa");
-
-
+        aco13.sortName();
+        System.out.println();
 
 
 
