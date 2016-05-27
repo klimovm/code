@@ -67,21 +67,37 @@ public class Group {
         showGroup();
     }
 
-    public boolean delStudent(Student student) {
+    public boolean delStudent(String name) {
+        if (name == null || name.isEmpty()) return false;
 
         for (int i = 0; i < counter; i++) {
-            if (students[i] == (student)) {
+            if (name.equals(students[i].getName())) {
                 students[i] = null;
 
                 for (int j = i; j < counter; j++) {
                     students[j] = students[j + 1];
                 }
-            }
+
             counter--;
             return true;
+            }
         }
         return false;
     }
+
+//    public boolean delStudent(String name){
+//        if (name == null || name.isEmpty()) return false;
+//
+//        for (int i = 0; i < counter; i++){
+//            if (name.equals(students[i].getName())){
+//                System.arraycopy(students, i + 1, students, i, students.length - (i + 1));
+//                counter--;
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//    }
 
 
 }

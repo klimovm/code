@@ -39,10 +39,12 @@ public class TestStudent {
 
 
 
-        aco13.delStudent(st3);
-
-        aco13.showGroup();
+        aco13.delStudent("Jack");
         System.out.println();
+        aco13.sortName();
+
+//        aco13.showGroup();
+//        System.out.println();
 
 
 
