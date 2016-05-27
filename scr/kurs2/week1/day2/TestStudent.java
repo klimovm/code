@@ -19,18 +19,33 @@ public class TestStudent {
         Student st3 = new Student("Alisa",
                 new MyDate(1988, 1, 3),
                 'W');
+        Student st4 = new Student("Linda",
+                new MyDate(1988, 1, 3),
+                'W');
+        Student st5 = new Student("Katy",
+                new MyDate(1988, 1, 3),
+                'W');
 
         Group aco13 = new Group("ACO13");
 
         aco13.addStudent(st1);
         aco13.addStudent(st2);
         aco13.addStudent(st3);
+        aco13.addStudent(st4);
+        aco13.addStudent(st5);
 
         aco13.showGroup();
         System.out.println();
 
-        aco13.sortName();
+
+
+        aco13.delStudent(st3);
+
+        aco13.showGroup();
         System.out.println();
+
+
+
 
 
 

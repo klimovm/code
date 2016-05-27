@@ -73,7 +73,7 @@ public class Group {
             if (students[i] == (student)) {
                 students[i] = null;
 
-                for (int j = i; i < counter; j++) {
+                for (int j = i; j < counter; j++) {
                     students[j] = students[j + 1];
                 }
             }
