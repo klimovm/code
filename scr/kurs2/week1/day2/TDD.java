@@ -19,11 +19,13 @@ public class TDD {
 
         boolean expected1 = true;
 
-        boolean actual1 = group.delStudent(st1);
+        boolean actual1 = group.delStudent("name");
 
         System.out.printf("Metod name - %s, result - %s," +
                         "expected -%s, actual - %s\n", "delStudent"
                 , expected1 == actual1,expected1,actual1);
 
     }
+
+
 }
