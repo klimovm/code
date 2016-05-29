@@ -1,11 +1,13 @@
 package scr.kurs2.week1.day2;
 
 
+import java.util.Arrays;
+
 /**
  * Created by Mihail on 22.05.2016.
  */
 public class Group {
-    private static final int GROUP_SIZE = 20;
+    private static final int GROUP_SIZE = 3;
     private int counter;
     private String name;
     private Student[] students;
@@ -28,7 +30,9 @@ public class Group {
     public boolean addStudent(Student student) {
         if (student == null) return false;
 //               todo make resizeable(сделать изменения размера)
-        if (counter >= students.length) return false;
+        if (counter >= students.length) {
+            students = Arrays.copyOf(students, counter * 2);
+        }
 
 //               todo check if already present in group
 
@@ -67,25 +71,56 @@ public class Group {
         showGroup();
     }
 
+    public static int getGroupSize() {
+        return GROUP_SIZE;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Student[] getStudents() {
+        return students;
+    }
+
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
+
     public boolean delStudent(String name) {
         if (name == null || name.isEmpty()) return false;
 
         for (int i = 0; i < counter; i++) {
             if (name.equals(students[i].getName())) {
-                students[i] = null;
+                //  students[i] = null;
 
-                for (int j = i; j < counter; j++) {
+                for (int j = i; j < counter - 1; j++) {
                     students[j] = students[j + 1];
                 }
 
-            counter--;
-            return true;
+
+                students[counter - 1] = null;
+
+                counter--;
+                return true;
             }
         }
         return false;
     }
 
-//    public boolean delStudent(String name){
+    //    public boolean delStudent(String name){
 //        if (name == null || name.isEmpty()) return false;
 //
 //        for (int i = 0; i < counter; i++){
@@ -98,6 +133,24 @@ public class Group {
 //
 //        return false;
 //    }
+    public boolean delStudentObject(Student student) {
+        if (student == null) return false;
 
+        for (int i = 0; i < counter; i++) {
+            if (student.equals(students[i])) {
+                //  students[i] = null;
+
+                for (int j = i; j < counter - 1; j++) {
+                    students[j] = students[j + 1];
+                }
+
+                students[counter - 1] = null;
+
+                counter--;
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

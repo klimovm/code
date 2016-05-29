@@ -8,9 +8,19 @@ import java.util.Arrays;
 public class MyString {
     private char [] str;
 
-    public MyString (String string ){
-        this.str=str;
-
+    public char[] getStr() {
+        return str;
     }
 
+    public void setStr(char[] str) {
+        this.str = str;
+    }
+
+
+
+    public void printString(char[]str){
+        for (int i = 0; i <str.length ; i++) {
+            System.out.println(str[i]);
+        }
+    }
 }
