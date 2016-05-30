@@ -1,5 +1,7 @@
 package scr.kurs2.week1.day2.homeWork;
 
+import scr.kurs1.week2.ArrayUtils;
+
 import java.util.Arrays;
 
 /**
@@ -27,7 +29,29 @@ public class MyString {
             System.out.print(a[i]);
         }
     }
+
     /******************************************************************************************************************/
-    /*КОНКАТЕНАЦИЯ*/
+    /* КОНКАТЕНАЦИЯ*/
+    public String concatString(char[] a, char[] b) {
+        if (a == null) return charToString(b);
+        if (b == null) return charToString(a);
+        char[] c = new char[a.length + b.length];
+        System.arraycopy(a, 0, c, 0, a.length);
+        System.arraycopy(b, 0, c, a.length, b.length);
+        return charToString(c);
+    }
+    /******************************************************************************************************************/
+    /* ПОНИЖЕНИЕ РЕГИСТРА*/
+    public void lowCase(char[] a){
+        for (char d:a ) {
+            if (Character.isLowerCase(d))
+                d = Character.toUpperCase(d);
+            else  d =Character.toLowerCase(d);
+        }
+    }
+
+
+
+
 
 }

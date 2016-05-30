@@ -8,14 +8,19 @@ public class TestMyString {
 
         MyString myString = new MyString();
 
-        char[] name = {'с', 'а', 'ш','а'};
-        char[] surname = {'п', 'е', 'т','р','о','в'};
+        char[] name = {'с', 'а', 'ш', 'а'};
+        char[] surname = {'п', 'е', 'т', 'р', 'о', 'в'};
 
-        myString.printString(myString.charToString(name));
+        myString.printStringChar(name);
         System.out.println();
 
         myString.printStringChar(surname);
         System.out.println();
+
+        //Конкатенация
+        myString.printString(myString.concatString(name, surname));
+        //регистр
+        myString.lowCase(surname);
 
 
     }
