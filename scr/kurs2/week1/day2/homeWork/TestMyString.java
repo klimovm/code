@@ -8,14 +8,13 @@ public class TestMyString {
 
         MyString myString = new MyString();
 
-        char[] scr = {'a', 'b', 'c'};
-        String a = "bla-bla";
+        char[] name = {'с', 'а', 'ш','а'};
+        char[] surname = {'п', 'е', 'т','р','о','в'};
 
-        /*Запустил два медода для наглядной проверки*/
-        myString.printString(a);
+        myString.printString(myString.charToString(name));
         System.out.println();
 
-        myString.printStringChar(scr);
+        myString.printStringChar(surname);
         System.out.println();
 
 
