@@ -40,18 +40,40 @@ public class MyString {
         System.arraycopy(b, 0, c, a.length, b.length);
         return charToString(c);
     }
+
     /******************************************************************************************************************/
-    /* ПОНИЖЕНИЕ РЕГИСТРА*/
-    public void lowCase(char[] a){
-        for (char d:a ) {
-            if (Character.isLowerCase(d))
-                d = Character.toUpperCase(d);
-            else  d =Character.toLowerCase(d);
+    /* ПОВЫШЕНИЕ И ПОНИЖЕНИЕ РЕГИСТРА*/
+    public String lowCase(char[] a) {
+        String str = "";
+        for (char c : a) {
+            if (Character.isLowerCase(c))
+                c = Character.toUpperCase(c);
+            else
+                c = Character.toLowerCase(c);
+            str += c;
         }
+        return str;
     }
 
+    /******************************************************************************************************************/
+    /*ПОИСК ПОДСТРОКИ*/
+    public String subString(char[] a, int startIndex, int endIndex) {
 
+        char[] v = new char[endIndex - startIndex + 1];
+        for (int i = 0; i < v.length; i++, startIndex++)
+            v[i] = a[startIndex];
+        return charToString(v);
+    }
 
+    /******************************************************************************************************************/
+    /*ПОИСК ЕЛЕМЕНТА ПО ЗАДАНОМУ ИНДЕКСУ*/
+    public String searchElement(char[] a, int index) {
+        char[] g = new char[1];
+        for (int i = 0; i < g.length; i++) {
+            g[i] = a[index];
+        }
+        return charToString(g);
+    }
 
 
 }

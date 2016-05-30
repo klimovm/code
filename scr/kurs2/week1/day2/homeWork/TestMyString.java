@@ -8,7 +8,7 @@ public class TestMyString {
 
         MyString myString = new MyString();
 
-        char[] name = {'с', 'а', 'ш', 'а'};
+        char[] name = {'c', 'а', 'ш', 'а'};
         char[] surname = {'п', 'е', 'т', 'р', 'о', 'в'};
 
         myString.printStringChar(name);
@@ -19,8 +19,19 @@ public class TestMyString {
 
         //Конкатенация
         myString.printString(myString.concatString(name, surname));
+
         //регистр
-        myString.lowCase(surname);
+        System.out.println();
+        System.out.println("регистры");
+        myString.printString(myString.lowCase(name));
+
+        //Подстроки
+        System.out.println();
+        myString.printString(myString.subString(surname, 0, 4));
+
+        //поиск елемента по индексу
+        System.out.println();
+        System.out.println(myString.searchElement(name,2));
 
 
     }

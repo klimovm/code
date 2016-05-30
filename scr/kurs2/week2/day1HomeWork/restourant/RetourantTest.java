@@ -13,6 +13,8 @@ public class RetourantTest {
         Stuff weiter = new Waiter("Vika",21,"W",1122);
         Stuff bartender = new Bartender("Oleg",33,"M",3322,20);
 
+
+
         weiter.work();
     }
 }
