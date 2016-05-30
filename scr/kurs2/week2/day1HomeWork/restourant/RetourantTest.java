@@ -1,7 +1,5 @@
 package scr.kurs2.week2.day1HomeWork.restourant;
 
-import scr.kurs2.week2.day1ClassWork.inheritence.Coder;
-import scr.kurs2.week2.day1ClassWork.inheritence.QA;
 
 /**
  * Created by Mihail on 28.05.2016.

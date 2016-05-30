@@ -6,21 +6,18 @@ import java.util.Arrays;
  * Created by miha on 27.05.2016.
  */
 public class MyString {
-    private char [] str;
+    private char[] strokaChar;
+    private String strokaString;
 
-    public char[] getStr() {
-        return str;
-    }
-
-    public void setStr(char[] str) {
-        this.str = str;
-    }
-
-
-
-    public void printString(char[]str){
-        for (int i = 0; i <str.length ; i++) {
-            System.out.println(str[i]);
+/********************************************************************************************************************/
+/*написал два метода что бы лучше запоминалось*/
+    public void printString(String a) {
+            System.out.print(a);
+        }
+    public void  printStringChar(char [] a){
+        for (int i = 0; i <a.length ; i++) {
+            System.out.print(a[i]);
         }
     }
+
 }
