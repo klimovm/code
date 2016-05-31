@@ -15,10 +15,11 @@ public class Student implements Comparable {
 
     private char gender;
 
-    public Student(String name, MyDate birthDay, char gender) {
+    public Student(String name, MyDate birthDay, char gender,double averageMark) {
         this.birthDay = birthDay;
         this.name = name;
         this.gender = gender;
+        this.averageMark = averageMark;
     }
 
     public String getName() {
@@ -58,6 +59,7 @@ public class Student implements Comparable {
         return String.format("%2$s, BD - %1$s, average mark - %3$.1f",  birthDay.asString(), name, averageMark);
     }
 
+
     @Override
     public int compareTo(Object o) {
         if (this == o) return 0;
@@ -71,7 +73,6 @@ public class Student implements Comparable {
     }
 
     /******************************************************************************************************************/
-
 
 
 

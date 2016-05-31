@@ -8,7 +8,7 @@ import scr.utils.MyDate;
 public class TDD {
     public static void main(String[] args) {
         Group group = new Group("ACO13");
-        Student st1 = new Student("Aex", new MyDate(1989, 10, 11), 'M');
+        Student st1 = new Student("Aex", new MyDate(1989, 10, 11), 'M',1.1);
 
         boolean expected = true;
         boolean actual = group.addStudent(st1);

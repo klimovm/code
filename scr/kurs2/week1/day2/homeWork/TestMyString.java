@@ -11,7 +11,9 @@ public class TestMyString {
         char[] name = {'c', 'а', 'ш', 'а'};
         char[] surname = {'п', 'е', 'т', 'р', 'о', 'в'};
 
-        //Вывод массива на консоль
+        myString.printStringChar(name);
+        System.out.println();
+
         myString.printStringChar(surname);
         System.out.println();
 
@@ -19,18 +21,13 @@ public class TestMyString {
         myString.printString(myString.concatString(name, surname));
 
         //регистр
-        System.out.println();
         myString.printString(myString.lowCase(name));
 
         //Подстроки
-        System.out.println();
-        myString.printString(myString.subString(surname, 1, 4));
+        myString.printString(myString.subString(surname, 0, 4));
 
         //поиск елемента по индексу
-        System.out.println();
-        System.out.println(myString.searchElement(surname,2));
-        //удаление пробелов
-       // System.out.println(myString.trimDel(surname));
+        System.out.println(myString.searchElement(name,2));
 
 
     }
