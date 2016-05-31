@@ -74,6 +74,14 @@ public class MyString {
         }
         return charToString(g);
     }
+    /******************************************************************************************************************/
+    /*УДАЛЕНИЕ ПРОБЕЛОВ*/
+   /* public String trimDel (char [] a){
+        String b = charToString(a);
+        for (int i = 0; i <b.length() ; i++)
+            b = b.trim();
+        return b;
+    }*/
 
 
 }
