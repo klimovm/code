@@ -1,6 +1,6 @@
 package scr.kurs2.week1.day2;
 
-import scr.utils.MyDate;
+import scr.utils.Mydate;
 
 /**
  * Created by miha on 23.05.2016.
@@ -8,7 +8,7 @@ import scr.utils.MyDate;
 public class TDD {
     public static void main(String[] args) {
         Group group = new Group("ACO13");
-        Student st1 = new Student("Aex", new MyDate(1989, 10, 11), 'M');
+        Student st1 = new Student("Aex", new Mydate(1989, 10, 11), 'M');
 
         boolean expected = true;
         boolean actual = group.addStudent(st1);

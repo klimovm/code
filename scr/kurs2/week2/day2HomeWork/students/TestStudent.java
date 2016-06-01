@@ -1,6 +1,6 @@
 package scr.kurs2.week2.day2HomeWork.students;
 
-import scr.utils.MyDate;
+import scr.utils.Mydate;
 
 import java.util.Arrays;
 
@@ -11,17 +11,17 @@ public class TestStudent {
     public static void main(String[] args) {
 
         Student st1 = new Student("Alex",
-                new MyDate(1989, 12, 12),
+                new Mydate(1986, 1, 1),
                 'M',200);
         Student st2 = new Student("Jack",
-                new MyDate(1989, 3, 13),
+                new Mydate(1987, 3, 13),
                 'M',1.3);
         Student st3 = new Student("Anna",
-                new MyDate(1988, 1, 3),
+                new Mydate(1988, 1, 3),
                 'W',1.4);
 
         Student st4 = new Student("Jeniya",
-                new MyDate(1988, 1, 3),
+                new Mydate(1989, 1, 4),
                 'W',100);
 
         Group aco13 = new Group("ACO13");
@@ -65,10 +65,13 @@ public class TestStudent {
                 System.out.println(aco13.getStudents()[i].toString());
         }
 
-        System.out.println("======================Сортирока по имени==============================");
+        System.out.println("======================Сортирока по имени===============================");
         aco13.sortName();
-        System.out.println("======================Сортирока по оценкам==============================");
-        Arrays.sort(aco13.getStudents(),new SortByMark());
+        System.out.println("======================Сортирока по оценкам=============================");
+        Arrays.sort(aco13.getStudents(),new ComparatorSortByMark());
+        aco13.showGroup();
+        System.out.println("======================Сортирока по дате рождения=======================");
+        Arrays.sort(aco13.getStudents(),new ComparatorSortByBD());
         aco13.showGroup();
 
 

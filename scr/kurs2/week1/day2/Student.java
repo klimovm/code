@@ -1,6 +1,6 @@
 package scr.kurs2.week1.day2;
 
-import scr.utils.MyDate;
+import scr.utils.Mydate;
 
 /**
  * Created by Mihail on 22.05.2016.
@@ -9,12 +9,12 @@ public class Student {
 
     private String name;
 
-    private MyDate birthDay;
+    private Mydate birthDay;
 
     private double averageMark;
     private char gender;
 
-    public Student(String name, MyDate birthDay, char gender) {
+    public Student(String name, Mydate birthDay, char gender) {
         this.birthDay = birthDay;
         this.name = name;
         this.gender = gender;
@@ -24,7 +24,7 @@ public class Student {
         return name;
     }
 
-    public MyDate getBirthDay() {
+    public Mydate getBirthDay() {
         return birthDay;
     }
 

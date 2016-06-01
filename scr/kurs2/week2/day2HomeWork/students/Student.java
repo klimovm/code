@@ -1,21 +1,21 @@
 package scr.kurs2.week2.day2HomeWork.students;
 
-import scr.utils.MyDate;
+import scr.utils.Mydate;
 
 /**
  * Created by Mihail on 22.05.2016.
  */
-public class Student implements Comparable {
+public class Student implements Comparable  {
 
     private String name;
 
-    private MyDate birthDay;
+    private Mydate birthDay;
 
     private double averageMark;
 
     private char gender;
 
-    public Student(String name, MyDate birthDay, char gender,double averageMark) {
+    public Student(String name, Mydate birthDay, char gender, double averageMark) {
         this.birthDay = birthDay;
         this.name = name;
         this.gender = gender;
@@ -26,7 +26,7 @@ public class Student implements Comparable {
         return name;
     }
 
-    public MyDate getBirthDay() {
+    public Mydate getBirthDay() {
         return birthDay;
     }
 

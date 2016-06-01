@@ -1,6 +1,6 @@
 package scr.kurs2.week1.day2;
 
-import scr.utils.MyDate;
+import scr.utils.Mydate;
 
 import java.util.Arrays;
 
@@ -11,17 +11,17 @@ public class TestStudent {
     public static void main(String[] args) {
 
         Student st1 = new Student("Alex",
-                new MyDate(1989, 12, 12),
+                new Mydate(1989, 12, 12),
                 'M');
         Student st2 = new Student("Jack",
-                new MyDate(1989, 3, 13),
+                new Mydate(1989, 3, 13),
                 'M');
         Student st3 = new Student("Anna",
-                new MyDate(1988, 1, 3),
+                new Mydate(1988, 1, 3),
                 'W');
 
         Student st4 = new Student("Jeniya",
-                new MyDate(1988, 1, 3),
+                new Mydate(1988, 1, 3),
                 'W');
 
         Group aco13 = new Group("ACO13");
