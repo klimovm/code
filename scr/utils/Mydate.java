@@ -1,5 +1,7 @@
 package scr.utils;
 
+import scr.kurs2.week2.day2HomeWork.students.Student;
+
 import java.util.Objects;
 
 /**
@@ -22,20 +24,33 @@ public class Mydate implements Comparable {
     }
 
 
+    /******************************************************************************************************************/
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) {return false;}
+        if(!(obj instanceof Student)){return false;}
+        Mydate obj1 = (Mydate) obj;
+     // TODO: изучить и проработать этот метод
+        return obj.equals(obj1);
+    }
+    /******************************************************************************************************************/
     @Override
     public int compareTo(Object o) {
-        if (this.yearBirth != yearBirth) {
-            return this.yearBirth - yearBirth;
+
+        Mydate date = (Mydate) o;
+
+        if (this.yearBirth != date.getYearBirth()) {
+            return this.yearBirth - date.getYearBirth();
         }
-        if (this.monthBirth != monthBirth) {
-            return this.monthBirth - monthBirth;
+        if (this.monthBirth != date.getMonthBirth()) {
+            return this.monthBirth - date.getMonthBirth();
         }
-        if (this.dayBirth != dayBirth) {
-            return this.dayBirth - dayBirth;
+        if (this.dayBirth != date.getDayBirth()) {
+            return this.dayBirth - date.dayBirth;
         }
         return 0;
     }
-
+    /******************************************************************************************************************/
 
     public int getYearBirth() {
         return yearBirth;

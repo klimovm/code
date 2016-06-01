@@ -42,6 +42,10 @@ public class Student implements Comparable  {
         this.averageMark = averageMark;
     }
 
+    public void setBirthDay(Mydate birthDay) {
+        this.birthDay = birthDay;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

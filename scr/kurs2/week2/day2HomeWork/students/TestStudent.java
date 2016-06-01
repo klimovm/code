@@ -11,18 +11,23 @@ public class TestStudent {
     public static void main(String[] args) {
 
         Student st1 = new Student("Alex",
-                new Mydate(1986, 1, 1),
-                'M',200);
+                new Mydate(1986, 1, 3),
+                'M',140);
         Student st2 = new Student("Jack",
-                new Mydate(1987, 3, 13),
+                new Mydate(1986, 1, 1),
                 'M',1.3);
         Student st3 = new Student("Anna",
-                new Mydate(1988, 1, 3),
-                'W',1.4);
+                new Mydate(1986, 1, 3),
+                'W',140);
 
         Student st4 = new Student("Jeniya",
-                new Mydate(1989, 1, 4),
+                new Mydate(1986, 1, 2),
                 'W',100);
+        Student st5 = new Student("Alex",
+                new Mydate(1986, 1, 3),
+                'M',140);
+
+
 
         Group aco13 = new Group("ACO13");
 
@@ -30,6 +35,7 @@ public class TestStudent {
         aco13.addStudent(st2);
         aco13.addStudent(st3);
         aco13.addStudent(st4);
+        aco13.addStudent(st5);
 
         aco13.showGroup();
         System.out.println();
@@ -68,11 +74,13 @@ public class TestStudent {
         System.out.println("======================Сортирока по имени===============================");
         aco13.sortName();
         System.out.println("======================Сортирока по оценкам=============================");
-        Arrays.sort(aco13.getStudents(),new ComparatorSortByMark());
+        //Arrays.sort(aco13.getStudents(),new ComparatorSortByMark());
+        aco13.sortByMark();
         aco13.showGroup();
         System.out.println("======================Сортирока по дате рождения=======================");
-        Arrays.sort(aco13.getStudents(),new ComparatorSortByBD());
+        aco13.sortByBD();
         aco13.showGroup();
+        System.out.println("======================Сравнение======================");
 
 
 
