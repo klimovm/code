@@ -27,12 +27,19 @@ public class Mydate implements Comparable {
     /******************************************************************************************************************/
     @Override
     public boolean equals(Object obj) {
-        if(obj == null) {return false;}
-        if(!(obj instanceof Student)){return false;}
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Mydate)) {
+            return false;
+        }
         Mydate obj1 = (Mydate) obj;
-     // TODO: изучить и проработать этот метод
-        return obj.equals(obj1);
+        // TODO: изучить и проработать этот метод.Сравнить поля екземпляра класса
+        return yearBirth ==(obj1.getYearBirth())
+                && monthBirth == (obj1.getMonthBirth())
+                && dayBirth == (obj1.getDayBirth());
     }
+
     /******************************************************************************************************************/
     @Override
     public int compareTo(Object o) {
@@ -50,6 +57,7 @@ public class Mydate implements Comparable {
         }
         return 0;
     }
+
     /******************************************************************************************************************/
 
     public int getYearBirth() {

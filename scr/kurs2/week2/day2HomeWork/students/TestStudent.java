@@ -74,15 +74,12 @@ public class TestStudent {
         System.out.println("======================Сортирока по имени===============================");
         aco13.sortName();
         System.out.println("======================Сортирока по оценкам=============================");
-        //Arrays.sort(aco13.getStudents(),new ComparatorSortByMark());
         aco13.sortByMark();
         aco13.showGroup();
         System.out.println("======================Сортирока по дате рождения=======================");
         aco13.sortByBD();
         aco13.showGroup();
         System.out.println("======================Сравнение======================");
-
-
-
+        System.out.println(st1.equals(st5));
     }
 }

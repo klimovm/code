@@ -55,7 +55,7 @@ public class Student implements Comparable  {
 
         Student tmp = (Student) o;
 
-        return this.name.equals(tmp.name) && this.birthDay.equals(tmp.birthDay);
+        return this.name.equals(tmp.name)&& this.birthDay.equals(tmp.birthDay);
 
     }
 

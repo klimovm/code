@@ -19,4 +19,7 @@ public class ComparatorSortByBD implements Comparator <Student> {
 
         return date1.compareTo(date2);
     }
+    public boolean equalsBD(){
+        return true;
+    }
 }
