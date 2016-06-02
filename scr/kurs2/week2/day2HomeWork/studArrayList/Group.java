@@ -1,6 +1,7 @@
 package scr.kurs2.week2.day2HomeWork.studArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 /**
@@ -21,8 +22,11 @@ public class Group {
 
     /***********************Метод добавление студента в группу********************/
     public boolean addStudent(Student student) {
-
         if (student == null) return false;
+        for (int i = 0; i <counter ; i++) {
+            if (student.equals(students.get(i))) return false;
+        }
+        students.add(counter,student);
         counter++;
         return true;
     }
