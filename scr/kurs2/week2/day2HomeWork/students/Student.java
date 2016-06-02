@@ -8,11 +8,8 @@ import scr.utils.Mydate;
 public class Student implements Comparable  {
 
     private String name;
-
     private Mydate birthDay;
-
     private double averageMark;
-
     private char gender;
 
     public Student(String name, Mydate birthDay, char gender, double averageMark) {

@@ -24,7 +24,7 @@ public class TestStudent {
                 new Mydate(1986, 1, 2),
                 'W',100);
         Student st5 = new Student("Alex",
-                new Mydate(1986, 1, 3),
+                new Mydate(1986, 1, 2),
                 'M',140);
 
 
