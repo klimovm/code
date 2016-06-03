@@ -13,6 +13,7 @@ public class TestStudent {
         Student student2 = new Student("Коля", new Mydate(1988, 04, 21), 11.2, 181);
         Student student3 = new Student("Олег", new Mydate(1988, 04, 22), 13.2, 182);
         Student student4 = new Student("Ваня", new Mydate(1988, 04, 23), 13.0, 182);
+        Student student5 = new Student("Саша", new Mydate(1989, 04, 20), 15.2, 180);
 
         /*************************создаем группу**************************************/
         Group aco13 = new Group("ACO13");
@@ -21,6 +22,7 @@ public class TestStudent {
         aco13.addStudent(student2);
         aco13.addStudent(student3);
         aco13.addStudent(student4);
+        aco13.addStudent(student5);
 
         System.out.println("================Показать нашу группу===================");
         aco13.showGroup();
@@ -40,6 +42,9 @@ public class TestStudent {
         System.out.println("===============Удаление студента=======================");
         aco13.delStudentObject(student3);
         aco13.showGroup();
+
+        System.out.println("===============Сравнение студента=======================");
+        System.out.println(student1.equals(student4));
 
 
 
