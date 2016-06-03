@@ -8,7 +8,6 @@ import java.util.ArrayList;
  */
 public class Group {
 
-    private int counter;
     private String name;
     private ArrayList<Student> students = new ArrayList<>();
 
@@ -31,8 +30,7 @@ public class Group {
         //ВТОРОЙ ВАРИАНТ РЕАЛИЗАЦИИ без цикла на проверку есть ли обьект в ArrayList
         if (student == null) return false;
         if (students.contains(student)) return false;
-        students.add(counter, student);
-        counter++;
+        students.add(student);
         return true;
     }
 
@@ -47,46 +45,46 @@ public class Group {
 
     /********************************Сортировка по имени**************************/
     public void sortName() {
-        for (int i = 0; i < counter; i++) {
-            for (int j = i + 1; j < counter; j++) {
+      /*  for (int i = 0; i < students.size(); i++) {
+            for (int j = i + 1; j < students.size(); j++) {
                 if (students.get(i).getName().compareTo(students.get(j).getName()) > 0) {
                     Student tmp = students.get(j);
                     students.set(j, students.get(i));
                     students.set(i, tmp);
                 }
             }
-        }
-
+        }*/
     }
+
 
     /********************************Сортировка по дате**************************/
     public void sortBD() {
-        for (int i = 0; i < counter; i++) {
-            for (int j = i + 1; j < counter; j++) {
+      /*  for (int i = 0; i < students.size(); i++) {
+            for (int j = i + 1; j < students.size(); j++) {
                 if (students.get(i).getBd().compareTo(students.get(j).getBd()) > 0) {
                     Student tmp = students.get(j);
                     students.set(j, students.get(i));
                     students.set(i, tmp);
                 }
             }
-        }
+        }*/
+
     }
 
     /********************************* Сортировка по среднему балу**************************/
     public void sortMark() {
-        for (int i = 0; i < counter; i++) {
-            for (int j = i + 1; j < counter; j++) {
+        /*for (int i = 0; i < students.size(); i++) {
+            for (int j = i + 1; j < students.size(); j++) {
                 if (students.get(i).getMiddleMark()>(students.get(j).getMiddleMark()) ) {
                     Student tmp = students.get(j);
                     students.set(j, students.get(i));
                     students.set(i, tmp);
                 }
             }
-        }
+        }*/
     }
     /********************************* Удаление объекта**************************/
     public boolean delStudentObject( Student student) {
-        if (student == null) return false;
         students.remove(student);
         return true;
     }

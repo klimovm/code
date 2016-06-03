@@ -13,7 +13,7 @@ public class TestStudent {
         Student student2 = new Student("Коля", new Mydate(1988, 04, 21), 11.2, 181);
         Student student3 = new Student("Олег", new Mydate(1988, 04, 22), 13.2, 182);
         Student student4 = new Student("Ваня", new Mydate(1988, 04, 23), 13.0, 182);
-        Student student5 = new Student("Саша", new Mydate(1989, 04, 20), 15.2, 180);
+        Student student5 = new Student("Толя", new Mydate(1989, 04, 20), 10.2, 180);
 
         /*************************создаем группу**************************************/
         Group aco13 = new Group("ACO13");
@@ -30,6 +30,7 @@ public class TestStudent {
         System.out.println("===============Сортировка по имени=====================");
         aco13.sortName();
         aco13.showGroup();
+
 
         System.out.println("===============Сортировка по дате======================");
         aco13.sortBD();
