@@ -72,12 +72,12 @@ public class Group {
         showGroup();
     }
 
-    public void sortByMark(){
-        Arrays.sort(getStudents(),new ComparatorSortByMark());
+    public void sortByMark() {
+        Arrays.sort(getStudents(), new ComparatorSortByMark());
     }
 
-    public void sortByBD(){
-        Arrays.sort(getStudents(),new ComparatorSortByBD());
+    public void sortByBD() {
+        Arrays.sort(getStudents(), new ComparatorSortByBD());
     }
 
     public static int getGroupSize() {

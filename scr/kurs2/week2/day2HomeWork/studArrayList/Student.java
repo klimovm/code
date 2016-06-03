@@ -5,7 +5,7 @@ import scr.utils.Mydate;
 /**
  * Created by miha on 02.06.2016.
  */
-public class Student {
+public class Student implements Comparable {
 
     private String name;
     private Mydate bd;
@@ -44,7 +44,33 @@ public class Student {
         return String.format("%2$s, BD - %1$s, average mark - %3$.1f, height - %4$d",
                 bd.asString(), name, middleMark, heidht);
     }
-    /************************************************************************************/
+
+
+
+    /******************************Метод сравнения********************************************/
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(o == null) return false;
+
+        if(!(o instanceof Student)) return false;
+
+        Student tmp = (Student) o;
+
+        return this.name.equals(tmp.name)&& this.bd.equals(tmp.bd);
+
+    }
+    /******************************Сортировка********************************************/
+
+    public int compareTo(Object o) {
+        if (this == o) return 0;
+        if(o != null && o instanceof Student) {
+            Student tmp = (Student)o;
+
+            return this.name.compareTo(tmp.name);
+        }
+        return -1;
+    }
 
 
 }
