@@ -33,8 +33,8 @@ public class Group {
         //ВТОРОЙ ВАРИАНТ РЕАЛИЗАЦИИ без цикла на проверку есть ли обьект в ArrayList
         if (student == null) return false;
         if (students.contains(student)) return false;
-        students.add(student);
-        return true;
+
+        return students.add(student);
     }
 
     /*************************Метод вывода группы на консоль************************/
@@ -92,7 +92,7 @@ public class Group {
     }
     /********************************* Удаление объекта**************************/
     public boolean delStudentObject( Student student) {
-        students.remove(student);
-        return true;
+
+        return students.remove(student);
     }
 }

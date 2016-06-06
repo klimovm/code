@@ -7,7 +7,5 @@ public class TestMyArrayList {
     public static void main(String[] args) {
         MyArrayList a = new MyArrayList();
         Object  object1 = "Саша";
-
-
     }
 }
