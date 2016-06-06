@@ -1,9 +1,6 @@
 package scr.kurs2.week2.day2HomeWork.studArrayList;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 
 /**
@@ -13,6 +10,7 @@ public class Group {
 
     private String name;
     private ArrayList<Student> students = new ArrayList<>();
+
 
     /*************************Метод создает новую группу*****************************/
     public Group(String name) {
@@ -48,7 +46,8 @@ public class Group {
 
     /********************************Сортировка по имени**************************/
     public void sortName() {
-        students.sort(null);
+       // students.sort(null);
+        Collections.sort(students);
       /*  for (int i = 0; i < students.size(); i++) {
             for (int j = i + 1; j < students.size(); j++) {
                 if (students.get(i).getName().compareTo(students.get(j).getName()) > 0) {
@@ -63,7 +62,9 @@ public class Group {
 
     /********************************Сортировка по дате**************************/
     public void sortBD() {
-        students.sort(new ComparatorSortByBD());
+        //students.sort(new ComparatorSortByBD());
+        Collections.sort(students,new ComparatorSortByBD());
+
 
       /*  for (int i = 0; i < students.size(); i++) {
             for (int j = i + 1; j < students.size(); j++) {
@@ -79,7 +80,8 @@ public class Group {
 
     /********************************* Сортировка по среднему балу**************************/
     public void sortMark() {
-        students.sort(new ComparatorSortByMark());
+       // students.sort(new ComparatorSortByMark());
+        Collections.sort(students,new ComparatorSortByMark());
         /*for (int i = 0; i < students.size(); i++) {
             for (int j = i + 1; j < students.size(); j++) {
                 if (students.get(i).getMiddleMark()>(students.get(j).getMiddleMark()) ) {
