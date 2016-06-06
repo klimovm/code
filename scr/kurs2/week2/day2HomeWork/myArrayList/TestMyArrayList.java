@@ -7,17 +7,13 @@ import java.util.ArrayList;
  */
 public class TestMyArrayList {
     public static void main(String[] args) {
-        Worker worker1 = new Worker("Саша","Петров",1988,1);
-        Worker worker2 = new Worker("Коля","Иванов",1989,2);
-        Worker worker3 = new Worker("Катя","Жукова",1986,4);
-
-        String a = "22";
+        Worker worker1 = new Worker("Саша", "Петров", 1988, 1);
+        Worker worker2 = new Worker("Коля", "Иванов", 1989, 2);
+        Worker worker3 = new Worker("Катя", "Жукова", 1986, 4);
 
         MyArrayList list = new MyArrayList();
 
-        list.add(a);
-        System.out.println(list.toString());
-        }
-
-
+        list.add(worker1);
+        list.show();
     }
+}
