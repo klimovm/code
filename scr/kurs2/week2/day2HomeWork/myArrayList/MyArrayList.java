@@ -8,6 +8,15 @@ public class MyArrayList {
 
 
     private Object[] elements;
+    private int size;//для изменения общего количества
+    private static final int DEFAULT_SIZE = 10;
+    private int counter;// количество занятых ячеек не null
+
+    public MyArrayList() {
+        elements = new Object[this.DEFAULT_SIZE];
+        size = DEFAULT_SIZE;
+    }
+
 
     public Object[] getElements() {
         return elements;
@@ -37,15 +46,6 @@ public class MyArrayList {
         this.counter = counter;
     }
 
-    private int size;
-    private static final int DEFAULT_SIZE = 10;
-    private int counter;
-
-
-    public MyArrayList() {
-        elements = new Object[this.DEFAULT_SIZE];
-        size = DEFAULT_SIZE;
-    }
 
     /********************
      * Добавление объекта в ArrayList
@@ -65,14 +65,37 @@ public class MyArrayList {
         return true;
     }
 
-    public void show(){
-        for (int i = 0; i <elements.size(); i++) {
-            System.out.println(elements.get(i));
+    /*********
+     * Вывод на экран
+     ************/
+    public void show() {
+        for (int i = 0; i < counter; i++) {
+            System.out.println(elements[i]);
         }
     }
 
+    /****************
+     * Удаление объекта с листа
+     ******/
+    public boolean remove(Object obj) {
+
+        for (int i = 0; i < counter; i++) {
+            if (obj.equals(elements[i])) {
+                System.arraycopy(elements, i +1 , elements, i, counter - i-1);
+                counter--;
+            }
+        }
+        return true;
+    }
 
 
+    public boolean removeInt(int index){
+        int numMoved = size - index - 1;
+        System.arraycopy(elements, index + 1, elements, index, numMoved);
+        elements[--size] = null;
+        counter--;
+        return true;
+    }
 }
 
 

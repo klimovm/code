@@ -14,6 +14,28 @@ public class TestMyArrayList {
         MyArrayList list = new MyArrayList();
 
         list.add(worker1);
+        list.add(worker2);
+        list.add(worker1);
+        list.add(worker3);
+        list.add(worker1);
+        list.add(worker1);
+        list.add(worker1);
+
         list.show();
+        System.out.println("Размер листа с null: " + list.getSize());
+        System.out.println("Размер листа реальных значений: " + list.getCounter());
+
+        System.out.println("======Удаление по индексу==========");
+        list.removeInt(1);
+        list.show();
+        System.out.println("Размер листа с null: " + list.getSize());
+        System.out.println("Размер листа реальных значений: " + list.getCounter());
+
+        System.out.println("======Удаление по объекту==========");
+        list.remove(worker1);
+        list.show();
+        System.out.println("Размер листа с null: " + list.getSize());
+        System.out.println("Размер листа реальных значений: " + list.getCounter());
+
     }
 }
