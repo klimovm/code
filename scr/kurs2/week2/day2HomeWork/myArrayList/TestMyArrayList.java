@@ -44,10 +44,14 @@ public class TestMyArrayList {
 
 
         System.out.println("========Добавляем в список объект в заданый индекс ============");
-        list.addIndex(-1,"ddd");
+        list.addIndex(1,"ddd");
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
+
+
+        System.out.println("========get============");
+        System.out.println(list.get(0));
 
 
     }

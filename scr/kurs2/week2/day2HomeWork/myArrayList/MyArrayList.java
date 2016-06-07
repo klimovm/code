@@ -1,6 +1,8 @@
 package scr.kurs2.week2.day2HomeWork.myArrayList;
 
 
+import java.util.Objects;
+
 /**
  * Created by miha on 03.06.2016.
  */
@@ -72,7 +74,7 @@ public class MyArrayList {
 
     /*********Добавление объекта в ArrayList по индексу*******/
     public boolean addIndex(int index,Object obj) {
-            if (index <= counter && index >= 0){
+            if (index < counter && index >= 0){
                 System.arraycopy(elements, index, elements, index + 1, counter - index);
                 elements[index] = obj;
                 size++;
@@ -101,6 +103,14 @@ public class MyArrayList {
             elements[--counter] = null;                 //уменьшаем размер массива и забываем про последний элемент
             return true;
         } else return false;
+    }
+
+    /*************Метод получения объекта по индексу********************/
+    public Object get(int index) {
+        if (index >= 0 && index < counter) {
+            return elements[index];
+        }
+        return null;
     }
 
 }
