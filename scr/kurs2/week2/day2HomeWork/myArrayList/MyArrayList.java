@@ -46,13 +46,15 @@ public class MyArrayList {
         elements = new Object[this.DEFAULT_SIZE];
         size = DEFAULT_SIZE;
     }
-    /********Добавление объекта в ArrayList*******/
-    public void  show(){
-        for (int i = 0; i <counter ; i++) {
+
+    /*********Добавление объекта в ArrayList*******/
+    public void show() {
+        for (int i = 0; i < counter; i++) {
             System.out.println(elements[i]);
         }
     }
-    /********Добавление объекта в ArrayList*******/
+
+    /*********Добавление объекта в ArrayList******/
     public boolean add(Object obj) {
         if (obj == null) return false;
         else if (counter < size) {
@@ -67,27 +69,38 @@ public class MyArrayList {
         }
         return true;
     }
-    /********Удаление объекта в ArrayList*******/
-    public boolean remove(Object obj) {
-        if (obj == null) return false;
-        for (int i = 0; i < counter; i++) {
-            if (obj.equals(elements[i])){
-                System.arraycopy(elements, i + 1 , elements, i, counter - i- 1);
-                elements[--counter]=null;
+
+    /*********Добавление объекта в ArrayList по индексу*******/
+    public boolean addIndex(int index,Object obj) {
+            if (index <= counter && index >= 0){
+                System.arraycopy(elements, index, elements, index + 1, counter - index);
+                elements[index] = obj;
+                size++;
+                return true;
             }
-        }
-        return  true;
+        return false;
     }
 
-    /********Удаление объекта в ArrayList по индексу*******/
-    public boolean removeIndex(int index){
-        if (index < counter && index >= 0){
-        int numForCopy = counter - index - 1;     //какое количество элементов надо скопировать
-        System.arraycopy(elements, index + 1, elements, index, numForCopy);
-        elements[--counter]=null;                 //уменьшаем размер массива и забываем про последний элемент
-        return true;}
+    /*********Удаление объекта в ArrayList*******/
+    public boolean remove(Object obj) {
+        for (int i = 0; i < counter; i++) {
+            if (elements[i].equals(obj)) {
+                System.arraycopy(elements, i + 1, elements, i, counter - i - 1);
+                elements[--counter] = null;
+                return true;
+            }
+        }
+        return false;
+    }
 
-        else return false;
+    /*********Удаление объекта в ArrayList по индексу*******/
+    public boolean removeIndex(int index) {
+        if (index < counter && index >= 0) {
+            int numForCopy = counter - index - 1;        //какое количество элементов надо скопировать
+            System.arraycopy(elements, index + 1, elements, index, numForCopy);
+            elements[--counter] = null;                 //уменьшаем размер массива и забываем про последний элемент
+            return true;
+        } else return false;
     }
 
 }

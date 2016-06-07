@@ -13,12 +13,14 @@ public class TestMyArrayList {
 
         MyArrayList list = new MyArrayList();
 
-        /***Добавляем в список****/
+        /***Добавляем в список по объекту в конец списка ****/
         list.add(worker1);
         list.add(worker1);
         list.add(worker1);
         list.add(worker2);
         list.add(worker3);
+
+
 
 
         System.out.println("==========Показываем изначальный список==========");
@@ -28,7 +30,7 @@ public class TestMyArrayList {
 
 
         System.out.println("==========Удаление елемента по объекту==========");
-        list.remove(worker1);
+        list.remove(1);
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
@@ -36,6 +38,13 @@ public class TestMyArrayList {
 
         System.out.println("==========Удаление елемента по индексу==========");
         list.removeIndex(1);
+        list.show();
+        System.out.println("Размер листа: " + list.getSize());
+        System.out.println("К-во непустых елементов в листе: " + list.getCounter());
+
+
+        System.out.println("========Добавляем в список объект в заданый индекс ============");
+        list.addIndex(-1,"ddd");
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
