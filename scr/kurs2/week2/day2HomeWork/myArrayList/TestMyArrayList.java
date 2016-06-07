@@ -13,29 +13,33 @@ public class TestMyArrayList {
 
         MyArrayList list = new MyArrayList();
 
+        /***Добавляем в список****/
+        list.add(worker1);
+        list.add(worker1);
         list.add(worker1);
         list.add(worker2);
-        list.add(worker1);
         list.add(worker3);
-        list.add(worker1);
-        list.add(worker1);
-        list.add(worker1);
 
+
+        System.out.println("==========Показываем изначальный список==========");
         list.show();
-        System.out.println("Размер листа с null: " + list.getSize());
-        System.out.println("Размер листа реальных значений: " + list.getCounter());
+        System.out.println("Размер листа: " + list.getSize());
+        System.out.println("К-во непустых елементов в листе: " + list.getCounter());
 
-        System.out.println("======Удаление по индексу==========");
-        list.removeInt(1);
-        list.show();
-        System.out.println("Размер листа с null: " + list.getSize());
-        System.out.println("Размер листа реальных значений: " + list.getCounter());
 
-        System.out.println("======Удаление по объекту==========");
+        System.out.println("==========Удаление елемента по объекту==========");
         list.remove(worker1);
         list.show();
-        System.out.println("Размер листа с null: " + list.getSize());
-        System.out.println("Размер листа реальных значений: " + list.getCounter());
+        System.out.println("Размер листа: " + list.getSize());
+        System.out.println("К-во непустых елементов в листе: " + list.getCounter());
+
+
+        System.out.println("==========Удаление елемента по индексу==========");
+        list.removeIndex(1);
+        list.show();
+        System.out.println("Размер листа: " + list.getSize());
+        System.out.println("К-во непустых елементов в листе: " + list.getCounter());
+
 
     }
 }

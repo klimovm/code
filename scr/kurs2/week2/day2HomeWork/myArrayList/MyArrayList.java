@@ -8,15 +8,6 @@ public class MyArrayList {
 
 
     private Object[] elements;
-    private int size;//для изменения общего количества
-    private static final int DEFAULT_SIZE = 10;
-    private int counter;// количество занятых ячеек не null
-
-    public MyArrayList() {
-        elements = new Object[this.DEFAULT_SIZE];
-        size = DEFAULT_SIZE;
-    }
-
 
     public Object[] getElements() {
         return elements;
@@ -46,10 +37,22 @@ public class MyArrayList {
         this.counter = counter;
     }
 
+    private int size;
+    private static final int DEFAULT_SIZE = 10;
+    private int counter;
 
-    /********************
-     * Добавление объекта в ArrayList
-     ***************/
+
+    public MyArrayList() {
+        elements = new Object[this.DEFAULT_SIZE];
+        size = DEFAULT_SIZE;
+    }
+    /********Добавление объекта в ArrayList*******/
+    public void  show(){
+        for (int i = 0; i <counter ; i++) {
+            System.out.println(elements[i]);
+        }
+    }
+    /********Добавление объекта в ArrayList*******/
     public boolean add(Object obj) {
         if (obj == null) return false;
         else if (counter < size) {
@@ -64,38 +67,29 @@ public class MyArrayList {
         }
         return true;
     }
-
-    /*********
-     * Вывод на экран
-     ************/
-    public void show() {
-        for (int i = 0; i < counter; i++) {
-            System.out.println(elements[i]);
-        }
-    }
-
-    /****************
-     * Удаление объекта с листа
-     ******/
+    /********Удаление объекта в ArrayList*******/
     public boolean remove(Object obj) {
-
+        if (obj == null) return false;
         for (int i = 0; i < counter; i++) {
-            if (obj.equals(elements[i])) {
-                System.arraycopy(elements, i +1 , elements, i, counter - i-1);
-                counter--;
+            if (obj.equals(elements[i])){
+                System.arraycopy(elements, i + 1 , elements, i, counter - i- 1);
+                elements[--counter]=null;
             }
         }
-        return true;
+        return  true;
     }
 
+    /********Удаление объекта в ArrayList по индексу*******/
+    public boolean removeIndex(int index){
+        if (index < counter && index >= 0){
+        int numForCopy = counter - index - 1;     //какое количество элементов надо скопировать
+        System.arraycopy(elements, index + 1, elements, index, numForCopy);
+        elements[--counter]=null;                 //уменьшаем размер массива и забываем про последний элемент
+        return true;}
 
-    public boolean removeInt(int index){
-        int numMoved = size - index - 1;
-        System.arraycopy(elements, index + 1, elements, index, numMoved);
-        elements[--size] = null;
-        counter--;
-        return true;
+        else return false;
     }
+
 }
 
 
