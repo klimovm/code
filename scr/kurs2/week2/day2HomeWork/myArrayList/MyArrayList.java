@@ -85,12 +85,13 @@ public class MyArrayList {
         else {
             int sizeNew = size * 2;
             Object[] elementsNew =  new Object[sizeNew];
-            System.arraycopy(elements, 0, elementsNew, 0, size);
+            System.arraycopy(elements, 0, elementsNew, 0, counter);
             elements = elementsNew;
             System.arraycopy(elementsNew, index, elementsNew, index + 1, counter - index);
             elementsNew[index] = obj;
             counter++;
             size = sizeNew;
+
         }
         return true;
     }
