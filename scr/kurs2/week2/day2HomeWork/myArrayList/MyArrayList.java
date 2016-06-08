@@ -10,6 +10,10 @@ public class MyArrayList {
 
 
     private Object[] elements;
+    private int size;
+    private static final int DEFAULT_SIZE = 10;
+    private int counter;
+
 
     public Object[] getElements() {
         return elements;
@@ -39,9 +43,7 @@ public class MyArrayList {
         this.counter = counter;
     }
 
-    private int size;
-    private static final int DEFAULT_SIZE = 10;
-    private int counter;
+
 
 
     public MyArrayList() {
@@ -86,12 +88,11 @@ public class MyArrayList {
             int sizeNew = size * 2;
             Object[] elementsNew =  new Object[sizeNew];
             System.arraycopy(elements, 0, elementsNew, 0, counter);
-            elements = elementsNew;
             System.arraycopy(elementsNew, index, elementsNew, index + 1, counter - index);
             elementsNew[index] = obj;
+            elements = elementsNew;
             counter++;
             size = sizeNew;
-
         }
         return true;
     }
@@ -127,13 +128,18 @@ public class MyArrayList {
     }
 
     /*********Метод Set.Заменяем объект новым объектом в позиции*******/
-    public boolean satIndex(int index,Object obj) {
+    public boolean setIndex(int index,Object obj) {
         if (index < counter && index >= 0){
             elements[index] = obj;
             return true;
         }
         return false;
     }
+
+    public int size(){
+        return counter;
+    }
+
 
 }
 
