@@ -35,7 +35,8 @@ public class TestMyArrayList {
 
 
         System.out.println("========Добавляем в список объект в заданый индекс ============");
-        list.addIndex(14,"666");
+        list.addIndex(11,"666");
+        list.addIndex(14,"77");
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());

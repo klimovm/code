@@ -76,25 +76,29 @@ public class MyArrayList {
 
     /*********Добавление объекта в ArrayList по индексу*******/
     public boolean addIndex(int index,Object obj) {
-        if (index < size && index >= 0) {
+
+        if (index <= counter && index >= 0) {
             if (counter < size) {
                 System.arraycopy(elements, index, elements, index + 1, counter - index);
                 elements[index] = obj;
                 counter++;
+                return true;
+            }
+            else {
+                int sizeNew = size * 2;
+                Object[] elementsNew =  new Object[sizeNew];
+                System.arraycopy(elements, 0, elementsNew, 0, counter);
+                System.arraycopy(elementsNew, index, elementsNew, index + 1, counter - index);
+                elementsNew[index] = obj;
+                elements = elementsNew;
+                counter++;
+                size = sizeNew;
             }
             return true;
         }
-        else {
-            int sizeNew = size * 2;
-            Object[] elementsNew =  new Object[sizeNew];
-            System.arraycopy(elements, 0, elementsNew, 0, counter);
-            System.arraycopy(elementsNew, index, elementsNew, index + 1, counter - index);
-            elementsNew[index] = obj;
-            elements = elementsNew;
-            counter++;
-            size = sizeNew;
-        }
-        return true;
+
+        else
+        return false;
     }
 
     /*********Удаление объекта в ArrayList*******/
