@@ -76,8 +76,8 @@ public class MyArrayList {
 
     /*********Добавление объекта в ArrayList по индексу*******/
     public boolean addIndex(int index,Object obj) {
-        if (counter < size) {
-            if (index < counter && index >= 0) {
+        if (index < size && index >= 0) {
+            if (counter < size) {
                 System.arraycopy(elements, index, elements, index + 1, counter - index);
                 elements[index] = obj;
                 counter++;
