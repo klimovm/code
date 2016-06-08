@@ -74,13 +74,25 @@ public class MyArrayList {
 
     /*********Добавление объекта в ArrayList по индексу*******/
     public boolean addIndex(int index,Object obj) {
-            if (index < counter && index >= 0){
+        if (counter < size) {
+            if (index < counter && index >= 0) {
                 System.arraycopy(elements, index, elements, index + 1, counter - index);
                 elements[index] = obj;
-                size++;
-                return true;
+                counter++;
             }
-        return false;
+            return true;
+        }
+        else {
+            int sizeNew = size * 2;
+            Object[] elementsNew =  new Object[sizeNew];
+            System.arraycopy(elements, 0, elementsNew, 0, size);
+            elements = elementsNew;
+            System.arraycopy(elementsNew, index, elementsNew, index + 1, counter - index);
+            elementsNew[index] = obj;
+            counter++;
+            size = sizeNew;
+        }
+        return true;
     }
 
     /*********Удаление объекта в ArrayList*******/
@@ -111,6 +123,15 @@ public class MyArrayList {
             return elements[index];
         }
         return null;
+    }
+
+    /*********Метод Set.Заменяем объект новым объектом в позиции*******/
+    public boolean satIndex(int index,Object obj) {
+        if (index < counter && index >= 0){
+            elements[index] = obj;
+            return true;
+        }
+        return false;
     }
 
 }
