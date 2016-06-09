@@ -8,7 +8,6 @@ import java.util.Objects;
  */
 public class MyArrayList {
 
-
     private Object[] elements;
     private int size;
     private static final int DEFAULT_SIZE = 10;
@@ -44,21 +43,19 @@ public class MyArrayList {
     }
 
 
-
-
     public MyArrayList() {
         elements = new Object[this.DEFAULT_SIZE];
         size = DEFAULT_SIZE;
     }
 
-    /*********Добавление объекта в ArrayList*******/
+    /*********Добавление объекта в ArrayList******/
     public void show() {
         for (int i = 0; i < counter; i++) {
             System.out.println(elements[i]);
         }
     }
 
-    /*********Добавление объекта в ArrayList******/
+    /*********Добавление объекта в ArrayList*****/
     public boolean add(Object obj) {
         if (obj == null) return false;
         else if (counter < size) {
@@ -74,8 +71,8 @@ public class MyArrayList {
         return true;
     }
 
-    /*********Добавление объекта в ArrayList по индексу*******/
-    public boolean addIndex(int index,Object obj) {
+    /*********Добавление объекта в ArrayList по индексу******/
+    public boolean addIndex(int index, Object obj) {
 
         if (index <= counter && index >= 0) {
             if (counter < size) {
@@ -83,10 +80,9 @@ public class MyArrayList {
                 elements[index] = obj;
                 counter++;
                 return true;
-            }
-            else {
+            } else {
                 int sizeNew = size * 2;
-                Object[] elementsNew =  new Object[sizeNew];
+                Object[] elementsNew = new Object[sizeNew];
                 System.arraycopy(elements, 0, elementsNew, 0, counter);
                 System.arraycopy(elementsNew, index, elementsNew, index + 1, counter - index);
                 elementsNew[index] = obj;
@@ -95,10 +91,8 @@ public class MyArrayList {
                 size = sizeNew;
             }
             return true;
-        }
-
-        else
-        return false;
+        } else
+            return false;
     }
 
     /*********Удаление объекта в ArrayList*******/
@@ -113,7 +107,7 @@ public class MyArrayList {
         return false;
     }
 
-    /*********Удаление объекта в ArrayList по индексу*******/
+    /*********Удаление объекта в ArrayList по индексу******/
     public boolean removeIndex(int index) {
         if (index < counter && index >= 0) {
             int numForCopy = counter - index - 1;        //какое количество элементов надо скопировать
@@ -123,7 +117,7 @@ public class MyArrayList {
         } else return false;
     }
 
-    /*************Метод получения объекта по индексу********************/
+    /*************Метод получения объекта по индексу******************/
     public Object get(int index) {
         if (index >= 0 && index < counter) {
             return elements[index];
@@ -132,18 +126,34 @@ public class MyArrayList {
     }
 
     /*********Метод Set.Заменяем объект новым объектом в позиции*******/
-    public boolean setIndex(int index,Object obj) {
-        if (index < counter && index >= 0){
+    public boolean setIndex(int index, Object obj) {
+        if (index < counter && index >= 0) {
             elements[index] = obj;
             return true;
         }
         return false;
     }
-
-    public int size(){
+    /*********Метод size.Показываем сколько непустых елементов*******/
+    public int size() {
         return counter;
     }
 
+    /*********Метод Clear.Очищаем массив(заполняем null*******/
+    public boolean clear() {
+        for (int i = 0; i < size; i++) {
+            elements[i] = null;
+        }
+        return true;
+    }
+
+    /*********Метод Contains.Проверяет есть ли объект в листе*******/
+    public boolean contains(Object obj) {
+        for (int i = 0; i < counter; i++) {
+            if (obj.equals(elements[i]))
+                return true;
+        }
+        return false;
+    }
 
 }
 
