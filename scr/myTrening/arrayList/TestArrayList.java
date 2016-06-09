@@ -42,6 +42,7 @@ public class TestArrayList {
         for (int i = 0; i < a1.size(); i++) {
             System.out.print(a1.get(i) + " ");
         }
+
     }
 
 
