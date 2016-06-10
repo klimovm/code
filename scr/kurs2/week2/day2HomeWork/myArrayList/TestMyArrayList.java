@@ -1,5 +1,7 @@
 package scr.kurs2.week2.day2HomeWork.myArrayList;
 
+import scr.kurs2.week2.day2HomeWork.studArrayList.Group;
+
 import java.util.ArrayList;
 
 /**
@@ -14,16 +16,16 @@ public class TestMyArrayList {
         MyArrayList list = new MyArrayList();
 
         /***Добавляем в список по объекту в конец списка ****/
-        list.add(worker1);
-        list.add(worker2);
-        list.add(worker3);
+        list.add(1);
+        list.add(2);
+        list.add(3);
         list.add(4);
         list.add(5);
         list.add(6);
         list.add(7);
-        list.add(8);
-        list.add(9);
-        list.add(10);
+        list.add(worker3);
+        list.add(worker2);
+        list.add(worker1);
 
 
         System.out.println("==========Показываем изначальный список==========");
@@ -32,46 +34,42 @@ public class TestMyArrayList {
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
 
 
-
         System.out.println("========Добавляем в список объект в заданый индекс ============");
-        list.addIndex(1,777);
-        list.addIndex(10,666);
+        list.add(10,777);
+        list.add(3,4444);
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
 
 
-
-
         System.out.println("==========Удаление елемента по индексу==========");
-        list.removeIndex(1);
+        list.remove(0);
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
 
 
         System.out.println("==========Удаление елемента по объекту==========");
-        list.remove(1);
+        list.remove(worker1);
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
 
 
         System.out.println("========get============");
-        System.out.println(list.get(11));
+        System.out.println(list.get(9));
 
         System.out.println("========set============");
-        list.setIndex(11,888);
+        list.set(1,888);
         list.show();
+
+
+        System.out.println("========Contains=======");
+        System.out.println(list.contains(worker2));
 
         System.out.println("========clear=======");
         list.clear();
         list.show();
-
-        System.out.println("========Contains=======");
-        System.out.println(list.contains(88));
-
-
 
     }
 }
