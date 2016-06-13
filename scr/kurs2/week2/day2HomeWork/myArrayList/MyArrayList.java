@@ -20,34 +20,15 @@ public class MyArrayList {
         size = DEFAULT_SIZE;
     }
 
-
-    public Object[] getElements() {
-        return elements;
-    }
-
-    public void setElements(Object[] elements) {
-        this.elements = elements;
-    }
-
     public int getSize() {
         return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public static int getDefaultSize() {
-        return DEFAULT_SIZE;
     }
 
     public int getCounter() {
         return counter;
     }
 
-    public void setCounter(int counter) {
-        this.counter = counter;
-    }
+
 
 
     /*********Вывод листа на консоль******/
@@ -60,12 +41,8 @@ public class MyArrayList {
     /*********Добавление объекта в ArrayList*****/
     public boolean add(Object obj) {
         if (obj == null) return false;
-        else if (counter < size) {
-            elements[counter++] = obj;
-        } else {
-            ensureCapacity();
-            elements[counter++] = obj;
-        }
+        ensureCapacity();
+        elements[counter++] = obj;
         return true;
     }
     /****************************************************/
@@ -79,7 +56,7 @@ public class MyArrayList {
 
     /*********Добавление объекта в ArrayList по индексу******/
     public boolean add(int index, Object obj) {
-        if (index > counter || index < 0) {
+        if (index >= counter || index < 0) {
             return false;
         }
         ensureCapacity();
@@ -136,8 +113,8 @@ public class MyArrayList {
 
     /*********Метод Contains.Проверяет есть ли объект в листе*******/
     public boolean contains(Object obj) {
+        if (obj == null) return false;
         for (int i = 0; i < counter; i++) {
-            if (obj == null) return false;
             if (obj.equals(elements[i]))
                 return true;
         }

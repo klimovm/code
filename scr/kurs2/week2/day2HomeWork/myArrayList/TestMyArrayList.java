@@ -1,8 +1,6 @@
 package scr.kurs2.week2.day2HomeWork.myArrayList;
 
-import scr.kurs2.week2.day2HomeWork.studArrayList.Group;
 
-import java.util.ArrayList;
 
 /**
  * Created by miha on 03.06.2016.
@@ -23,9 +21,9 @@ public class TestMyArrayList {
         list.add(5);
         list.add(6);
         list.add(7);
-        list.add(worker3);
-        list.add(worker2);
-        list.add(worker1);
+        list.add(8);
+        list.add(9);
+        list.add(10);
 
 
         System.out.println("==========Показываем изначальный список==========");
@@ -36,13 +34,13 @@ public class TestMyArrayList {
 
         System.out.println("========Добавляем в список объект в заданый индекс ============");
         list.add(10,777);
-        list.add(3,4444);
+        list.add(111,4444);
         list.show();
         System.out.println("Размер листа: " + list.getSize());
         System.out.println("К-во непустых елементов в листе: " + list.getCounter());
 
 
-        System.out.println("==========Удаление елемента по индексу==========");
+        /*System.out.println("==========Удаление елемента по индексу==========");
         list.remove(0);
         list.show();
         System.out.println("Размер листа: " + list.getSize());
@@ -70,6 +68,6 @@ public class TestMyArrayList {
         System.out.println("========clear=======");
         list.clear();
         list.show();
-
+*/
     }
 }
