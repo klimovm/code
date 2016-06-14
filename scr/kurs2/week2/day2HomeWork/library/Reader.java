@@ -1,29 +1,29 @@
 package scr.kurs2.week2.day2HomeWork.library;
 
-import scr.utils.Mydate;
+import java.util.ArrayList;
 
 /**
- * Created by miha on 09.06.2016.
+ * Created by miha on 14.06.2016.
  */
-public class Reader implements Comparable {
-    public String name;
-    public String surname;
-    public Mydate bd;
-    public int id;
+public class Reader {
+    private String name;
+    private String surname;
+    private int idCard;
+    private long telNumber;
+    private boolean blackList;
+    private ArrayList<Prints> prints;
 
-
-    public Reader(String name, String surname, Mydate bd, int id) {
+    public Reader(String name, String surname, int idCard, long telNumber, boolean blackList, ArrayList<Prints> prints) {
         this.name = name;
         this.surname = surname;
-        this.bd = bd;
-        this.id = id;
-    }
-    public String toString(){
-        return String.format("%s,%s,%s,%d",name,surname,bd,id);
+        this.idCard = idCard;
+        this.telNumber = telNumber;
+        this.blackList = blackList;
+        this.prints = prints;
     }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public String toString() {
+        return String.format("%s,%s,%d,%d,",name,surname,idCard,telNumber);
     }
 }
