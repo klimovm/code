@@ -1,7 +1,6 @@
 package scr.kurs2.week2.day2HomeWork.library.comparators;
 
 import scr.kurs2.week2.day2HomeWork.library.Print;
-import scr.kurs2.week2.day2HomeWork.library.Reader;
 
 import java.util.Comparator;
 

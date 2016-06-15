@@ -18,6 +18,10 @@ public class Print {
         this.counterPrint = counterPrint;
     }
 
+    public void setCounterPrint(int counterPrint) {
+        this.counterPrint +=1;
+    }
+
     public String getName() {
         return name;
     }

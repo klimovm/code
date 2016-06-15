@@ -56,7 +56,7 @@ public class MyArrayList {
 
     /*********Добавление объекта в ArrayList по индексу******/
     public boolean add(int index, Object obj) {
-        if (index >= counter || index < 0) {
+        if (index > counter || index < 0) {
             return false;
         }
         ensureCapacity();
@@ -69,7 +69,6 @@ public class MyArrayList {
     /*********Удаление объекта в ArrayList*******/
     public boolean remove(Object obj) {
         for (int i = 0; i < counter; i++) {
-            if (obj == null) return false;
             if (obj.equals(elements[i])) {
                 System.arraycopy(elements, i + 1, elements, i, counter - i - 1);
                 elements[--counter] = null;

@@ -58,6 +58,7 @@ public class TestLibrary {
         lybrary.addPrints(nespaper2);
         lybrary.addPrints(nespaper3);
         lybrary.addPrints(nespaper4);
+        lybrary.addPrints(nespaper4);
 
         System.out.println("====Список печатных изданий====");
         lybrary.showPrints();

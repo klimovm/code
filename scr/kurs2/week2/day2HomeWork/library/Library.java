@@ -27,34 +27,36 @@ public class Library {
     }
 
 
+    //добавить читателя в список читателей
+    public boolean addReader(Reader reader) {
+        if (reader == null) return false;
+        if (readers.contains(reader)) return false;
+        return readers.add(reader);
+    }
 
-  public boolean addReader(Reader reader) {
-      if (reader == null) return false;
-      if (readers.contains(reader)) return false;
-      return readers.add(reader);
-  }
-    public void showReaders(){
-        Collections.sort(readers,new ComparatorSortByNameReader());
-        for (int i = 0; i <readers.size() ; i++) {
+    //посмотреть список читателей
+    public void showReaders() {
+        Collections.sort(readers, new ComparatorSortByNameReader());
+        for (int i = 0; i < readers.size(); i++) {
             System.out.println(readers.get(i));
         }
     }
 
 
-
+    //добавить печатное издание в библиотеку
     public boolean addPrints(Print print) {
         if (print == null) return false;
-        if (prints.contains(print)) return false;
+        if (prints.contains(print)) print.setCounterPrint(1);
         return prints.add(print);
     }
-    public void showPrints(){
-        Collections.sort(prints,new ComparatorSortByNamePrints());
-        for (int i = 0; i <prints.size() ; i++) {
+
+    //посмотреть список доступных конкретных печатных изданий
+    public void showPrints() {
+        Collections.sort(prints, new ComparatorSortByNamePrints());
+        for (int i = 0; i < prints.size(); i++) {
             System.out.println(prints.get(i));
         }
     }
-
-
 
 
 }
