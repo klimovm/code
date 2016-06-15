@@ -3,14 +3,14 @@ package scr.kurs2.week2.day2HomeWork.library;
 /**
  * Created by miha on 14.06.2016.
  */
-public class Jornals extends Prints {
+public class Jornal extends Print {
 
     private int number;
 
     /**
      * Конструктор класса
      **/
-    public Jornals(String name, int yearPrint, int counterPrint, int number) {
+    public Jornal(String name, int yearPrint, int counterPrint, int number) {
         super(name, yearPrint, counterPrint);
         this.number = number;
     }
@@ -25,10 +25,7 @@ public class Jornals extends Prints {
         if (obj == null) return false;
         if (!(getClass() == obj.getClass())) return false;
         if (!super.equals(obj)) return false;
-        else {
-            Jornals tmp = (Jornals) obj;
-            if (tmp.number == this.number) return true;
-            else return false;
-        }
+            Jornal tmp = (Jornal) obj;
+            return (tmp.number == this.number);
     }
 }

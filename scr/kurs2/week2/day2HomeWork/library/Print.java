@@ -3,7 +3,7 @@ package scr.kurs2.week2.day2HomeWork.library;
 /**
  * Created by miha on 14.06.2016.
  */
-public class Prints {
+public class Print {
 
     private String name;
     private int yearPrint;
@@ -12,7 +12,7 @@ public class Prints {
     /**
      * Конструктор класса
      **/
-    public Prints(String name, int yearPrint, int counterPrint) {
+    public Print(String name, int yearPrint, int counterPrint) {
         this.name = name;
         this.yearPrint = yearPrint;
         this.counterPrint = counterPrint;
@@ -27,10 +27,7 @@ public class Prints {
     public boolean equals(Object obj) {
         if (obj == 0) return false;
         if (!(getClass() == obj.getClass())) return false;
-        else {
-            Prints tmp = (Prints) obj;
-            if ((tmp.name == this.name) && (tmp.yearPrint == this.yearPrint)) return true;
-            else return false;
-        }
+        Print tmp = (Print) obj;
+        return ((tmp.name == this.name) && (tmp.yearPrint == this.yearPrint));
     }
 }

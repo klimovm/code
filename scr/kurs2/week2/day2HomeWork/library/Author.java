@@ -26,12 +26,9 @@ public class Author {
         if (obj == null) return false;
         /* Удостоверимся, что ссылки имеют тот же самый тип */
         if (!(getClass() == obj.getClass())) return false;
-        else {
-            Author tmp = (Author) obj;
-            if ((tmp.name == this.name) && (tmp.surname == this.surname))
-                return true;
-            else
-                return false;
-        }
+
+        Author tmp = (Author) obj;
+        return ((tmp.name == this.name) && (tmp.surname == this.surname));
     }
 }
+
