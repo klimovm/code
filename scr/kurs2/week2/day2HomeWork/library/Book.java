@@ -5,29 +5,23 @@ package scr.kurs2.week2.day2HomeWork.library;
  */
 public class Book extends Print {
 
-    private String nameAuthor;
-    private String surnameAuthor;
 
     /**
      * Конструктор класса
      **/
-    public Book(String name, int yearPrint, int counterPrint, String nameAuthor, String surnameAuthor) {
-        super(name, yearPrint, counterPrint);
-        this.nameAuthor = nameAuthor;
-        this.surnameAuthor = surnameAuthor;
+    public Book(String name, int yearPrint, int counterPrint, Author author) {
+        super(name, yearPrint, counterPrint,author);
     }
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%s", super.toString(), nameAuthor, surnameAuthor);
+        return String.format("%s,", super.toString());
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(getClass() == obj.getClass())) return false;
-        if (!super.equals(obj)) return false;
-        Book tmp = (Book) obj;
-        return ((tmp.nameAuthor == this.nameAuthor) && (tmp.surnameAuthor == this.surnameAuthor));
+        return super.equals(obj);
     }
 }

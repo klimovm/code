@@ -8,15 +8,19 @@ import java.util.ArrayList;
 public class TestLibrary {
     public static void main(String[] args) {
 
-        Author a1 = new Author("Федор","Достоевский");
-        Author a2 = new Author("Лев","Толстой");
-        Author a3 = new Author("Михаил","Булгаков");
-        Author a4 = new Author("Николай","Гоголь");
+        Author author1 = new Author("Федор","Достоевский");
+        Author author2 = new Author("Лев","Толстой");
+        Author author3 = new Author("Михаил","Булгаков");
+        Author author4 = new Author("Николай","Гоголь");
 
-        Reader r1 = new Reader("Саша","Петров",1,2222222);
-        Reader r2 = new Reader("Коля","Иванов",2,3333333);
-        Reader r3 = new Reader("Игорь","Сидоров",3,4444444);
-        Reader r4 = new Reader("Вася","Филимонов",2,5555555);
+        Reader reader1 = new Reader("Саша","Петров",1,2222222);
+        Reader reader2 = new Reader("Коля","Иванов",2,3333333);
+        Reader reader3 = new Reader("Игорь","Сидоров",3,4444444);
+        Reader reader4 = new Reader("Вася","Филимонов",2,5555555);
+
+        Print book1 = new Book("Идиот", 1869,3,author1);
+        Print book2 = new Book("Анна Каренина", 1877,5,author2);
+
 
 
     }
