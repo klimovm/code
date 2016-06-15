@@ -16,4 +16,18 @@ public class NewsPaper extends Prints {
     public String toString() {
         return String.format("%s,%d",super.toString(),number);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == 0) return false;
+        if (!(getClass() == obj.getClass())) return false;
+        if (!super.equals(obj)) return false;
+        else {
+            NewsPaper tmp = (NewsPaper) obj;
+            if (tmp.number == this.number) return true;
+            else return false;
+        }
+    }
+
+
 }

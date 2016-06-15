@@ -19,4 +19,16 @@ public class Book extends Prints {
     public String toString() {
         return String.format("%s,%s,%s",super.toString(),nameAuthor,surnameAuthor);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(getClass() == obj.getClass())) return false;
+        if (!super.equals(obj)) return false;
+        else {
+            Book tmp = (Book) obj;
+            if ((tmp.nameAuthor == this.nameAuthor) && (tmp.surnameAuthor == this.surnameAuthor)) return true;
+            else return false;
+        }
+    }
 }

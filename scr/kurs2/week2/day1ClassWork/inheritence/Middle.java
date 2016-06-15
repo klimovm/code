@@ -5,7 +5,7 @@ package scr.kurs2.week2.day1ClassWork.inheritence;
  */
 public class Middle extends Coder {
 
-
+    /**Конструктор класса**/
     public Middle(int age, String name, String surname, String programmingLanguage) {
         super(age, name, surname, programmingLanguage);
     }
