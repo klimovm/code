@@ -6,7 +6,7 @@ package scr.kurs2.week2.day2HomeWork.library;
 public class Jornals extends Prints {
 
     private int number;
-
+    /**Конструктор класса**/
     public Jornals(String name, int yearPrint, int counterPrint, int number) {
         super(name, yearPrint, counterPrint);
         this.number = number;

@@ -7,6 +7,9 @@ public class Author {
     private String name;
     private String surname;
 
+    /**
+     * Конструктор класса
+     **/
     public Author(String name, String surname) {
         this.name = name;
         this.surname = surname;
@@ -14,11 +17,21 @@ public class Author {
 
     @Override
     public String toString() {
-        return String.format("%s,%s",name,surname);
+        return String.format("%s,%s", name, surname);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        /* obj ссылается на null */
+        if (obj == null) return false;
+        /* Удостоверимся, что ссылки имеют тот же самый тип */
+        if (!(getClass() == obj.getClass())) return false;
+        else {
+            Author tmp = (Author) obj;
+            if ((tmp.name == this.name) && (tmp.surname == this.surname))
+                return true;
+            else
+                return false;
+        }
     }
 }

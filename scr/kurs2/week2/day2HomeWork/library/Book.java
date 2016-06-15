@@ -8,6 +8,7 @@ public class Book extends Prints {
     private String nameAuthor;
     private String surnameAuthor;
 
+    /**Конструктор класса**/
     public Book(String name, int yearPrint, int counterPrint, String nameAuthor, String surnameAuthor) {
         super(name, yearPrint, counterPrint);
         this.nameAuthor = nameAuthor;

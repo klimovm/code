@@ -11,7 +11,7 @@ public class Lybrary {
     private ArrayList<Reader> reader;
     private ArrayList<Prints> prints;
 
-
+    /**Конструктор класса**/
     public Lybrary(String name, String adress, ArrayList<Reader> reader, ArrayList<Prints> prints) {
         this.name = name;
         this.adress = adress;
