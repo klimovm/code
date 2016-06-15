@@ -6,18 +6,16 @@ package scr.kurs2.week2.day2HomeWork.library;
 public class Print {
 
     private String name;
-    private Author author;
     private int yearPrint;
     private int counterPrint;
 
     /**
      * Конструктор класса
      **/
-    public Print(String name, int yearPrint, int counterPrint, Author author) {
+    public Print(String name, int yearPrint, int counterPrint) {
         this.name = name;
         this.yearPrint = yearPrint;
         this.counterPrint = counterPrint;
-        this.author = author;
     }
 
     @Override

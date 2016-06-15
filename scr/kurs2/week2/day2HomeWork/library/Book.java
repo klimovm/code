@@ -5,12 +5,14 @@ package scr.kurs2.week2.day2HomeWork.library;
  */
 public class Book extends Print {
 
+    private Author author;
 
     /**
      * Конструктор класса
      **/
-    public Book(String name, int yearPrint, int counterPrint, Author author) {
-        super(name, yearPrint, counterPrint,author);
+    public Book(String name, int yearPrint, int counterPrint,Author author) {
+        super(name, yearPrint, counterPrint);
+        this.author = author;
     }
 
     @Override
@@ -22,6 +24,8 @@ public class Book extends Print {
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(getClass() == obj.getClass())) return false;
-        return super.equals(obj);
+        if (!super.equals(obj)) return false;
+        Book tmp =(Book) obj;
+        return (tmp.author == this.author);
     }
 }
