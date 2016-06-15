@@ -18,6 +18,10 @@ public class Print {
         this.counterPrint = counterPrint;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return String.format("%s,%d", name, yearPrint);

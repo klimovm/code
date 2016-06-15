@@ -24,6 +24,10 @@ public class Reader {
         this.telNumber = telNumber;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return String.format("%s,%s,%d,%d,", name, surname, idCard, telNumber);
