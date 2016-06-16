@@ -13,7 +13,7 @@ import java.util.Collections;
 /**
  * Created by miha on 02.06.2016.
  */
-public class Group {
+public class Group extends MyArrayList {
 
     private String name;
     private MyArrayList students = new MyArrayList();

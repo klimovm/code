@@ -46,7 +46,7 @@ public class Library {
     //добавить печатное издание в библиотеку
     public boolean addPrints(Print print) {
         if (print == null) return false;
-        if (prints.contains(print)) print.setCounterPrint(1);
+        if (prints.contains(print)) print.setCounterPrint(1000);
         return prints.add(print);
     }
 

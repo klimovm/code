@@ -100,8 +100,9 @@ public class MyArrayList {
     /*********Метод Set.Заменяем объект новым объектом в позиции*******/
     public Object set(int index, Object obj) {
         if (index < counter && index >= 0) {
+            Object oldValue = elements;
             elements[index] = obj;
-            return elements[index];
+            return oldValue;
         }
         return false;
     }
