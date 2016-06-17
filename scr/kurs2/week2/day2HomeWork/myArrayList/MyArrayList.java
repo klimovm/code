@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 import java.util.Objects;
 
+
+
 /**
  * Created by miha on 03.06.2016.
  */
@@ -14,6 +16,7 @@ public class MyArrayList {
     private int size;
     private static final int DEFAULT_SIZE = 10;
     private int counter;
+
 
     public MyArrayList() {
         elements = new Object[this.DEFAULT_SIZE];

@@ -50,7 +50,7 @@ public class TestStudent {
         System.out.println(aco13.size());
         System.out.println();
         /********Проверяет есть ли объект в листе******/
-        System.out.println(aco13.contains("dfdfdf"));
+        System.out.println(aco13.contains("Слава"));
         System.out.println();
         /********Очищаем массив(заполняем null******/
         aco13.clear();
