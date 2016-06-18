@@ -7,19 +7,24 @@ public class Print {
 
     private String name;
     private int yearPrint;
+
+
     private int counterPrint;
 
     /**
      * Конструктор класса
      **/
-    public Print(String name, int yearPrint, int counterPrint) {
+    public Print(String name, int yearPrint) {
         this.name = name;
         this.yearPrint = yearPrint;
-        this.counterPrint = counterPrint;
     }
 
-    public void setCounterPrint(int counterPrint) {
-        this.counterPrint +=1;
+    public void setCounterPrint(int count) {
+        this.counterPrint = count;
+    }
+
+    public int getCounterPrint() {
+        return counterPrint;
     }
 
     public String getName() {
@@ -28,12 +33,12 @@ public class Print {
 
     @Override
     public String toString() {
-        return String.format("%s,%d", name, yearPrint);
+        return String.format("Имя принта: %s,год:%d,к-во:%d", name, yearPrint,counterPrint);
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == 0) return false;
+        if (obj == null) return false;
         if (!(getClass() == obj.getClass())) return false;
         Print tmp = (Print) obj;
         return ((tmp.name == this.name) && (tmp.yearPrint == this.yearPrint));

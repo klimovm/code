@@ -16,10 +16,12 @@ public class TestLibrary {
         Reader reader3 = new Reader("Игорь", "Сидоров", 3, 4444444);
         Reader reader4 = new Reader("Вася", "Филимонов", 2, 5555555);
 
-        Print book1 = new Book("Идиот", 1869, 3, author1);
-        Print book2 = new Book("Анна Каренина", 1877, 5, author2);
-        Print book3 = new Book("Мастер и Маргарита", 1966, 1, author3);
-        Print book4 = new Book("Тарас Бульба", 1950, 1, author4);
+        Print book1 = new Book("Идиот", 1869, author1);
+        Print book2 = new Book("Анна Каренина", 1877, author2);
+        Print book3 = new Book("Мастер и Маргарита", 1966, author3);
+        Print book4 = new Book("Тарас Бульба", 1950, author4);
+
+        Print book5 = new Book("Идиот", 1869, author1);
 
         Print jornal1 = new Jornal("Космо", 2000, 2, 1);
         Print jornal2 = new Jornal("Сад", 2000, 2, 1);
@@ -44,21 +46,24 @@ public class TestLibrary {
         System.out.println();
 
         //Добавить книги,журналы,газеты
-        lybrary.addPrints(book1);
-        lybrary.addPrints(book2);
-        lybrary.addPrints(book3);
-        lybrary.addPrints(book4);
+        lybrary.addPrint(book1);
+        lybrary.addPrint(book1);
+        lybrary.addPrint(book1);
+        lybrary.addPrint(book2);
+        lybrary.addPrint(book3);
+        lybrary.addPrint(book4);
+        lybrary.addPrint(book5);
 
-        lybrary.addPrints(jornal1);
-        lybrary.addPrints(jornal2);
-        lybrary.addPrints(jornal3);
-        lybrary.addPrints(jornal4);
+  /*      lybrary.addPrint(jornal1);
+        lybrary.addPrint(jornal2);
+        lybrary.addPrint(jornal3);
+        lybrary.addPrint(jornal4);
 
-        lybrary.addPrints(nespaper1);
-        lybrary.addPrints(nespaper2);
-        lybrary.addPrints(nespaper3);
-        lybrary.addPrints(nespaper4);
-        lybrary.addPrints(nespaper4);
+        lybrary.addPrint(nespaper1);
+        lybrary.addPrint(nespaper2);
+        lybrary.addPrint(nespaper3);
+        lybrary.addPrint(nespaper4);
+        lybrary.addPrint(nespaper4);*/
 
         System.out.println("====Список печатных изданий====");
         lybrary.showPrints();

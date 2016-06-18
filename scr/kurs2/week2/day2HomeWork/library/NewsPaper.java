@@ -11,7 +11,7 @@ public class NewsPaper extends Print {
      * Конструктор класса
      **/
     public NewsPaper(String name, int yearPrint, int counterPrint, int number) {
-        super(name, yearPrint, counterPrint);
+        super(name, yearPrint);
         this.number = number;
     }
 
@@ -22,7 +22,7 @@ public class NewsPaper extends Print {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == 0) return false;
+        if (obj == null) return false;
         if (!(getClass() == obj.getClass())) return false;
         if (!super.equals(obj)) return false;
 

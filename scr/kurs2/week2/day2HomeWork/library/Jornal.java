@@ -11,7 +11,7 @@ public class Jornal extends Print {
      * Конструктор класса
      **/
     public Jornal(String name, int yearPrint, int counterPrint, int number) {
-        super(name, yearPrint, counterPrint);
+        super(name, yearPrint);
         this.number = number;
     }
 

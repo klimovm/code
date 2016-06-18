@@ -10,15 +10,15 @@ public class Book extends Print {
     /**
      * Конструктор класса
      **/
-    public Book(String name, int yearPrint, int counterPrint,Author author) {
-        super(name, yearPrint, counterPrint);
+    public Book(String name, int yearPrint,Author author) {
+        super(name, yearPrint);
         this.author = author;
     }
 
-    @Override
+  /*  @Override
     public String toString() {
         return String.format("%s,%s", super.toString(),author);
-    }
+    }*/
 
     @Override
     public boolean equals(Object obj) {

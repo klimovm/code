@@ -44,10 +44,15 @@ public class Library {
 
 
     //добавить печатное издание в библиотеку
-    public boolean addPrints(Print print) {
+    public boolean addPrint(Print print) {
         if (print == null) return false;
-        if (prints.contains(print)) print.setCounterPrint(1000);
-        return prints.add(print);
+        if (prints.contains(print)) {
+            print.setCounterPrint(print.getCounterPrint() + 1);
+            return true;
+        } else
+            print.setCounterPrint(print.getCounterPrint() + 1);
+            return prints.add(print);
+
     }
 
     //посмотреть список доступных конкретных печатных изданий
