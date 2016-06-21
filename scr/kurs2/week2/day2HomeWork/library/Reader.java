@@ -14,6 +14,8 @@ public class Reader {
     private boolean blackList;
     private List<Print> prints;
 
+    private int countPrint;
+
     /**
      * Конструктор класса
      **/
@@ -22,11 +24,33 @@ public class Reader {
         this.surname = surname;
         this.idCard = idCard;
         this.telNumber = telNumber;
+        this.prints = new ArrayList<>();
+    }
+
+    /**гетеры и сетеры***/
+
+    public List<Print> getPrints() {
+        return prints;
+    }
+    public boolean isBlackList() {
+        return blackList;
+    }
+
+
+    public void setCountPrint(int countPrint) {
+        this.countPrint = countPrint;
+    }
+
+    public int getCountPrint() {
+        return countPrint;
     }
 
     public String getName() {
         return name;
     }
+
+
+
 
     @Override
     public String toString() {

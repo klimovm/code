@@ -7,9 +7,8 @@ public class Print {
 
     private String name;
     private int yearPrint;
-
-
     private int counterPrint;
+
 
     /**
      * Конструктор класса
@@ -30,6 +29,8 @@ public class Print {
     public String getName() {
         return name;
     }
+
+
 
     @Override
     public String toString() {

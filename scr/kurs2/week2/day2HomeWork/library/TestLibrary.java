@@ -20,7 +20,6 @@ public class TestLibrary {
         Print book2 = new Book("Анна Каренина", 1877, author2);
         Print book3 = new Book("Мастер и Маргарита", 1966, author3);
         Print book4 = new Book("Тарас Бульба", 1950, author4);
-
         Print book5 = new Book("Идиот", 1869, author1);
 
         Print jornal1 = new Jornal("Космо", 2000, 2, 1);
@@ -39,8 +38,8 @@ public class TestLibrary {
         //Добавить читателей
         lybrary.addReader(reader1);
         lybrary.addReader(reader2);
-        lybrary.addReader(reader3);
-        lybrary.addReader(reader4);
+
+
         System.out.println("====Список читателей:====");
         lybrary.showReaders();
         System.out.println();
@@ -49,24 +48,23 @@ public class TestLibrary {
         lybrary.addPrint(book1);
         lybrary.addPrint(book1);
         lybrary.addPrint(book1);
-        lybrary.addPrint(book2);
-        lybrary.addPrint(book3);
-        lybrary.addPrint(book4);
-        lybrary.addPrint(book5);
-
-  /*      lybrary.addPrint(jornal1);
-        lybrary.addPrint(jornal2);
-        lybrary.addPrint(jornal3);
-        lybrary.addPrint(jornal4);
-
-        lybrary.addPrint(nespaper1);
-        lybrary.addPrint(nespaper2);
-        lybrary.addPrint(nespaper3);
-        lybrary.addPrint(nespaper4);
-        lybrary.addPrint(nespaper4);*/
+        lybrary.addPrint(book1);
 
         System.out.println("====Список печатных изданий====");
         lybrary.showPrints();
+        System.out.println();
+
+        //Выдаем печатные издания
+        lybrary.givePrintRider(book1,reader1);
+        System.out.println("====книги на руках====");
+        lybrary.showIssueOfReader(reader1);
+        System.out.println();
+
+        System.out.println("====Список печатных изданий в наличии====");
+        lybrary.showPrints();
+        System.out.println();
+
+
 
 
     }

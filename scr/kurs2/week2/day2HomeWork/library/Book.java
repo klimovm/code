@@ -15,10 +15,6 @@ public class Book extends Print {
         this.author = author;
     }
 
-  /*  @Override
-    public String toString() {
-        return String.format("%s,%s", super.toString(),author);
-    }*/
 
     @Override
     public boolean equals(Object obj) {

@@ -17,7 +17,7 @@ public class NewsPaper extends Print {
 
     @Override
     public String toString() {
-        return String.format("%s,%d", super.toString(), number);
+        return String.format("%s,номер выпуска: %d", super.toString(), number);
     }
 
     @Override

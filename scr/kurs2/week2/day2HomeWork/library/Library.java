@@ -63,5 +63,35 @@ public class Library {
         }
     }
 
+    /**выдать печатное издание читателю (если книга есть в наличии)***/
+    public boolean givePrintRider(Print print,Reader reader){
+        if (print == null || reader == null) return false;
+        if (reader.getCountPrint() > 3 || reader.isBlackList()) return false;
+
+        reader.getPrints().add(print);
+        reader.setCountPrint(reader.getCountPrint()+1);
+
+        int index;
+        index = prints.indexOf(print);
+        if (prints.get(index).getCounterPrint() > 1) {
+            prints.get(index).setCounterPrint(prints.get(index).getCounterPrint() - 1);
+        } else if (prints.get(index).getCounterPrint() == 0) {
+            prints.remove(index);
+        }
+        return false;
+    }
+
+    public void showIssueOfReader(Reader reader) {
+        if (reader == null || !readers.contains(reader)) return;
+        if (reader.getPrints().size() > 0) {
+            System.out.println(reader.getName() + " :");
+            for (int i = 0; i < reader.getPrints().size(); i++) {
+                System.out.println(reader.getPrints().get(i));
+            }
+        } else
+            System.out.println("Readers do not have prints");
+    }
+
+
 
 }
