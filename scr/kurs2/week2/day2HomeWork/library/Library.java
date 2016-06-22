@@ -51,7 +51,7 @@ public class Library {
             return true;
         } else
             print.setCounterPrint(print.getCounterPrint() + 1);
-            return prints.add(print);
+        return prints.add(print);
 
     }
 
@@ -63,35 +63,58 @@ public class Library {
         }
     }
 
-    /**выдать печатное издание читателю (если книга есть в наличии)***/
-    public boolean givePrintRider(Print print,Reader reader){
+    /**
+     * выдать печатное издание читателю (если книга есть в наличии)
+     ***/
+    public boolean givePrintRider(Print print, Reader reader) {
         if (print == null || reader == null) return false;
-        if (reader.getCountPrint() > 3 || reader.isBlackList()) return false;
+        if (reader.getCountPrint() >= 3 || reader.isBlackList() || reader.getPrints().contains(print)) return false;
 
         reader.getPrints().add(print);
-        reader.setCountPrint(reader.getCountPrint()+1);
+        print.setCounterPrint(print.getCounterPrint() - 1);
+        reader.setCountPrint(reader.getCountPrint() + 1);
+        if (print.getCounterPrint() == 0) prints.remove(prints.indexOf(print));
 
-        int index;
-        index = prints.indexOf(print);
-        if (prints.get(index).getCounterPrint() > 1) {
-            prints.get(index).setCounterPrint(prints.get(index).getCounterPrint() - 1);
-        } else if (prints.get(index).getCounterPrint() == 0) {
-            prints.remove(index);
-        }
-        return false;
+        return true;
     }
 
-    public void showIssueOfReader(Reader reader) {
+    public void showPrintReader(Reader reader) {
         if (reader == null || !readers.contains(reader)) return;
         if (reader.getPrints().size() > 0) {
-            System.out.println(reader.getName() + " :");
+
+            System.out.println(reader.getName() + " " + reader.getSurname() + ":");
+            Collections.sort(reader.getPrints(), new ComparatorSortByNamePrints());
             for (int i = 0; i < reader.getPrints().size(); i++) {
                 System.out.println(reader.getPrints().get(i));
             }
         } else
-            System.out.println("Readers do not have prints");
+            System.out.println(reader.getName() + " " + reader.getSurname() + " не имеет на руках изданий");
     }
 
 
+    public void showPrintsReaders() {
+        for (Reader reader : readers) {
+            if (reader.getCountPrint() > 0) {
+                showPrintReader(reader);
+            }
+        }
+    }
 
+    public boolean addBlackListReader(Reader reader) {
+        if (reader == null) return false;
+        if (readers.contains(reader))
+            reader.setBlackList(true);
+        return true;
+    }
+
+    public void showBlackList() {
+        for (Reader reader : readers) {
+            System.out.println(reader + " " + reader.isBlackList());
+        }
+    }
+
+    //посмотреть печатные издания конкретного автора
+    public void showAuthorPrint(Object author) {
+
+    }
 }

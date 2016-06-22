@@ -38,6 +38,7 @@ public class TestLibrary {
         //Добавить читателей
         lybrary.addReader(reader1);
         lybrary.addReader(reader2);
+        lybrary.addReader(reader4);
 
 
         System.out.println("====Список читателей:====");
@@ -47,24 +48,45 @@ public class TestLibrary {
         //Добавить книги,журналы,газеты
         lybrary.addPrint(book1);
         lybrary.addPrint(book1);
-        lybrary.addPrint(book1);
-        lybrary.addPrint(book1);
+        lybrary.addPrint(book2);
+        lybrary.addPrint(book2);
+        lybrary.addPrint(book3);
+        lybrary.addPrint(jornal1);
 
         System.out.println("====Список печатных изданий====");
         lybrary.showPrints();
         System.out.println();
 
-        //Выдаем печатные издания
-        lybrary.givePrintRider(book1,reader1);
-        System.out.println("====книги на руках====");
-        lybrary.showIssueOfReader(reader1);
+        System.out.println("====Читателя Саша в черный список====");
+        lybrary.addBlackListReader(reader1);
         System.out.println();
+
+
+        //Выдаем печатные издания;
+        lybrary.givePrintRider(book1,reader2);
+        lybrary.givePrintRider(book2,reader4);
+        lybrary.givePrintRider(book1,reader4);
+        lybrary.givePrintRider(book3,reader4);
+        /*System.out.println("====книги на руках у определенного читателя====");
+        lybrary.showPrintReader(reader1);
+        lybrary.showPrintReader(reader2);
+        System.out.println();*/
+
+        System.out.println("====книги на руках у списка читателей====");
+        lybrary.showPrintsReaders();
+        System.out.println();
+
 
         System.out.println("====Список печатных изданий в наличии====");
         lybrary.showPrints();
         System.out.println();
 
+        System.out.println("====Черный Список ");
+        lybrary.showBlackList();
+        System.out.println();
 
+        System.out.println("====Автор с книгами ");
+        lybrary.showAuthorPrint(author1);
 
 
     }

@@ -5,6 +5,7 @@ package scr.kurs2.week2.day2HomeWork.library;
  */
 public class Book extends Print {
 
+
     private Author author;
 
     /**
@@ -13,6 +14,10 @@ public class Book extends Print {
     public Book(String name, int yearPrint,Author author) {
         super(name, yearPrint);
         this.author = author;
+    }
+
+    public Author getAuthor() {
+        return author;
     }
 
 

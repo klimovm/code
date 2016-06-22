@@ -13,7 +13,6 @@ public class Reader {
     private long telNumber;
     private boolean blackList;
     private List<Print> prints;
-
     private int countPrint;
 
     /**
@@ -28,6 +27,15 @@ public class Reader {
     }
 
     /**гетеры и сетеры***/
+
+
+    public void setBlackList(boolean blackList) {
+        this.blackList = blackList;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
 
     public List<Print> getPrints() {
         return prints;
@@ -56,6 +64,8 @@ public class Reader {
     public String toString() {
         return String.format("%s,%s,%d,%d,", name, surname, idCard, telNumber);
     }
+
+
 
     @Override
     public boolean equals(Object obj) {

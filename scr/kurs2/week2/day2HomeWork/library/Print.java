@@ -1,5 +1,8 @@
 package scr.kurs2.week2.day2HomeWork.library;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by miha on 14.06.2016.
  */
@@ -36,6 +39,9 @@ public class Print {
     public String toString() {
         return String.format("Имя принта: %s,год:%d,к-во:%d", name, yearPrint,counterPrint);
     }
+
+
+
 
     @Override
     public boolean equals(Object obj) {
