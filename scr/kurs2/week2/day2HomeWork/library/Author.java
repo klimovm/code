@@ -3,7 +3,7 @@ package scr.kurs2.week2.day2HomeWork.library;
 /**
  * Created by miha on 14.06.2016.
  */
-public class Author {
+public class Author  {
     private String name;
     private String surname;
 

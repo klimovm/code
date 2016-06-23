@@ -115,6 +115,38 @@ public class Library {
 
     //посмотреть печатные издания конкретного автора
     public void showAuthorPrint(Object author) {
+        List<Book> authorPrints = new ArrayList<>();
+        for (int i = 0; i < prints.size() ; i++) {
+          //  if(prints instanceof Book  && (Book)prints.getAuthor.equals(author))
 
+        }
+
+    }
+
+
+    //посмотреть печатные издания конкретного года
+    public void showPrintYear(int year) {
+        List<Print> tmp = new ArrayList<>();
+        for (int i = 0; i < prints.size(); i++) {
+            if (prints.get(i).getYearPrint() == year) {
+                tmp.add(prints.get(i));
+            }
+        }
+        for (int i = 0; i < tmp.size(); i++) {
+            System.out.println(tmp.get(i));
+        }
+    }
+
+    //найти печатное издание по названию (ключевым словам)
+    public void showPrintName(String name) {
+        List<Print> tmp = new ArrayList<>();
+        for (int i = 0; i < prints.size(); i++) {
+            if (prints.get(i).getName() == name) {
+                tmp.add(prints.get(i));
+            }
+        }
+        for (int i = 0; i < tmp.size(); i++) {
+            System.out.println(tmp.get(i));
+        }
     }
 }

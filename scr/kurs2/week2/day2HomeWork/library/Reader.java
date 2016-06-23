@@ -15,6 +15,7 @@ public class Reader {
     private List<Print> prints;
     private int countPrint;
 
+
     /**
      * Конструктор класса
      **/

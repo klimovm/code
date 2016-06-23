@@ -1,5 +1,7 @@
 package scr.kurs2.week2.day2HomeWork.library;
 
+import java.util.List;
+
 /**
  * Created by miha on 14.06.2016.
  */
@@ -11,7 +13,7 @@ public class Book extends Print {
     /**
      * Конструктор класса
      **/
-    public Book(String name, int yearPrint,Author author) {
+    public Book(String name, int yearPrint, Author author) {
         super(name, yearPrint);
         this.author = author;
     }
@@ -19,6 +21,7 @@ public class Book extends Print {
     public Author getAuthor() {
         return author;
     }
+
 
 
     @Override

@@ -11,6 +11,7 @@ public class Print {
     private String name;
     private int yearPrint;
     private int counterPrint;
+    List<Print> printList;
 
 
     /**
@@ -19,6 +20,8 @@ public class Print {
     public Print(String name, int yearPrint) {
         this.name = name;
         this.yearPrint = yearPrint;
+        this.printList = new ArrayList<>();
+
     }
 
     public void setCounterPrint(int count) {
@@ -33,7 +36,9 @@ public class Print {
         return name;
     }
 
-
+    public int getYearPrint() {
+        return yearPrint;
+    }
 
     @Override
     public String toString() {
