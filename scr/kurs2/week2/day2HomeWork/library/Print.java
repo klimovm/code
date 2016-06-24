@@ -1,5 +1,6 @@
 package scr.kurs2.week2.day2HomeWork.library;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class Print {
     private String name;
     private int yearPrint;
     private int counterPrint;
-    List<Print> printList;
+
 
 
     /**
@@ -20,9 +21,9 @@ public class Print {
     public Print(String name, int yearPrint) {
         this.name = name;
         this.yearPrint = yearPrint;
-        this.printList = new ArrayList<>();
 
     }
+
 
     public void setCounterPrint(int count) {
         this.counterPrint = count;

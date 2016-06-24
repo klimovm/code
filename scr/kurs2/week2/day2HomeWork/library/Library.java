@@ -15,6 +15,7 @@ public class Library {
     private String adress;
     private List<Reader> readers;
     private List<Print> prints;
+    private List<Book> books;
 
     /**
      * Конструктор класса
@@ -24,6 +25,7 @@ public class Library {
         this.adress = adress;
         this.prints = new ArrayList<>();
         this.readers = new ArrayList<>();
+        this.books = new ArrayList<>();
     }
 
 
@@ -78,6 +80,7 @@ public class Library {
 
         return true;
     }
+
 
     public void showPrintReader(Reader reader) {
         if (reader == null || !readers.contains(reader)) return;
@@ -142,15 +145,19 @@ public class Library {
     }
 
     //посмотреть печатные издания конкретного автора
-    public void showAuthorPrint(Object author) {
-        List<Print> authorPrints = new ArrayList<>();
-        for (int i = 0; i < prints.size(); i++) {
-            if ( (prints instanceof Book) && ((Book) prints).getAuthor() == (author)) {
-                authorPrints.add(prints.get(i));
+
+    public void showAuthorPrint(Author author) {
+        List<Print> tmp = new ArrayList<>();
+        for (int i = 0; i < prints.size(); i++)
+            if ((prints.get(i) instanceof Book) && ((Book) prints.get(i)).getAuthor().equals(author)) {
+                tmp.add(prints.get(i));
             }
+        for (int i = 0; i < tmp.size(); i++) {
+            System.out.println(tmp.get(i));
         }
-        for (int i = 0; i < authorPrints.size(); i++) {
-            System.out.println(authorPrints.get(i));
-        }
+
     }
+
+
+
 }

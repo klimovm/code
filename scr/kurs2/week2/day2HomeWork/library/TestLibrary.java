@@ -17,10 +17,10 @@ public class TestLibrary {
         Reader reader4 = new Reader("Вася", "Филимонов", 2, 5555555);
 
         Print book1 = new Book("Идиот", 1869, author1);
+        Print book5 = new Book("Nfnfnf", 1869, author1);
         Print book2 = new Book("Анна Каренина", 1877, author2);
         Print book3 = new Book("Мастер и Маргарита", 1966, author3);
         Print book4 = new Book("Тарас Бульба", 1950, author4);
-        Print book5 = new Book("Идиот", 1869, author1);
 
         Print jornal1 = new Jornal("Космо", 2000, 2, 1);
         Print jornal2 = new Jornal("Сад", 2000, 2, 1);
@@ -36,14 +36,10 @@ public class TestLibrary {
 
         //добавляем издания в библиотеку
         library.addPrint(book1);
+        library.addPrint(book5);
         library.addPrint(book1);
-        library.addPrint(book1);
-        library.addPrint(book1);
-        library.addPrint(nespaper1);
         library.addPrint(nespaper1);
         library.addPrint(jornal1);
-        library.addPrint(jornal2);
-        library.addPrint(jornal3);
 
         //добавляем читателей в библиотеку
         library.addReader(reader1);
@@ -80,15 +76,18 @@ public class TestLibrary {
         System.out.println();
 
         System.out.println("===Поиск издания по году===");
-        library.showPrintYear(2000);
+        library.showPrintYear(1869);
         System.out.println();
 
         System.out.println("===Поиск издания по названию===");
-        library.showPrintName("Авто");
+        library.showPrintName("Идиот");
         System.out.println();
 
         System.out.println("===Поиск издания по автору===");
         library.showAuthorPrint(author1);
+        System.out.println();
+;
+
 
 
 

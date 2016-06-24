@@ -1,11 +1,15 @@
 package scr.kurs2.week2.day2HomeWork.library;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by miha on 14.06.2016.
  */
-public class Author  {
+public class Author {
     private String name;
     private String surname;
+
 
     /**
      * Конструктор класса
@@ -13,7 +17,9 @@ public class Author  {
     public Author(String name, String surname) {
         this.name = name;
         this.surname = surname;
+
     }
+
 
     @Override
     public String toString() {

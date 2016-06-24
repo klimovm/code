@@ -27,7 +27,9 @@ public class Reader {
         this.prints = new ArrayList<>();
     }
 
-    /**гетеры и сетеры***/
+    /**
+     * гетеры и сетеры
+     ***/
 
 
     public void setBlackList(boolean blackList) {
@@ -41,6 +43,7 @@ public class Reader {
     public List<Print> getPrints() {
         return prints;
     }
+
     public boolean isBlackList() {
         return blackList;
     }
@@ -59,13 +62,10 @@ public class Reader {
     }
 
 
-
-
     @Override
     public String toString() {
         return String.format("%s,%s,%d,%d,", name, surname, idCard, telNumber);
     }
-
 
 
     @Override
