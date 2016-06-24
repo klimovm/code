@@ -22,6 +22,11 @@ public class Book extends Print {
         return author;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s,%s", super.toString(),author);
+    }
+
 
 
     @Override

@@ -24,7 +24,6 @@ public class TestLibrary {
 
         Print jornal1 = new Jornal("Космо", 2000, 2, 1);
         Print jornal2 = new Jornal("Сад", 2000, 2, 1);
-        Print jornal5 = new Jornal("Сад", 2000, 15, 15);
         Print jornal3 = new Jornal("Авто", 2000, 2, 1);
         Print jornal4 = new Jornal("Живность", 2000, 2, 1);
 
@@ -33,11 +32,67 @@ public class TestLibrary {
         Print nespaper3 = new NewsPaper("Новости",2010,2,1);
         Print nespaper4 = new NewsPaper("Спорт",2010,2,1);
 
-        Library lybrary = new Library("НБУ", "Крещатик,1");
+        Library library = new Library("НБУ", "Крещатик,1");
 
-        lybrary.addPrint(jornal2);
-        lybrary.addPrint(jornal5);
-        lybrary.showPrints();
+        //добавляем издания в библиотеку
+        library.addPrint(book1);
+        library.addPrint(book1);
+        library.addPrint(book1);
+        library.addPrint(book1);
+        library.addPrint(nespaper1);
+        library.addPrint(nespaper1);
+        library.addPrint(jornal1);
+        library.addPrint(jornal2);
+        library.addPrint(jornal3);
+
+        //добавляем читателей в библиотеку
+        library.addReader(reader1);
+        library.addReader(reader2);
+        library.addReader(reader3);
+
+        //выдать печатное издание читателю
+        library.givePrintRider(book1,reader1);
+        library.givePrintRider(jornal1,reader2);
+
+        //добавить читателя в черный список
+        library.addBlackListReader(reader1);
+
+        System.out.println("===посмотреть черный список===");
+        library.showBlackList();
+        System.out.println();
+
+        library.givePrintRider(nespaper1,reader1);
+
+        System.out.println("===Посмотреть список книг у читателя===");
+        library.showPrintReader(reader1);
+        System.out.println();
+
+        System.out.println("===Посмотреть список книг у всех читателей==");
+        library.showPrintsReaders();
+        System.out.println();
+
+        System.out.println("===Список изданий в библиотеке===");
+        library.showPrints();
+        System.out.println();
+
+        System.out.println("===Список читателей в библиотеке===");
+        library.showReaders();
+        System.out.println();
+
+        System.out.println("===Поиск издания по году===");
+        library.showPrintYear(2000);
+        System.out.println();
+
+        System.out.println("===Поиск издания по названию===");
+        library.showPrintName("Авто");
+        System.out.println();
+
+        System.out.println("===Поиск издания по автору===");
+        library.showAuthorPrint(author1);
+
+
+
+
 
 
     }

@@ -69,6 +69,7 @@ public class Library {
     public boolean givePrintRider(Print print, Reader reader) {
         if (print == null || reader == null) return false;
         if (reader.getCountPrint() >= 3 || reader.isBlackList() || reader.getPrints().contains(print)) return false;
+        if (!prints.contains(print)) return false;
 
         reader.getPrints().add(print);
         print.setCounterPrint(print.getCounterPrint() - 1);
@@ -113,17 +114,6 @@ public class Library {
         }
     }
 
-    //посмотреть печатные издания конкретного автора
-    public void showAuthorPrint(Object author) {
-        List<Book> authorPrints = new ArrayList<>();
-        for (int i = 0; i < prints.size() ; i++) {
-          //  if(prints instanceof Book  && (Book)prints.getAuthor.equals(author))
-
-        }
-
-    }
-
-
     //посмотреть печатные издания конкретного года
     public void showPrintYear(int year) {
         List<Print> tmp = new ArrayList<>();
@@ -137,6 +127,7 @@ public class Library {
         }
     }
 
+
     //найти печатное издание по названию (ключевым словам)
     public void showPrintName(String name) {
         List<Print> tmp = new ArrayList<>();
@@ -147,6 +138,19 @@ public class Library {
         }
         for (int i = 0; i < tmp.size(); i++) {
             System.out.println(tmp.get(i));
+        }
+    }
+
+    //посмотреть печатные издания конкретного автора
+    public void showAuthorPrint(Object author) {
+        List<Print> authorPrints = new ArrayList<>();
+        for (int i = 0; i < prints.size(); i++) {
+            if ( (prints instanceof Book) && ((Book) prints).getAuthor() == (author)) {
+                authorPrints.add(prints.get(i));
+            }
+        }
+        for (int i = 0; i < authorPrints.size(); i++) {
+            System.out.println(authorPrints.get(i));
         }
     }
 }
