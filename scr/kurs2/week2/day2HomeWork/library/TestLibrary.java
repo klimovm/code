@@ -12,6 +12,7 @@ public class TestLibrary {
         Author author4 = new Author("Николай", "Гоголь");
 
         Reader reader1 = new Reader("Саша", "Петров", 1, 2222222);
+        Reader reader5 = new Reader("Саша", "Петров", 1, 2222222);
         Reader reader2 = new Reader("Коля", "Иванов", 2, 3333333);
         Reader reader3 = new Reader("Игорь", "Сидоров", 3, 4444444);
         Reader reader4 = new Reader("Вася", "Филимонов", 2, 5555555);
@@ -43,6 +44,7 @@ public class TestLibrary {
 
         //добавляем читателей в библиотеку
         library.addReader(reader1);
+        library.addReader(reader5);
         library.addReader(reader2);
         library.addReader(reader3);
 
