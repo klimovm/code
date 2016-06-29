@@ -12,7 +12,6 @@ public class TestLibrary {
         Author author4 = new Author("Николай", "Гоголь");
 
         Reader reader1 = new Reader("Саша", "Петров", 1, 2222222);
-        Reader reader5 = new Reader("Саша", "Петров", 1, 2222222);
         Reader reader2 = new Reader("Коля", "Иванов", 2, 3333333);
         Reader reader3 = new Reader("Игорь", "Сидоров", 3, 4444444);
         Reader reader4 = new Reader("Вася", "Филимонов", 2, 5555555);
@@ -28,10 +27,10 @@ public class TestLibrary {
         Print jornal3 = new Jornal("Авто", 2000, 2, 1);
         Print jornal4 = new Jornal("Живность", 2000, 2, 1);
 
-        Print nespaper1 = new NewsPaper("Факты",2010,2,1);
-        Print nespaper2 = new NewsPaper("Сегодня",2010,2,1);
-        Print nespaper3 = new NewsPaper("Новости",2010,2,1);
-        Print nespaper4 = new NewsPaper("Спорт",2010,2,1);
+        Print nespaper1 = new NewsPaper("Факты", 2010, 2, 1);
+        Print nespaper2 = new NewsPaper("Сегодня", 2010, 2, 1);
+        Print nespaper3 = new NewsPaper("Новости", 2010, 2, 1);
+        Print nespaper4 = new NewsPaper("Спорт", 2010, 2, 1);
 
         Library library = new Library("НБУ", "Крещатик,1");
 
@@ -44,13 +43,12 @@ public class TestLibrary {
 
         //добавляем читателей в библиотеку
         library.addReader(reader1);
-        library.addReader(reader5);
         library.addReader(reader2);
         library.addReader(reader3);
 
         //выдать печатное издание читателю
-        library.givePrintRider(book1,reader1);
-        library.givePrintRider(jornal1,reader2);
+        library.givePrintRider(book1, reader1);
+        library.givePrintRider(jornal1, reader2);
 
         //добавить читателя в черный список
         library.addBlackListReader(reader1);
@@ -59,7 +57,7 @@ public class TestLibrary {
         library.showBlackList();
         System.out.println();
 
-        library.givePrintRider(nespaper1,reader1);
+        library.givePrintRider(nespaper1, reader1);
 
         System.out.println("===Посмотреть список книг у читателя===");
         library.showPrintReader(reader1);
@@ -88,13 +86,5 @@ public class TestLibrary {
         System.out.println("===Поиск издания по автору===");
         library.showAuthorPrint(author1);
         System.out.println();
-;
-
-
-
-
-
-
-
     }
 }
