@@ -28,7 +28,7 @@ public class TestLinkedList {
         list.remove(author3);
         showList(list);
 
-//dgkl;dfkgl;dfkgl;dfkgl;kdf
+
 
 
 
