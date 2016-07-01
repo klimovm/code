@@ -18,7 +18,7 @@ public class TestLinkedList {
         list.add( author3);
         showList(list);
 
-        list.set(1,"Трололо");
+        list.set(1,"Катя");
         showList(list);
 
         System.out.println(list.get(1));
@@ -28,10 +28,9 @@ public class TestLinkedList {
         list.remove(author3);
         showList(list);
 
-
-
-
-
+        System.out.println("add index node");
+        list.add(1,"000011111");
+        showList(list);
 
     }
 

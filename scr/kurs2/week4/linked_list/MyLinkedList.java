@@ -9,6 +9,7 @@ import java.util.ListIterator;
  * Created by miha on 29.06.2016.
  */
 public class MyLinkedList<T> implements List<T> {
+
     private Node<T> head;
     private Node<T> tail;
     private int size;
@@ -39,6 +40,7 @@ public class MyLinkedList<T> implements List<T> {
         return (T[]) new Object[0];
     }
 
+    /*******************************************************************/
     @Override
     public boolean add(Object o) {
         if (head == null) {
@@ -53,6 +55,24 @@ public class MyLinkedList<T> implements List<T> {
         size++;
         return true;
     }
+
+    /*******************************************************************/
+    @Override
+    public void add(int index, T element) {
+
+        Node tmp = new Node(element);
+        head.next = findNode(index);
+        for (int i = 0; i < size -1 ; i++) {
+            if (head.next.equals(tmp)){
+
+                head.next = tmp;}
+        }
+
+
+
+    }
+
+    /*******************************************************************/
 
     @Override
     public boolean remove(Object o) {
@@ -107,10 +127,7 @@ public class MyLinkedList<T> implements List<T> {
         return toReturn;
     }
 
-    @Override
-    public void add(int index, T element) {
 
-    }
 
     @Override
     public T remove(int index) {
