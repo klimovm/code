@@ -28,8 +28,8 @@ public class TestLinkedList {
         list.remove(author3);
         showList(list);
 
-        System.out.println("add index node");
-        list.add(1,"000011111");
+        System.out.println("==========add index node======");
+        list.add(2,"Новая нода");
         showList(list);
 
     }

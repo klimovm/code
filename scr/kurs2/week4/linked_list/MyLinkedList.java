@@ -59,17 +59,11 @@ public class MyLinkedList<T> implements List<T> {
     /*******************************************************************/
     @Override
     public void add(int index, T element) {
-
         Node tmp = new Node(element);
-        head.next = findNode(index);
-        for (int i = 0; i < size -1 ; i++) {
-            if (head.next.equals(tmp)){
-
-                head.next = tmp;}
-        }
-
-
-
+        Node<T> iter =findNode(index);
+        iter.previous.next = tmp;
+        tmp.next = iter;
+        size++;
     }
 
     /*******************************************************************/
