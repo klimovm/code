@@ -1,0 +1,72 @@
+Theory:
+
+ 1.Generics
+	lifecycle
+		declare, use, define
+	wildcard
+	scope -> class, method
+
+	examples in java
+
+	How to use gnerics in a hierarchy (is-a relation)
+
+
+
+2. Exceptions -> hierarchy
+	types: unchecked, checked(try-catch or throws)
+
+	'throw'
+
+    Checked(throws or try-catch) and Unchecked
+    http://kostin.ws/java/java-exceptions.html
+    http://habrahabr.ru/company/golovachcourses/blog/223821/
+    http://habrahabr.ru/company/golovachcourses/blog/225585/
+
+
+
+  3.java.io.*
+         byte			char
+	InputStream		    Reader
+	OutputStream		Writer
+
+	Abstract classes InputStream/OutputStream
+        https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html
+        https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html
+        http://sernam.ru/book_java.php?id=56
+
+        http://habrahabr.ru/post/178405/
+
+        Class File
+        https://docs.oracle.com/javase/7/docs/api/java/io/File.html
+        http://developer.alexanderklimov.ru/android/java/file.php
+
+   design pattern Adapter, Decorator
+
+   class File
+
+   Serialization, Deserialization
+	ObjectInputStream, ObjectOutputStream
+
+	interface Serializable
+
+   Recommedation
+	always close output stream
+		finally or try-with-resources
+
+
+Practise:
+
+1. Add to previous homework(data_structures)
+    - generics
+    - exception
+
+2. TODO saving your library in file
+
+
+3. Make view part of your library(use console menu)
+
+
+4. CommandLine https://www.codecademy.com/learn/learn-the-command-line !!!
+
+
+5. Git https://www.codecademy.com/learn/learn-git !!!

@@ -1,0 +1,60 @@
+package kurs2.data_structures.linked_list;
+
+
+import kurs2.week2.day2HomeWork.library.Author;
+
+/**
+ * Created by miha on 29.06.2016.
+ */
+public class TestLinkedList {
+    public static void main(String[] args) {
+        Author author1 = new Author("Вася", "1111");
+        Author author2 = new Author("Саша", "2222");
+        Author author3 = new Author("Витя", "3333");
+
+        MyLinkedList list = new MyLinkedList();
+        list.add( author1);
+        list.add( author2);
+        list.add( author3);
+        showList(list);
+
+        list.set(1,"Катя");
+        showList(list);
+
+        System.out.println(list.get(1));
+        System.out.println();
+
+
+        list.remove(author3);
+        showList(list);
+
+        System.out.println("==========add index node======");
+        list.add(2,"Новая нода");
+        showList(list);
+
+
+        System.out.println("==========Подсписок======");
+        showList((MyLinkedList) list.subList(0,2));
+
+
+
+        System.out.println("==========Удаление по объекту======");
+        list.remove(author1);
+        showList(list);
+
+        System.out.println("==========to array======");
+
+
+        System.out.println("==========clear======");
+        list.clear();
+        showList(list);
+
+    }
+
+    private static void showList(MyLinkedList list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        System.out.println();
+    }
+}
