@@ -1,8 +1,6 @@
 package kurs2.data_structures.linked_list;
 
 
-import kurs2.data_structures.linked_list.MyLinkedList;
-
 import java.util.List;
 
 /**
