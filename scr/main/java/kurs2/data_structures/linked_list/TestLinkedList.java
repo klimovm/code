@@ -15,16 +15,31 @@ public class TestLinkedList {
         Author author3 = new Author("Витя", "3333");
 
         MyLinkedList list = new MyLinkedList();
-
         list.add( author1);
-        list.add(333);
         list.add( author2);
         list.add( author3);
-        list.add(1111);
-        list.add(33);
+
+        MyLinkedList list2 = new MyLinkedList();
+        list2.add("Man");
+        list2.add("Woman");
+        list2.add("Child");
+
+        showList(list);
+        showList(list2);
+
+        list.addAll(0,list2);
         showList(list);
 
-        System.out.println("==========IndexOf======");
+        System.out.println("==========removeAllCollection======");
+        System.out.println(list.remove(list2));
+        System.out.println(list.size());
+
+
+
+
+
+
+       /* System.out.println("==========IndexOf======");
         System.out.println(list.indexOf(author2));
         System.out.println("===========================");
 
@@ -72,7 +87,7 @@ public class TestLinkedList {
 
         System.out.println("==========clear======");
         list.clear();
-        showList(list);
+        showList(list);*/
 
     }
 

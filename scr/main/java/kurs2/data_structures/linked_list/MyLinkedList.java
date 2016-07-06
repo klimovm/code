@@ -85,7 +85,9 @@ public class MyLinkedList<T> implements List<T> {
         Node<T> newNode = new Node<>(element);
         if (index == 0) {
             newNode.next = head;
+            head.previous = newNode;
             head = newNode;
+
         } else if (index == size) {
             tail.next = newNode;
             newNode.previous = tail;
@@ -105,29 +107,26 @@ public class MyLinkedList<T> implements List<T> {
     /*******************************************************************/
     @Override
     public boolean addAll(Collection c) {
-
-        return false;
+        boolean result = false;
+        for (Object o:c) {//перебираем коллекцию и добавляем поелементно
+            result = add(o);
+        }
+        return result;
     }
 
     /*******************************************************************/
     @Override
     public boolean addAll(int index, Collection c) {
-        Object [] array = c.toArray();
-
-        if (array.length == 0) return false;
-
-        if (index == size){
-
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
         }
 
-        if (index == 0){
-
+        for (Object o:c) {//перебираем коллекцию и добавляем поелементно
+            add(index, (T) o);
+            index++;
         }
-
-
             return false;
     }
-    //test
 
 
     /*******************************************************************/
@@ -138,6 +137,16 @@ public class MyLinkedList<T> implements List<T> {
             remove(indexOf(o));
             return true;
         } else return false;
+    }
+    /*******************************************************************/
+    @Override
+    public boolean removeAll(Collection c) {
+        // TODO: 06.07.2016
+        for (Object o:c) {//перебираем коллекцию и удаляем поелементно
+            remove(o);
+            size--;
+        }
+        return true;
     }
     /*******************************************************************/
 
@@ -296,10 +305,6 @@ public class MyLinkedList<T> implements List<T> {
         return false;
     }
 
-    @Override
-    public boolean removeAll(Collection c) {
-        return false;
-    }
 
     @Override
     public boolean containsAll(Collection c) {
