@@ -21,6 +21,7 @@ public class TestTime {
         System.out.println("bubleSort - " + bubleSort);
 
 
+
         TimeCounter insertTime = new TimeCounter();
         final int[] array2 = ArrayUtils.createArray(10000);
 
@@ -41,6 +42,6 @@ public class TestTime {
                 ArrayUtils.selectSort(array1);
             }
         });
-        System.out.println("selectSort - "+ selectSort);
+        System.out.println("selectSort - " + selectSort);
     }
 }
