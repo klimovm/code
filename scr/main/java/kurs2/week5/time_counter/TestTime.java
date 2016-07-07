@@ -33,6 +33,8 @@ public class TestTime {
         });
         System.out.println("insertSort - " + insertSort);
 
+
+
         TimeCounter selectTime = new TimeCounter();
         final int[] array1 = ArrayUtils.createArray(10000);
 

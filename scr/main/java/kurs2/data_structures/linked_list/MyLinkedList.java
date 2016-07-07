@@ -146,7 +146,7 @@ public class MyLinkedList<T> implements List<T> {
             remove(o);
             size--;
         }
-        return true;
+            return false;
     }
     /*******************************************************************/
 
@@ -304,7 +304,6 @@ public class MyLinkedList<T> implements List<T> {
     public boolean retainAll(Collection c) {
         return false;
     }
-
 
     @Override
     public boolean containsAll(Collection c) {

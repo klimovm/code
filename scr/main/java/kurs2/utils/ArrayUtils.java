@@ -30,7 +30,7 @@ public class ArrayUtils {
 
     public static void insertSort(int[] array) {
         if (array == null || array.length <= 1) return;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             int tmp = array[i];
             int indexPrevious = i - 1;
             while (indexPrevious >= 0 && array[indexPrevious] > tmp) {

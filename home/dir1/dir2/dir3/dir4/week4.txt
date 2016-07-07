@@ -1,0 +1,47 @@
+Theory:
+
+    1. See patterns Strategy, Observer, Adapter, Decorator, Iterator, State, Singleton
+        book Head First Design Patterns
+
+    2. See interface java.util.List
+
+		     Data Structures based on:
+        Nodes
+               https://www.cs.usfca.edu/~galles/visualization/StackLL.html
+               https://www.cs.usfca.edu/~galles/visualization/QueueLL.html
+
+	    Array
+               https://www.cs.usfca.edu/~galles/visualization/StackArray.html
+               https://www.cs.usfca.edu/~galles/visualization/QueueArray.html
+
+
+           More exaples structures on Nodes
+           http://visualgo.net/list.html
+
+	    Define advantages and disadvantages of linked and array structures
+
+    3. Generics:
+        https://www.youtube.com/watch?v=MniNZsyjH9E
+        https://www.youtube.com/watch?v=pezRhckJbFE
+
+    4. Iterator
+        https://www.youtube.com/watch?v=2DuwRrmZwDE
+        https://www.youtube.com/watch?v=VKIzUuMdmag
+
+Practice:
+
+   1.Finish our LinkedList
+
+   2. Make reversion method
+        https://github.com/gorobec/SigleLinkedListReversion
+        See https://www.youtube.com/watch?v=Le9fLywkhJM&feature=youtu.be
+
+
+
+   3.Write own sorting algorithms
+     	bubble, selection, insertion
+     	http://visualgo.net/sorting.html
+
+   4. Implement own simple ArrayStack, LinkedStack, ArrayQueue, LinkedQueue
+
+   5. Finish previous home works! In search methods use Binary search, don't forget about sorting.
