@@ -56,6 +56,17 @@ public class MyLinkedList<T> implements List<T> {
         return false;
     }
 
+
+    @Override
+    public boolean retainAll(Collection c) {
+        for (Object o:c) {
+            clear();
+            addAll(c);
+        }
+        return false;
+
+    }
+
     /******************************************************/
     @Override
     public Iterator<T> iterator() {
@@ -314,10 +325,7 @@ public class MyLinkedList<T> implements List<T> {
 
     /**************************************************************************/
 
-    @Override
-    public boolean retainAll(Collection c) {
-        return false;
-    }
+
 
     @Override
     public Object[] toArray(Object[] a) {

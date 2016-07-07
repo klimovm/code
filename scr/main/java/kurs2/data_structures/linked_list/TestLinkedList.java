@@ -47,6 +47,11 @@ public class TestLinkedList {
         System.out.println("==========containsObj=====");
         System.out.println(list.contains(author1));
 
+        System.out.println("++++++++++++++");
+        list.addAll(list2);
+        list.retainAll(list2);
+        showList(list);
+
 
 
 
