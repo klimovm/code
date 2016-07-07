@@ -31,7 +31,7 @@ public class TestLinkedList {
         showList(list);
 
         System.out.println("==========removeAllCollection======");
-        System.out.println(list.removeAll(list2));
+        list.removeAll(list2);
         showList(list);
         System.out.println(list.size());
 
