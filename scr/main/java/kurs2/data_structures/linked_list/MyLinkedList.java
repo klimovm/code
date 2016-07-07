@@ -42,8 +42,21 @@ public class MyLinkedList<T> implements List<T> {
     @Override
     public boolean contains(Object o) {
         return indexOf(o) != -1;
+         /*for (int i = 0; i < size(); i++) { //втрой вариант
+                if (get(i).equals(o)) return true;
+            }
+        return false;*/
     }
 
+    /******************************************************/
+    @Override
+    public boolean containsAll(Collection c) {
+        for (Object o : c)
+            if (contains(o)) return true;
+        return false;
+    }
+
+    /******************************************************/
     @Override
     public Iterator<T> iterator() {
         return new MyIterator();
@@ -141,7 +154,6 @@ public class MyLinkedList<T> implements List<T> {
     /*******************************************************************/
     @Override
     public boolean removeAll(Collection c) {
-        // TODO: 06.07.2016
         for (Object o:c) {//перебираем коллекцию и удаляем поелементно
             remove(o);
         }
@@ -184,6 +196,7 @@ public class MyLinkedList<T> implements List<T> {
         }
         return iter;
     }
+    /*******************************************************************/
 
     @Override
     public T set(int index, T element) {
@@ -195,6 +208,7 @@ public class MyLinkedList<T> implements List<T> {
 
         return toReturn;
     }
+    /*******************************************************************/
 
 
     @Override
@@ -225,6 +239,7 @@ public class MyLinkedList<T> implements List<T> {
         size--;
         return iter.value;
     }
+    /*******************************************************************/
 
     @Override
     public int indexOf(Object o) {
@@ -244,7 +259,7 @@ public class MyLinkedList<T> implements List<T> {
         }
         return -1;
     }
-
+    /*******************************************************************/
     @Override
     public int lastIndexOf(Object o) {
         Node<T> iter;
@@ -264,7 +279,7 @@ public class MyLinkedList<T> implements List<T> {
         }
         return -1;
     }
-
+    /*******************************************************************/
     @Override
     public ListIterator listIterator() {
 //        NOP
@@ -301,11 +316,6 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public boolean retainAll(Collection c) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection c) {
         return false;
     }
 

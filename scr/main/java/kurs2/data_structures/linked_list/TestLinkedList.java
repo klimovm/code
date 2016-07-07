@@ -24,16 +24,28 @@ public class TestLinkedList {
         list2.add("Woman");
         list2.add("Child");
 
+        MyLinkedList list3 = new MyLinkedList();
+        list3.add("M");
+        list3.add("W");
+        list3.add("C");
+
         showList(list);
         showList(list2);
 
-        list.addAll(0,list2);
+        list.addAll(list2);
         showList(list);
+
+        System.out.println("==========containsCollection======");
+        System.out.println(list.containsAll(list2));
 
         System.out.println("==========removeAllCollection======");
         list.removeAll(list2);
         showList(list);
         System.out.println(list.size());
+
+
+        System.out.println("==========containsObj=====");
+        System.out.println(list.contains(author1));
 
 
 
