@@ -144,7 +144,6 @@ public class MyLinkedList<T> implements List<T> {
         // TODO: 06.07.2016
         for (Object o:c) {//перебираем коллекцию и удаляем поелементно
             remove(o);
-            size--;
         }
             return false;
     }
