@@ -35,7 +35,7 @@ public class TestLinkedList {
         list.addAll(list2);
         showList(list);
 
-        System.out.println("==========containsCollection======");
+        System.out.println("==========containsAllCollection======");
         System.out.println(list.containsAll(list2));
 
         System.out.println("==========removeAllCollection======");
@@ -52,6 +52,15 @@ public class TestLinkedList {
         list.retainAll(list2);
         showList(list);
 
+        System.out.println("==========clear======");
+        list.clear();
+
+        list.add(0,222);
+        list.addAll(1,list2);
+        showList(list);
+
+        System.out.println(list.removeAll(list3));
+        showList(list);
 
 
 

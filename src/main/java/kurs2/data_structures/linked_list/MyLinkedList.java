@@ -52,8 +52,8 @@ public class MyLinkedList<T> implements List<T> {
     @Override
     public boolean containsAll(Collection c) {
         for (Object o : c)
-            if (contains(o)) return true;
-        return false;
+            if (!contains(o)) return false;
+        return true;
     }
 
 
@@ -107,7 +107,14 @@ public class MyLinkedList<T> implements List<T> {
         }
 
         Node<T> newNode = new Node<>(element);
+
+        if (size == 0){
+            head  = tail = newNode;
+            head.previous = null;
+            head.next =null;
+        }
         if (index == 0) {
+
             newNode.next = head;
             head.previous = newNode;
             head = newNode;
@@ -165,10 +172,11 @@ public class MyLinkedList<T> implements List<T> {
     /*******************************************************************/
     @Override
     public boolean removeAll(Collection c) {
+        boolean result = false;
         for (Object o:c) {//перебираем коллекцию и удаляем поелементно
-            remove(o);
+            result = remove(o);
         }
-            return false;
+            return result;
     }
     /*******************************************************************/
 
