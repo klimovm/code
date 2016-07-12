@@ -1,6 +1,6 @@
 package kurs2.week2.day2HomeWork.students;
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
 
 import java.util.Comparator;
 
@@ -14,8 +14,8 @@ public class ComparatorSortByBD implements Comparator <Student> {
         if (obj1 != null  && obj2 == null) return -1;
         if (obj1 == null && obj2 != null) return 1;
 
-        Mydate date1 = obj1.getBirthDay();
-        Mydate date2 = obj2.getBirthDay();
+        MyDate date1 = obj1.getBirthDay();
+        MyDate date2 = obj2.getBirthDay();
 
         return date1.compareTo(date2);
     }

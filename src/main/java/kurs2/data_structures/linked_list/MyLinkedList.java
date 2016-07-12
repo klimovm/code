@@ -208,7 +208,19 @@ public class MyLinkedList<T> implements List<T> {
         for (Object t : tmp) {
             remove(t);
         }
-        return  tmp.size()!=0;
+        return tmp.size() != 0;
+
+        //Второй вариант реализации без создания дополнительной структуры
+       /* if (c.isEmpty()) return false;
+
+        boolean change = false;
+        for (Object o : c) {
+            while (contains(o)) {
+                remove(o);
+                change = true;
+            }
+        }
+        return change;*/
     }
 
 
@@ -239,7 +251,7 @@ public class MyLinkedList<T> implements List<T> {
     }
 
     /*******************************************************************/
-    private Node<T> findNode(int index) {
+    public Node<T> findNode(int index) {
         if (index >= size || index < 0) {
             throw new MyIndexOutOfBoundException(String.valueOf(index));
         }
@@ -323,19 +335,24 @@ public class MyLinkedList<T> implements List<T> {
     /**************************************************************************/
     @Override
     public List subList(int fromIndex, int toIndex) {
-        // TODO: 10.07.2016
-        // проверки индексов от 0 до size-1;
 
+
+        // проверки индексов от 0 до size-1;
         //toIndex >= fromIndex
 
+        if (fromIndex <= toIndex && fromIndex >= 0 && toIndex < size) {
 
-        MyLinkedList<T> sublist = new MyLinkedList<>();
+            MyLinkedList<T> sublist = new MyLinkedList<>();
 
-        for (int i = fromIndex; i <= toIndex; i++) {
-            sublist.add(findNode(i).value);
+            for (int i = fromIndex; i <= toIndex; i++) {
+                sublist.add(findNode(i).value);
+            }
+
+            return sublist;
+        } else {
+            throw new NullPointerException("Нельзя так");
         }
 
-        return sublist;
     }
 
     /**************************************************************************/

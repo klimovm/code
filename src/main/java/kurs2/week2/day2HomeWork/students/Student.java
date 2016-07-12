@@ -1,6 +1,6 @@
 package kurs2.week2.day2HomeWork.students;
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
 
 /**
  * Created by Mihail on 22.05.2016.
@@ -8,11 +8,11 @@ import kurs2.utils.Mydate;
 public class Student implements Comparable  {
 
     private String name;
-    private Mydate birthDay;
+    private MyDate birthDay;
     private double averageMark;
     private char gender;
 
-    public Student(String name, Mydate birthDay, char gender, double averageMark) {
+    public Student(String name, MyDate birthDay, char gender, double averageMark) {
         this.birthDay = birthDay;
         this.name = name;
         this.gender = gender;
@@ -23,7 +23,7 @@ public class Student implements Comparable  {
         return name;
     }
 
-    public Mydate getBirthDay() {
+    public MyDate getBirthDay() {
         return birthDay;
     }
 
@@ -39,7 +39,7 @@ public class Student implements Comparable  {
         this.averageMark = averageMark;
     }
 
-    public void setBirthDay(Mydate birthDay) {
+    public void setBirthDay(MyDate birthDay) {
         this.birthDay = birthDay;
     }
 

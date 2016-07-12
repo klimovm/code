@@ -38,7 +38,20 @@ public class TestLinkedList {
 
 
         System.out.println("==========Подсписок======");
-        showList((MyLinkedList) list.subList(2,2));
+        showList((MyLinkedList) list.subList(0,2));
+
+
+        System.out.println("==========SET==============");
+        System.out.println(list.set(0,"Слово"));
+        showList(list);
+        System.out.println("===========================");
+
+
+
+        System.out.println("==========IndexOf======");
+        System.out.println(list.indexOf(author2));
+        System.out.println("===========================");
+
 
         System.out.println("==========containsAllCollection======");
         System.out.println(list.containsAll(list2));
@@ -79,11 +92,8 @@ public class TestLinkedList {
 
 
 
-       /* System.out.println("==========IndexOf======");
-        System.out.println(list.indexOf(author2));
-        System.out.println("===========================");
 
-        System.out.println("==========lastIndexOf======");
+        /*System.out.println("==========lastIndexOf======");
         System.out.println(list.lastIndexOf(author1));
         System.out.println("===========================");
 

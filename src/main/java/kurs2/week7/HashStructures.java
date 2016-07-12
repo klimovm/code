@@ -1,6 +1,7 @@
 package kurs2.week7;
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
+import kurs2.week1.day2.Gender;
 import kurs2.week1.day2.Student;
 
 import java.util.HashSet;
@@ -11,51 +12,46 @@ import java.util.Set;
  */
 public class HashStructures {
     public static void main(String[] args) {
-        Set<Student> set =new HashSet<>();
-        Set<String> string =new HashSet<>();
+        Set<Student> set = new HashSet<>();
+        HashSet<String>strings = new HashSet<>();
 
-        string.add("A");
-        string.add("A");
-        string.add("A");
-        string.add("A");
-        string.add("A");
-        string.add("A");
+        strings.add("A");
+        strings.add("C");
+        strings.add("B");
+        strings.add("F");
+        strings.add("Z");
 
+        System.out.println(strings.contains("F"));
 
-
-
-
+        /*for (String string : strings) {
+            System.out.println(string);
+        }*/
 
         Student st1 = new Student("Alex",
-                new Mydate(1989, 12, 12),
-                'M');
-        Student st2 = new Student("Jack",
-                new Mydate(1989, 3, 13),
-                'M');
+                new MyDate(1977, 12, 12),
+                Gender.MALE);
+        Student st2 = new Student("Johnny",
+                new MyDate(1963, 12, 12),
+                Gender.MALE);
         Student st3 = new Student("Anna",
-                new Mydate(1988, 1, 3),
-                'W');
+                new MyDate(1999, 12, 12),
+                Gender.FEMALE);
+        Student st4 = new Student("Kate",
+                new MyDate(2014, 12, 12),
+                Gender.FEMALE);
 
-        Student st4 = new Student("Jeniya",
-                new Mydate(1988, 1, 3),
-                'W');
+        Student st5 = new Student("Kate",
+                new MyDate(2014, 12, 12),
+                Gender.FEMALE);
 
-        Student st5 = new Student("Jeniya",
-                new Mydate(1988, 1, 3),
-                'W');
 
-        set.add(st1);
+
         set.add(st1);
         set.add(st2);
         set.add(st3);
         set.add(st4);
 
 
-        for (Student s:set ) {
-            System.out.println(s);
-        }
-          //  System.out.println(set.contains(st5));
-
-
+        System.out.println(set.contains(st5));
     }
 }

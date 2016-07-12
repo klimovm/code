@@ -1,6 +1,6 @@
 package kurs2.week1.day2;
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
 
 /**
  * Created by miha on 23.05.2016.
@@ -8,7 +8,7 @@ import kurs2.utils.Mydate;
 public class TDD {
     public static void main(String[] args) {
         Group group = new Group("ACO13");
-        Student st1 = new Student("Aex", new Mydate(1989, 10, 11), 'M');
+        Student st1 = new Student("Aex", new MyDate(1989, 10, 11), Gender.MALE);
 
         boolean expected = true;
         boolean actual = group.addStudent(st1);
@@ -19,7 +19,7 @@ public class TDD {
 
         boolean expected1 = true;
 
-        boolean actual1 = group.delStudent("name");
+        boolean actual1 = group.delStudent(st1);
 
         System.out.printf("Metod name - %s, result - %s," +
                         "expected -%s, actual - %s\n", "delStudent"

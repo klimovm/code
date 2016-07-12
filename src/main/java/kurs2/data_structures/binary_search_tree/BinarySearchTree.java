@@ -9,16 +9,15 @@ import java.util.*;
  */
 public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<E>, Iterable<E> {
 
-
     private Node<E> root;
     private int size;
     private Comparator<? super E> comparator;
 
-    public BinarySearchTree(Comparator<? super E> comparator) {
-        this.comparator = comparator;
+    public BinarySearchTree() {
     }
 
-    public BinarySearchTree() {
+    public BinarySearchTree(Comparator<? super E> comparator) {
+        this.comparator = comparator;
     }
 
     @Override
@@ -31,15 +30,14 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
         return size == 0;
     }
 
-    /************************************************************************************************/
     @Override
     public boolean contains(Object o) {
 
         Node<E> search = null;
 
         if (comparator != null) {
-            //todo search with comparator
-            //search with Comparable
+//            todo search with comparator
+//            search with Comparable
         } else {
 
             search = findNode(o);
@@ -48,7 +46,6 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
         return search != null;
     }
 
-    /************************************************************************************************/
     private Node<E> findNode(Object o) {
         if (o == null) throw new NullPointerException();
         Node<E> iterator = root;
@@ -64,58 +61,55 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
         return null;
     }
 
-    /************************************************************************************************/
-
     @Override
     public E lower(E e) {
+//        TODO
         return null;
     }
 
     @Override
     public E floor(E e) {
+        //        TODO
         return null;
     }
 
     @Override
     public E ceiling(E e) {
+        //        TODO
         return null;
     }
 
     @Override
     public E higher(E e) {
+        //        TODO
         return null;
     }
 
     @Override
     public E pollFirst() {
+        //        TODO
         return null;
     }
 
-
-    public void showTree(){
-        //делаем через рекурсию
-        // 1е правило выхода
+    public void showTree() {
         deepSearch(root);
-
     }
 
     private void deepSearch(Node<E> root) {
-        //exit
-        //находим меншего за root
+//       exit condition
+        if (root == null) return;
+//        find lowest then root
         deepSearch(root.leftChild);
-        // выводим найменьшее значение
         System.out.println(root.value);
-        //
+//        print lowest value
         deepSearch(root.rightChild);
-
     }
-
 
     @Override
     public E pollLast() {
+        //        TODO
         return null;
     }
-
 
     @Override
     public Iterator<E> iterator() {
@@ -124,90 +118,91 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
 
     @Override
     public NavigableSet<E> descendingSet() {
+//        NOP
         return null;
     }
 
     @Override
     public Iterator<E> descendingIterator() {
+//        NOP
         return null;
     }
 
     @Override
     public NavigableSet<E> subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive) {
+//        NOP
         return null;
     }
 
     @Override
     public NavigableSet<E> headSet(E toElement, boolean inclusive) {
+//        NOP
         return null;
     }
 
     @Override
     public NavigableSet<E> tailSet(E fromElement, boolean inclusive) {
+//        NOP
         return null;
     }
 
     @Override
     public Comparator<? super E> comparator() {
+        //        TODO
         return null;
     }
 
     @Override
     public SortedSet<E> subSet(E fromElement, E toElement) {
+//        NOP
         return null;
     }
 
     @Override
     public SortedSet<E> headSet(E toElement) {
+//        NOP
         return null;
     }
 
     @Override
     public SortedSet<E> tailSet(E fromElement) {
+//        NOP
         return null;
     }
 
-    /**************************************************************************/
     @Override
     public E first() {
+
+        return findLeft(root).value;
+    }
+
+    private Node<E> findLeft(Node<E> iter) {
         if (isEmpty()) throw new NoSuchElementException("size == 0");
-        Node<E> iter = root;
-        return findLeft(iter);
+        return iter.leftChild != null ? findLeft(iter.leftChild) : iter;
     }
 
-    /**************************************************************************/
-    private E findLeft(Node<E> iter) {
-        return iter.leftChild != null ? findLeft(iter.leftChild) : iter.value;
-    }
-
-
-    /**************************************************************************/
     @Override
     public E last() {
         if (isEmpty()) throw new NoSuchElementException("size == 0");
-        Node<E> iter = root;
-        return findRight(iter);
+        return findRight(root);
     }
 
     private E findRight(Node<E> iter) {
         return iter.rightChild != null ? findRight(iter.rightChild) : iter.value;
-
     }
-
-    /**************************************************************************/
-
 
     @Override
     public Object[] toArray() {
+        //        TODO
         return new Object[0];
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
+        //        TODO
         return null;
     }
 
-    /************************************************************************************************/
     @Override
     public boolean add(E e) {
 
@@ -217,9 +212,8 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
             size++;
             return true;
         } else if (comparator != null) {
-            // todo compare with comparator
+//            todo compare with comparator
         } else {
-
             @SuppressWarnings("unchecked")
             Comparable<? super E> eComparable = (Comparable<? super E>) e;
 
@@ -240,17 +234,16 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
             } while (iterator != null);
 
             if (compareResult > 0) {
-                parent.rightChild = new Node<E>(e, parent);
+                parent.rightChild = new Node<>(e, parent);
             } else {
                 parent.leftChild = new Node<E>(e, parent);
             }
             size++;
             return true;
+
         }
         return false;
     }
-
-    /************************************************************************************************/
 
     @SuppressWarnings("unchecked")
     private int canCompare(E element1, E element2) {
@@ -258,100 +251,101 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
                 ((Comparable<? super E>) element1).compareTo(element2);
     }
 
-
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    /************************************************************************************************/
     @Override
     public boolean remove(Object o) {
 
         Node<E> current = findNode(o);
         if (current == null) return false;
         size--;
-
-        if (current.rightChild == null && current.leftChild == null) {//doesn't have children
+        if (current.rightChild == null && current.leftChild == null) { // doesn't have children
             if (current == root) root = null;
-            else if (current == current.parrent.leftChild) current.parrent.leftChild = null;
-            else current.parrent.rightChild = null;
+            else if (current == current.parent.leftChild) current.parent.leftChild = null;
+            else current.parent.rightChild = null;
 
-            current.parrent = null;
-
-
-        } else if (current.rightChild == null) {//has only left child
+            current.parent = null;
+        } else if (current.rightChild == null) { // has only left child
+//            current root and
             if (current == root) {
                 root = current.leftChild;
-                root.parrent = null;
-            } else if (current == current.parrent.leftChild) {
-                current.parrent.leftChild = current.leftChild;
-                current.leftChild.parrent = current.parrent;
-                current.parrent = null;
+                root.parent = null;
+
+            }
+            //            no children, current
+            else if (current == current.parent.leftChild) {
+                current.parent.leftChild = current.leftChild;
+                current.leftChild.parent = current.parent;
+                current.parent = null;
             } else {
-                current.parrent.rightChild = current.leftChild;
-                current.leftChild.parrent = current.parrent;
-                current.parrent = null;
+                current.parent.rightChild = current.leftChild;
+                current.leftChild.parent = current.parent;
+                current.parent = null;
             }
             current.leftChild = null;
 
-
-        } else if (current.leftChild == null) {//has only right child
+        } else if (current.leftChild == null) { // has only right child
             if (current == root) {
                 root = current.rightChild;
-                root.parrent = null;
-            } else if (current == current.parrent.leftChild) {
-                current.parrent.leftChild = current.rightChild;
-                current.rightChild.parrent = current.parrent;
-                current.parrent = null;
+                root.parent = null;
+
+            } else if (current == current.parent.leftChild) {
+                current.parent.leftChild = current.rightChild;
+                current.rightChild.parent = current.parent;
+                current.parent = null;
             } else {
-                current.parrent.rightChild = current.rightChild;
-                current.rightChild.parrent = current.parrent;
-                current.parrent = null;
+                current.parent.rightChild = current.rightChild;
+                current.rightChild.parent = current.parent;
+                current.parent = null;
             }
             current.leftChild = null;
-        } else {//has both children
+        } else { // has both children
 
             Node<E> successor = findSuccessor(current);
-            if (current == root){
+            if (current == root) {
                 root = successor;
-            } else if (current.parrent.leftChild == current){
-                current.parrent.leftChild = successor;
-            }else {
-                current.parrent.rightChild = successor;
+            } else if (current.parent.leftChild == current) {
+                current.parent.leftChild = successor;
+            } else {
+                current.parent.rightChild = successor;
             }
-            successor.parrent = current.parrent;
+            successor.parent = current.parent;
             successor.leftChild = current.leftChild;
-            current.leftChild.parrent = successor;
-        }
+            current.leftChild.parent = successor;
 
+        }
 
         return true;
     }
 
     private Node<E> findSuccessor(Node<E> current) {
         Node<E> successor = current.rightChild;
+
         while (successor.leftChild != null) {
             successor = successor.leftChild;
         }
-        if (successor.parrent != current) {
-            successor.parrent.leftChild = successor.rightChild;
-            successor.rightChild.parrent = successor.parrent;
+        if (successor.parent != current) {
+            successor.parent.leftChild = successor.rightChild;
+            successor.rightChild.parent = successor.parent;
             successor.rightChild = current.rightChild;
-            current.rightChild.parrent = successor;
+            current.rightChild.parent = successor;
         }
         return successor;
     }
 
-    /************************************************************************************************/
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        //        TODO
+        return false;
+    }
 
     @Override
     public boolean addAll(Collection<? extends E> c) {
+        //        TODO
         return false;
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
+//        NOP
         return false;
     }
 
@@ -362,12 +356,17 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
 
     @Override
     public void clear() {
+//        TODO
 
     }
 
+    /**
+     * Node class
+     */
     private static class Node<T> {
+
         T value;
-        Node<T> parrent;
+        Node<T> parent;
         Node<T> leftChild;
         Node<T> rightChild;
 
@@ -377,33 +376,37 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
 
         public Node(T value, Node<T> parent) {
             this.value = value;
-            this.parrent = parent;
+            this.parent = parent;
         }
     }
 
+    /**
+     * Tree Iterator
+     */
     private class MyBinaryTreeIterator implements Iterator<E> {
 
 
-        // TODO: 09.07.2016
+        //        TODO
         Node<E> iterator;
-        public  MyBinaryTreeIterator(){
-            this.iterator = findLeftNode(root);
+
+
+        public MyBinaryTreeIterator() {
+
+            this.iterator = findLeft(root);
         }
 
-        private Node<E> findLeftNode(Node<E> root) {
-            return  null;
-        }
 
         @Override
         public boolean hasNext() {
-            return false;
+            return iterator != null;
         }
 
         @Override
         public E next() {
-            return null;
+            E forReturn = iterator.value;
+
+
+            return forReturn;
         }
-
-
     }
 }

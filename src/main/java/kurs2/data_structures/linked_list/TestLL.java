@@ -15,6 +15,7 @@ public class TestLL {
 
         list.add(5);
 
+
         int expected = 1;
         int actual = list.size();
         boolean result = actual == expected;
@@ -36,6 +37,7 @@ public class TestLL {
         list3.add(6);
 
         MyLinkedList list4 = new MyLinkedList();
+        MyLinkedList list66 = new MyLinkedList();
         list4.add(4);
         list4.add(5);
         list4.add(6);
@@ -46,6 +48,13 @@ public class TestLL {
         expected = 6;
         result = actual == expected;
         System.out.printf("Metod addAll(collection), result %s, actual - %d, expected %d\n", result, actual, expected);
+        /***************************************************************************************************/
+
+
+        boolean actualBool = list.removeAll(list3);
+        boolean expectedBool = false;
+        boolean resultBool = actualBool = expectedBool;
+        System.out.printf("Metod removeAll(collection), resultBool %s, actualBool - %s, expectedBool %s\n", resultBool, actualBool, expectedBool);
         /***************************************************************************************************/
 
         list.addAll(0,list4);
@@ -105,7 +114,6 @@ public class TestLL {
         result = actual == expected;
 
         System.out.printf("Metod remove, result %s, actual - %d, expected %d\n", result, actual, expected);
-
 
         expected = 15;
         actual = (Integer) list.remove(0);

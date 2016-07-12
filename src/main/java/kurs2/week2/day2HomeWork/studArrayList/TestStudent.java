@@ -1,7 +1,7 @@
 package kurs2.week2.day2HomeWork.studArrayList;
 
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
 
 /**
  * Created by miha on 02.06.2016.
@@ -9,11 +9,11 @@ import kurs2.utils.Mydate;
 public class TestStudent {
     public static void main(String[] args) {
         /*************************создаем студентов***********************************/
-        Student student1 = new Student("Саша", new Mydate(1989, 04, 20), 15.2, 180);
-        Student student2 = new Student("Коля", new Mydate(1988, 04, 21), 11.2, 181);
-        Student student3 = new Student("Олег", new Mydate(1988, 04, 22), 13.2, 182);
-        Student student4 = new Student("Ваня", new Mydate(1988, 04, 23), 13.0, 182);
-        Student student5 = new Student("Толя", new Mydate(1989, 04, 20), 10.2, 180);
+        Student student1 = new Student("Саша", new MyDate(1989, 04, 20), 15.2, 180);
+        Student student2 = new Student("Коля", new MyDate(1988, 04, 21), 11.2, 181);
+        Student student3 = new Student("Олег", new MyDate(1988, 04, 22), 13.2, 182);
+        Student student4 = new Student("Ваня", new MyDate(1988, 04, 23), 13.0, 182);
+        Student student5 = new Student("Толя", new MyDate(1989, 04, 20), 10.2, 180);
 
         /*************************создаем группу**************************************/
         Group aco13 = new Group("ACO13");

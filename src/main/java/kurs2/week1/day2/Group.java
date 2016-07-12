@@ -1,156 +1,60 @@
 package kurs2.week1.day2;
 
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by Mihail on 22.05.2016.
  */
 public class Group {
-    private static final int GROUP_SIZE = 3;
     private int counter;
     private String name;
-    private Student[] students;
+    private List<Student> students;
+    private transient Comparator<Student> comparator = new AgeComparator();
 
     public Group(String name) {
         this.name = name;
-        this.students = new Student[GROUP_SIZE];
+        this.students = new ArrayList<>();
     }
 
     public Group(String name, int groupSize) {
         this.name = name;
-        this.students = new Student[groupSize];
+        this.students = new ArrayList<>(groupSize);
     }
 
-    public Group(String name, Student[] students) {
-        this.name = name;
-        this.students = students;
-    }
 
-    public boolean addStudent(Student student) {
-        if (student == null) return false;
-//               todo make resizeable(сделать изменения размера)
-        if (counter >= students.length) {
-            students = Arrays.copyOf(students, counter * 2);
-        }
-
+    public boolean addStudent(Student student){
+        if(student == null) return false;
 //               todo check if already present in group
+        if(!students.contains(student)){
+            students.add(student);
+            counter++;
+            return true;
+        }
+        return false;
 
-        students[counter] = student;
-        counter++;
-        return true;
     }
 
-    public void showGroup() {
+    public void showGroup(){
         for (int i = 0; i < counter; i++) {
-            System.out.println(students[i].asString());
+            System.out.println(students.get(i));
         }
     }
 
-    public Student search(String name) {
-        for (int i = 0; i < counter; i++) {
-            if (name.equals(students[i].getName())) {
-                return students[i];
-            }
-        }
+    public final Student search(final String name){
         return null;
     }
 
-    public void sortName() {
-//        todo ry to not repeat comparing of already sorted Students
-        for (int j = 0; j < counter; j++) {
-            for (int i = 0; i < counter - 1; i++) {
-                int comparation = students[i].getName().compareTo(students[i + 1].getName());
-                if (comparation > 0) {
-                    Student tmp = students[i];
-                    students[i] = students[i + 1];
-                    students[i + 1] = tmp;
-                }
-            }
-        }
-        showGroup();
-    }
-
-    public static int getGroupSize() {
-        return GROUP_SIZE;
-    }
-
-    public int getCounter() {
-        return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Student[] getStudents() {
-        return students;
-    }
-
-    public void setStudents(Student[] students) {
-        this.students = students;
-    }
-
-    public boolean delStudent(String name) {
-        if (name == null || name.isEmpty()) return false;
-
-        for (int i = 0; i < counter; i++) {
-            if (name.equals(students[i].getName())) {
-                //  students[i] = null;
-
-                for (int j = i; j < counter - 1; j++) {
-                    students[j] = students[j + 1];
-                }
-
-
-                students[counter - 1] = null;
-
-                counter--;
-                return true;
-            }
-        }
+    public boolean delStudent(Student student){
         return false;
     }
 
-    //    public boolean delStudent(String name){
-//        if (name == null || name.isEmpty()) return false;
-//
-//        for (int i = 0; i < counter; i++){
-//            if (name.equals(students[i].getName())){
-//                System.arraycopy(students, i + 1, students, i, students.length - (i + 1));
-//                counter--;
-//                return true;
-//            }
-//        }
-//
-//        return false;
-//    }
-    public boolean delStudentObject(Student student) {
-        if (student == null) return false;
+    public void sort(){
+        Collections.sort(students, comparator);
+    }
 
-        for (int i = 0; i < counter; i++) {
-            if (student.equals(students[i])) {
-                //  students[i] = null;
-
-                for (int j = i; j < counter - 1; j++) {
-                    students[j] = students[j + 1];
-                }
-
-                students[counter - 1] = null;
-
-                counter--;
-                return true;
-            }
-        }
-        return false;
+    public void setComparator(Comparator<Student> comparator) {
+        this.comparator = comparator;
     }
 
 }

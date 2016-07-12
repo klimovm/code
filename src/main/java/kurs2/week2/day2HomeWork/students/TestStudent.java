@@ -1,6 +1,6 @@
 package kurs2.week2.day2HomeWork.students;
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
 
 import java.util.Arrays;
 
@@ -11,20 +11,20 @@ public class TestStudent {
     public static void main(String[] args) {
 
         Student st1 = new Student("Alex",
-                new Mydate(1986, 1, 3),
+                new MyDate(1986, 1, 3),
                 'M',140);
         Student st2 = new Student("Jack",
-                new Mydate(1986, 1, 1),
+                new MyDate(1986, 1, 1),
                 'M',1.3);
         Student st3 = new Student("Anna",
-                new Mydate(1986, 1, 3),
+                new MyDate(1986, 1, 3),
                 'W',140);
 
         Student st4 = new Student("Jeniya",
-                new Mydate(1986, 1, 2),
+                new MyDate(1986, 1, 2),
                 'W',100);
         Student st5 = new Student("Alex",
-                new Mydate(1986, 1, 2),
+                new MyDate(1986, 1, 2),
                 'M',140);
 
 

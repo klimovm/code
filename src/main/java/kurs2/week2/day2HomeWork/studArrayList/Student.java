@@ -1,6 +1,6 @@
 package kurs2.week2.day2HomeWork.studArrayList;
 
-import kurs2.utils.Mydate;
+import kurs2.utils.MyDate;
 
 /**
  * Created by miha on 02.06.2016.
@@ -8,12 +8,12 @@ import kurs2.utils.Mydate;
 public class Student implements Comparable {
 
     private String name;
-    private Mydate bd;
+    private MyDate bd;
     private double middleMark;
     private int heidht;
 
     /********************************Конструктор класса*************************************/
-    public Student(String name, Mydate bd, double middleMark, int heidht) {
+    public Student(String name, MyDate bd, double middleMark, int heidht) {
         this.name = name;
         this.bd = bd;
         this.middleMark = middleMark;
@@ -25,9 +25,9 @@ public class Student implements Comparable {
 
     public void setName(String name) {this.name = name;}
 
-    public Mydate getBd() {return bd;}
+    public MyDate getBd() {return bd;}
 
-    public void setBd(Mydate bd) {this.bd = bd;}
+    public void setBd(MyDate bd) {this.bd = bd;}
 
     public double getMiddleMark() {return middleMark;}
 
