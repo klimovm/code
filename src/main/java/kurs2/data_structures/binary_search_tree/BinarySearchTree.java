@@ -91,6 +91,26 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
         return null;
     }
 
+
+    public void showTree(){
+        //делаем через рекурсию
+        // 1е правило выхода
+        deepSearch(root);
+
+    }
+
+    private void deepSearch(Node<E> root) {
+        //exit
+        //находим меншего за root
+        deepSearch(root.leftChild);
+        // выводим найменьшее значение
+        System.out.println(root.value);
+        //
+        deepSearch(root.rightChild);
+
+    }
+
+
     @Override
     public E pollLast() {
         return null;
@@ -362,6 +382,18 @@ public class BinarySearchTree<E> extends AbstractSet<E> implements NavigableSet<
     }
 
     private class MyBinaryTreeIterator implements Iterator<E> {
+
+
+        // TODO: 09.07.2016
+        Node<E> iterator;
+        public  MyBinaryTreeIterator(){
+            this.iterator = findLeftNode(root);
+        }
+
+        private Node<E> findLeftNode(Node<E> root) {
+            return  null;
+        }
+
         @Override
         public boolean hasNext() {
             return false;

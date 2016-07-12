@@ -3,6 +3,7 @@ package kurs2.data_structures.linked_list;
 
 import kurs2.week2.day2HomeWork.library.Author;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 /**
@@ -35,11 +36,20 @@ public class TestLinkedList {
         list.addAll(list2);
         showList(list);
 
+
+        System.out.println("==========Подсписок======");
+        showList((MyLinkedList) list.subList(2,2));
+
         System.out.println("==========containsAllCollection======");
         System.out.println(list.containsAll(list2));
 
         System.out.println("==========removeAllCollection======");
         list.removeAll(list2);
+        showList(list);
+        System.out.println(list.size());
+
+        System.out.println("==========removeObj======");
+        list.remove(author1);
         showList(list);
         System.out.println(list.size());
 
@@ -57,6 +67,7 @@ public class TestLinkedList {
 
         list.add(0,222);
         list.addAll(1,list2);
+        System.out.println("----------------------------");
         showList(list);
 
         System.out.println(list.removeAll(list3));
@@ -117,6 +128,49 @@ public class TestLinkedList {
         System.out.println("==========clear======");
         list.clear();
         showList(list);*/
+
+        System.out.println("======TestRetainAll===");
+        ArrayList<String> aL = new ArrayList<>();
+        aL.add("A");
+        aL.add("B");
+        //aL.add("A");
+        aL.add("B");
+        aL.add("D");
+        aL.add("D");
+
+        ArrayList<String> aLCopi = new ArrayList<>();
+        aLCopi.add("A");
+        aLCopi.add("B");
+        aL.retainAll(aLCopi);
+        System.out.println(aL);
+
+
+        System.out.println("======TestRetainAlLForMyLinkedList===");
+        MyLinkedList<String> ll = new MyLinkedList<>();
+        ll.add("A");
+        ll.add("B");
+        ll.add("A");
+        ll.add("B");
+        ll.add("D");
+        ll.add("D");
+        MyLinkedList<String> ll2 = new MyLinkedList<>();
+        ll2.add("B");
+        ll2.add("D");
+
+
+        System.out.println("----------------------");
+        showList(ll);
+        System.out.println("----------------------");
+        ll.retainAll(ll2);
+        showList(ll);
+
+        System.out.println("-----------RemoveAll-----------");
+        ll.removeAll(ll2);
+        showList(ll);
+
+
+
+
 
     }
 

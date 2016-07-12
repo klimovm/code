@@ -11,19 +11,6 @@ public class MyLinkedList<T> implements List<T> {
     private Node<T> tail;
     private int size;
 
-
-    public void setHead(Node<T> head) {
-        this.head = head;
-    }
-
-    public void setTail(Node<T> tail) {
-        this.tail = tail;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     /******************************************************/
     @Override
     public int size() {
@@ -35,6 +22,7 @@ public class MyLinkedList<T> implements List<T> {
     @Override
     public boolean isEmpty() {
         return size == 0;
+        //return head == null; второй вариант реализации
     }
 
     /******************************************************/
@@ -42,10 +30,6 @@ public class MyLinkedList<T> implements List<T> {
     @Override
     public boolean contains(Object o) {
         return indexOf(o) != -1;
-         /*for (int i = 0; i < size(); i++) { //втрой вариант
-                if (get(i).equals(o)) return true;
-            }
-        return false;*/
     }
 
     /******************************************************/
@@ -59,10 +43,13 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public boolean retainAll(Collection c) {
-        for (Object o:c) {
-            clear();
-            addAll(c);
+        if (c == null) throw new NullPointerException();
+        MyLinkedList tmp = new MyLinkedList();
+        for (Object o : this) {
+            if (!c.contains(o))
+                tmp.add(o);
         }
+        removeAll(tmp);
         return false;
 
     }
@@ -83,6 +70,7 @@ public class MyLinkedList<T> implements List<T> {
             result[i++] = iter.value;
         return result;
     }
+
     /*******************************************************************/
     @Override
     public boolean add(Object o) {
@@ -96,6 +84,7 @@ public class MyLinkedList<T> implements List<T> {
         tail.next = newNode;
         tail = newNode;
         size++;
+        ///add(size, (T) o); второй вариант реализации
         return true;
     }
 
@@ -108,10 +97,10 @@ public class MyLinkedList<T> implements List<T> {
 
         Node<T> newNode = new Node<>(element);
 
-        if (size == 0){
-            head  = tail = newNode;
+        if (size == 0) {
+            head = tail = newNode;
             head.previous = null;
-            head.next =null;
+            head.next = null;
         }
         if (index == 0) {
 
@@ -139,10 +128,14 @@ public class MyLinkedList<T> implements List<T> {
     @Override
     public boolean addAll(Collection c) {
         boolean result = false;
-        for (Object o:c) {//перебираем коллекцию и добавляем поелементно
+        for (Object o : c) {//перебираем коллекцию и добавляем поелементно
             result = add(o);
         }
         return result;
+
+
+        // return addAll(size,c); вторая реализиция
+
     }
 
     /*******************************************************************/
@@ -152,11 +145,11 @@ public class MyLinkedList<T> implements List<T> {
             throw new IndexOutOfBoundsException();
         }
 
-        for (Object o:c) {//перебираем коллекцию и добавляем поелементно
+        for (Object o : c) {//перебираем коллекцию и добавляем поелементно
             add(index, (T) o);
             index++;
         }
-            return false;
+        return false;
     }
 
 
@@ -169,15 +162,56 @@ public class MyLinkedList<T> implements List<T> {
             return true;
         } else return false;
     }
+
+    /*******************************************************************/
+
+    @Override
+    public T remove(int index) {
+
+        Node<T> iter = findNode(index);
+        if (iter == head) {
+            head = iter.next;
+            if (iter.next == null) {
+                head = tail = null;
+            } else {
+                head.previous = null;
+                iter.next = null;
+            }
+        } else if (iter == tail) {
+            tail = iter.previous;
+            tail.next = null;
+            iter.previous = null;
+
+        } else {
+//        previous-> me -> next --->  previous -> next
+            iter.previous.next = iter.next;
+//        previous<- me <- next ---> previous <- next
+            iter.next.previous = iter.previous;
+            iter.previous = null;
+            iter.next = null;
+        }
+        size--;
+        return iter.value;
+    }
+
     /*******************************************************************/
     @Override
     public boolean removeAll(Collection c) {
-        boolean result = false;
-        for (Object o:c) {//перебираем коллекцию и удаляем поелементно
-            result = remove(o);
+        MyLinkedList tmp = new MyLinkedList();
+        for (Object o : c) {//перебираем коллекцию и удаляем поелементно
+            for (Object e : this) {
+                if (o.equals(e)) {
+                    tmp.add(o);
+                }
+            }
         }
-            return result;
+        for (Object t : tmp) {
+            remove(t);
+        }
+        return  tmp.size()!=0;
     }
+
+
     /*******************************************************************/
 
     //todo Exception
@@ -215,6 +249,7 @@ public class MyLinkedList<T> implements List<T> {
         }
         return iter;
     }
+
     /*******************************************************************/
 
     @Override
@@ -227,38 +262,9 @@ public class MyLinkedList<T> implements List<T> {
 
         return toReturn;
     }
+
     /*******************************************************************/
 
-
-    @Override
-    public T remove(int index) {
-
-        Node<T> iter = findNode(index);
-        if (iter == head) {
-            head = iter.next;
-            if (iter.next == null) {
-                head = tail = null;
-            } else {
-                head.previous = null;
-                iter.next = null;
-            }
-        } else if (iter == tail) {
-            tail = iter.previous;
-            tail.next = null;
-            iter.previous = null;
-
-        } else {
-//        previous-> me -> next --->  previous -> next
-            iter.previous.next = iter.next;
-//        previous<- me <- next ---> previous <- next
-            iter.next.previous = iter.previous;
-            iter.previous = null;
-            iter.next = null;
-        }
-        size--;
-        return iter.value;
-    }
-    /*******************************************************************/
 
     @Override
     public int indexOf(Object o) {
@@ -278,6 +284,7 @@ public class MyLinkedList<T> implements List<T> {
         }
         return -1;
     }
+
     /*******************************************************************/
     @Override
     public int lastIndexOf(Object o) {
@@ -298,6 +305,7 @@ public class MyLinkedList<T> implements List<T> {
         }
         return -1;
     }
+
     /*******************************************************************/
     @Override
     public ListIterator listIterator() {
@@ -315,24 +323,22 @@ public class MyLinkedList<T> implements List<T> {
     /**************************************************************************/
     @Override
     public List subList(int fromIndex, int toIndex) {
+        // TODO: 10.07.2016
+        // проверки индексов от 0 до size-1;
+
+        //toIndex >= fromIndex
+
+
         MyLinkedList<T> sublist = new MyLinkedList<>();
 
-        Node<T> currentHead = findNode(fromIndex);
-        Node<T> newHead = new Node<T>((Node<T>) currentHead.next, null, (T) currentHead.value);
-        sublist.setHead(newHead);
-
-        Node<T> currentTail = findNode(toIndex);
-        Node<T> newTail = new Node<T>(null, (Node<T>) currentTail.previous, (T) currentTail.value);
-
-        sublist.setTail(newTail);
-
-        sublist.setSize(toIndex - fromIndex + 1);
+        for (int i = fromIndex; i <= toIndex; i++) {
+            sublist.add(findNode(i).value);
+        }
 
         return sublist;
     }
 
     /**************************************************************************/
-
 
 
     @Override
