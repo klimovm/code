@@ -9,12 +9,9 @@ import java.util.List;
 public class TestLL {
     public static void main(String[] args) {
 
-
         MyLinkedList list = new MyLinkedList();
 
-
         list.add(5);
-
 
         int expected = 1;
         int actual = list.size();
@@ -37,10 +34,10 @@ public class TestLL {
         list3.add(6);
 
         MyLinkedList list4 = new MyLinkedList();
-        MyLinkedList list66 = new MyLinkedList();
         list4.add(4);
         list4.add(5);
-        list4.add(6);
+        list4.add(7);
+
 
         /***************************************************************************************************/
         list.addAll(list3);
@@ -52,18 +49,20 @@ public class TestLL {
 
 
         boolean actualBool = list.removeAll(list3);
-        boolean expectedBool = false;
-        boolean resultBool = actualBool = expectedBool;
+        boolean expectedBool = true;
+        boolean resultBool;
+        if (actualBool == expectedBool){resultBool = true;}
+        else resultBool = false;
         System.out.printf("Metod removeAll(collection), resultBool %s, actualBool - %s, expectedBool %s\n", resultBool, actualBool, expectedBool);
         /***************************************************************************************************/
 
         list.addAll(0,list4);
         actual = list.size();
-        expected = 9;
+        expected = 5;
         result = actual == expected;
         System.out.printf("Metod addAll(index,collection), result %s, actual - %d, expected %d\n", result, actual, expected);
 
-        /***************************************************************************************************/
+        /*************************************************************************************************/
 
 
         list.removeAll(list4);
@@ -72,17 +71,19 @@ public class TestLL {
         result = actual == expected;
         System.out.printf("Metod removeAll(Collection c), result %s, actual - %d, expected %d\n", result, actual, expected);list.removeAll(list4);
 
-        /***************************************************************************************************/
+        /*************************************************************************************************/
 
-        expected = 5;
-        actual = list.lastIndexOf((int) 25);
+
+        expected = 2;
+        actual = list.lastIndexOf((int) 6);
         result = actual == expected;
 
         System.out.printf("Metod lastIndexOf, result %s, actual - %d, expected %d\n", result, actual, expected);
 
 
 
-        /***************************************************************************************************/
+        /*************************************************************************************************/
+
 
         expected = 2;
         actual = list.indexOf(25);
@@ -121,17 +122,13 @@ public class TestLL {
 
         System.out.printf("Metod remove, result %s, actual - %d, expected %d\n", result, actual, expected);
 
-        /***************************************************************************************************/
+        /*************************************************************************************************/
+
         list.clear();
         actual = list.size();
         expected = 0;
         result = actual == expected;
         System.out.printf("Metod clear, result %s, actual - %d, expected %d\n", result, actual, expected);
-
-        // TODO: 07.07.2016  findNode переспросить
-        // TODO: 07.07.2016  set переспросить
-
-
 
     }
 }

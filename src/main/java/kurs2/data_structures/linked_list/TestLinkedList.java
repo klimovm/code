@@ -42,7 +42,7 @@ public class TestLinkedList {
 
 
         System.out.println("==========SET==============");
-        System.out.println(list.set(0,"Слово"));
+        list.set(0,"Слово");
         showList(list);
         System.out.println("===========================");
 
